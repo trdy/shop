@@ -1,14 +1,25 @@
 package com.yt.shop.dao;
 
-import com.yt.shop.common.BaseDao;
 import com.yt.shop.model.UserInfo;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
+import org.apache.catalina.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-@Repository("testDBDao")
-public interface TestDBDao extends BaseDao<UserInfo> {
+import java.util.List;
+import java.util.Map;
 
-    @Query(value = "from UserInfo u where u.userName=:userName and u.userPass=:userPass")
-    UserInfo findUserInfoByNameAndPass(@Param("userName") String userName, @Param("userPass") String userPass);
+@Repository("testDBDao")
+public class TestDBDao {
+
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+
+    public List<Map<String,Object>> findUserInfoList() {
+        String sql="select * from tab_user";
+        RowMapper<UserInfo> rowMapper = new BeanPropertyRowMapper<UserInfo>(UserInfo.class);
+        return jdbcTemplate.queryForList(sql,rowMapper);
+    }
 }

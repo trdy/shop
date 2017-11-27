@@ -145,7 +145,7 @@ public class TestController {
     @RequestMapping("/user/findUserInfoList")
     @ResponseBody
     public List<Map<String,Object>> findUserInfoList(){
-        return null;
+        return testService.findUserInfoList();
     }
 
 

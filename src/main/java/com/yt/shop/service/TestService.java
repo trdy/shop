@@ -1,6 +1,7 @@
 package com.yt.shop.service;
 
 import com.yt.shop.dao.TestDBDao;
+import com.yt.shop.dao.TestDBJPA;
 import com.yt.shop.model.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,14 +18,20 @@ import java.util.Map;
 public class TestService {
 
     @Autowired
+    private TestDBJPA testDBJPA;
     private TestDBDao testDBDao;
 
 
     @Transactional
     public UserInfo findUserInfoByNameAndPass(String userName, String userPass) {
 
-        return testDBDao.findUserInfoByNameAndPass(userName,userPass);
+        return testDBJPA.findUserInfoByNameAndPass(userName,userPass);
     }
 
+
+    @Transactional
+    public List<Map<String,Object>> findUserInfoList() {
+        return testDBDao.findUserInfoList();
+    }
 
 }

@@ -36,4 +36,8 @@ public class TestService {
         return testDBDao.findUserInfoList();
     }
 
+    @Transactional
+    public void insertUserInfo(UserInfo u) {
+        testDBJPA.save(u);
+    }
 }

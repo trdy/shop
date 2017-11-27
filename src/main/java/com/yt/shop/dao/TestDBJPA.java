@@ -13,5 +13,4 @@ public interface TestDBJPA extends JpaSpecificationExecutor<UserInfo>,PagingAndS
     @Query(value = "from UserInfo u where u.userName=:userName and u.userPass=:userPass")
     UserInfo findUserInfoByNameAndPass(@Param("userName") String userName, @Param("userPass") String userPass);
 
-
 }

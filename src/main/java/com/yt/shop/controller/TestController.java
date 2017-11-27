@@ -158,4 +158,23 @@ public class TestController {
     }
 
 
+    @RequestMapping("/user/userInfoEdit")
+    public String userInfoEdit(){
+        log.info("转到用户信息编辑页面");
+        return "userInfoEdit";
+
+    }
+
+    @RequestMapping("/user/userInfoSave")
+    @ResponseBody
+    public String userInfoSave(String userName,String userPass){
+        log.info("保存用户信息");
+        UserInfo u=new UserInfo();
+        u.setUserName(userName);
+        u.setUserPass(userPass);
+        u.setBirth(new Timestamp(System.currentTimeMillis()));
+        testService.insertUserInfo(u);
+
+        return "success";
+    }
 }

@@ -1,7 +1,6 @@
 package com.yt.shop.dao;
 
 import com.yt.shop.model.UserInfo;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

@@ -67,4 +67,638 @@
 "2017-11-27 09:17:52.193 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
 "2017-11-27 09:17:52.193 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/userList
 "2017-11-27 09:17:52.194 |-INFO  [http-nio-8080-exec-3] com.yt.shop.controller.TestController [findList 76] -| call TestController return list json method......
+"2017-11-27 10:08:16.878 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarting 48] -| Starting ShopApplication on PC-20170830XIPK with PID 184 (D:\mywork\shop\target\classes started by Administrator in D:\mywork\shop)
+"2017-11-27 10:08:16.879 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStartupProfileInfo 593] -| No active profile set, falling back to default profiles: default
+"2017-11-27 10:08:16.990 |-INFO  [background-preinit] org.hibernate.validator.internal.util.Version [<clinit> 30] -| HV000001: Hibernate Validator 5.3.5.Final
+"2017-11-27 10:08:17.024 |-INFO  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [prepareRefresh 583] -| Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6efaa541: startup date [Mon Nov 27 10:08:17 CST 2017]; root of context hierarchy
+"2017-11-27 10:08:18.018 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [initialize 89] -| Tomcat initialized with port(s): 8080 (http)
+"2017-11-27 10:08:18.024 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Starting service [Tomcat]
+"2017-11-27 10:08:18.024 |-INFO  [restartedMain] org.apache.catalina.core.StandardEngine [log 179] -| Starting Servlet Engine: Apache Tomcat/8.5.23
+"2017-11-27 10:08:18.080 |-INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring embedded WebApplicationContext
+"2017-11-27 10:08:18.080 |-INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader [prepareEmbeddedWebApplicationContext 276] -| Root WebApplicationContext: initialization completed in 1056 ms
+"2017-11-27 10:08:18.179 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'dispatcherServlet' to [/]
+"2017-11-27 10:08:18.180 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.DruidStatViewServlet' to [/druid/*]
+"2017-11-27 10:08:18.180 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.TestServlet' to [/servlet/testServlet]
+"2017-11-27 10:08:18.182 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+"2017-11-27 10:08:18.182 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+"2017-11-27 10:08:18.182 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'httpPutFormContentFilter' to: [/*]
+"2017-11-27 10:08:18.182 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'requestContextFilter' to: [/*]
+"2017-11-27 10:08:18.182 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'druidWebStatFilter' to urls: [/*]
+"2017-11-27 10:08:18.183 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'testFilter' to urls: [/*]
+"2017-11-27 10:08:18.194 |-INFO  [localhost-startStop-1] com.yt.shop.common.filter.TestFilter [init 21] -| test execute filter....init 
+"2017-11-27 10:08:18.334 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [init 932] -| {dataSource-1} inited
+"2017-11-27 10:08:18.456 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [createNativeEntityManagerFactory 349] -| Building JPA container EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:08:18.463 |-INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper [logPersistenceUnitInformation 31] -| HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+"2017-11-27 10:08:18.499 |-INFO  [restartedMain] org.hibernate.Version [logVersion 37] -| HHH000412: Hibernate Core {5.0.12.Final}
+"2017-11-27 10:08:18.500 |-INFO  [restartedMain] org.hibernate.cfg.Environment [<clinit> 213] -| HHH000206: hibernate.properties not found
+"2017-11-27 10:08:18.500 |-INFO  [restartedMain] org.hibernate.cfg.Environment [buildBytecodeProvider 317] -| HHH000021: Bytecode provider name : javassist
+"2017-11-27 10:08:18.523 |-INFO  [restartedMain] org.hibernate.annotations.common.Version [<clinit> 66] -| HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+"2017-11-27 10:08:18.581 |-INFO  [restartedMain] org.hibernate.dialect.Dialect [<init> 156] -| HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+"2017-11-27 10:08:18.863 |-INFO  [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate [execute 105] -| HHH000228: Running hbm2ddl schema update
+"2017-11-27 10:08:18.902 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [buildNativeEntityManagerFactory 379] -| Initialized JPA EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:08:19.019 |-INFO  [restartedMain] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [initiateService 47] -| HHH000397: Using ASTQueryTranslatorFactory
+"2017-11-27 10:08:19.234 |-WARN  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [refresh 551] -| Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+"2017-11-27 10:08:19.235 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [destroy 548] -| Closing JPA EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:08:19.238 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [close 1712] -| {dataSource-1} closed
+"2017-11-27 10:08:19.239 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Stopping service [Tomcat]
+"2017-11-27 10:08:19.241 |-INFO  [localhost-startStop-1] com.yt.shop.common.filter.TestFilter [destroy 35] -| test execute filter destroy
+"2017-11-27 10:08:19.248 |-INFO  [restartedMain] org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer [logAutoConfigurationReport 101] -| 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+"2017-11-27 10:08:19.252 |-ERROR [restartedMain] org.springframework.boot.SpringApplication [reportFailure 771] -| Application startup failed
+"org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.yt.shop.ShopApplication.main(ShopApplication.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 23 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.obtainBeanInstanceFromFactory(ConfigurationClassEnhancer.java:389)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$672557a9.mvcConversionService(<generated>)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.getConfigurableWebBindingInitializer(WebMvcConfigurationSupport.java:560)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration.getConfigurableWebBindingInitializer(WebMvcAutoConfiguration.java:432)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.requestMappingHandlerAdapter(WebMvcConfigurationSupport.java:520)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration.requestMappingHandlerAdapter(WebMvcAutoConfiguration.java:384)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$672557a9.CGLIB$requestMappingHandlerAdapter$8(<generated>)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$672557a9$$FastClassBySpringCGLIB$$f2885373.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$672557a9.requestMappingHandlerAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 49 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1084)
+	at org.springframework.data.repository.support.Repositories.cacheRepositoryFactory(Repositories.java:95)
+	at org.springframework.data.repository.support.Repositories.populateRepositoryFactoryInformation(Repositories.java:88)
+	at org.springframework.data.repository.support.Repositories.<init>(Repositories.java:81)
+	at org.springframework.data.repository.support.DomainClassConverter.setApplicationContext(DomainClassConverter.java:98)
+	at org.springframework.data.web.config.SpringDataWebConfiguration.addFormatters(SpringDataWebConfiguration.java:95)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.addFormatters(WebMvcConfigurerComposite.java:80)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.addFormatters(DelegatingWebMvcConfiguration.java:77)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.mvcConversionService(WebMvcConfigurationSupport.java:588)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$672557a9.CGLIB$mvcConversionService$32(<generated>)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$672557a9$$FastClassBySpringCGLIB$$f2885373.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$672557a9.mvcConversionService(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 50 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.hibernate.jpa.internal.metamodel.MetamodelImpl.managedType(MetamodelImpl.java:210)
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:70)
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:68)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:153)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:100)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:82)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:199)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.initAndReturn(RepositoryFactoryBeanSupport.java:277)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:263)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:101)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 75 common frames omitted
+2017-11-27 10:09:38.345 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarting 48] -| Starting ShopApplication on PC-20170830XIPK with PID 5768 (D:\mywork\shop\target\classes started by Administrator in D:\mywork\shop)
+"2017-11-27 10:09:38.347 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStartupProfileInfo 593] -| No active profile set, falling back to default profiles: default
+"2017-11-27 10:09:38.459 |-INFO  [background-preinit] org.hibernate.validator.internal.util.Version [<clinit> 30] -| HV000001: Hibernate Validator 5.3.5.Final
+"2017-11-27 10:09:38.491 |-INFO  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [prepareRefresh 583] -| Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6bc7bb80: startup date [Mon Nov 27 10:09:38 CST 2017]; root of context hierarchy
+"2017-11-27 10:09:39.457 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [initialize 89] -| Tomcat initialized with port(s): 8080 (http)
+"2017-11-27 10:09:39.463 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Starting service [Tomcat]
+"2017-11-27 10:09:39.464 |-INFO  [restartedMain] org.apache.catalina.core.StandardEngine [log 179] -| Starting Servlet Engine: Apache Tomcat/8.5.23
+"2017-11-27 10:09:39.517 |-INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring embedded WebApplicationContext
+"2017-11-27 10:09:39.518 |-INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader [prepareEmbeddedWebApplicationContext 276] -| Root WebApplicationContext: initialization completed in 1027 ms
+"2017-11-27 10:09:39.616 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'dispatcherServlet' to [/]
+"2017-11-27 10:09:39.617 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.DruidStatViewServlet' to [/druid/*]
+"2017-11-27 10:09:39.617 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.TestServlet' to [/servlet/testServlet]
+"2017-11-27 10:09:39.619 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+"2017-11-27 10:09:39.619 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+"2017-11-27 10:09:39.619 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'httpPutFormContentFilter' to: [/*]
+"2017-11-27 10:09:39.619 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'requestContextFilter' to: [/*]
+"2017-11-27 10:09:39.620 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'druidWebStatFilter' to urls: [/*]
+"2017-11-27 10:09:39.620 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'testFilter' to urls: [/*]
+"2017-11-27 10:09:39.628 |-INFO  [localhost-startStop-1] com.yt.shop.common.filter.TestFilter [init 21] -| test execute filter....init 
+"2017-11-27 10:09:39.767 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [init 932] -| {dataSource-1} inited
+"2017-11-27 10:09:39.894 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [createNativeEntityManagerFactory 349] -| Building JPA container EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:09:39.902 |-INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper [logPersistenceUnitInformation 31] -| HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+"2017-11-27 10:09:39.941 |-INFO  [restartedMain] org.hibernate.Version [logVersion 37] -| HHH000412: Hibernate Core {5.0.12.Final}
+"2017-11-27 10:09:39.941 |-INFO  [restartedMain] org.hibernate.cfg.Environment [<clinit> 213] -| HHH000206: hibernate.properties not found
+"2017-11-27 10:09:39.942 |-INFO  [restartedMain] org.hibernate.cfg.Environment [buildBytecodeProvider 317] -| HHH000021: Bytecode provider name : javassist
+"2017-11-27 10:09:39.966 |-INFO  [restartedMain] org.hibernate.annotations.common.Version [<clinit> 66] -| HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+"2017-11-27 10:09:40.113 |-INFO  [restartedMain] org.hibernate.dialect.Dialect [<init> 156] -| HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+"2017-11-27 10:09:40.318 |-INFO  [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate [execute 105] -| HHH000228: Running hbm2ddl schema update
+"2017-11-27 10:09:40.357 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [buildNativeEntityManagerFactory 379] -| Initialized JPA EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:09:40.475 |-INFO  [restartedMain] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [initiateService 47] -| HHH000397: Using ASTQueryTranslatorFactory
+"2017-11-27 10:09:40.691 |-WARN  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [refresh 551] -| Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+"2017-11-27 10:09:40.691 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [destroy 548] -| Closing JPA EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:09:40.694 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [close 1712] -| {dataSource-1} closed
+"2017-11-27 10:09:40.696 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Stopping service [Tomcat]
+"2017-11-27 10:09:40.697 |-INFO  [localhost-startStop-1] com.yt.shop.common.filter.TestFilter [destroy 35] -| test execute filter destroy
+"2017-11-27 10:09:40.703 |-INFO  [restartedMain] org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer [logAutoConfigurationReport 101] -| 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+"2017-11-27 10:09:40.708 |-ERROR [restartedMain] org.springframework.boot.SpringApplication [reportFailure 771] -| Application startup failed
+"org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.yt.shop.ShopApplication.main(ShopApplication.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 23 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.obtainBeanInstanceFromFactory(ConfigurationClassEnhancer.java:389)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$76d1545e.mvcConversionService(<generated>)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.getConfigurableWebBindingInitializer(WebMvcConfigurationSupport.java:560)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration.getConfigurableWebBindingInitializer(WebMvcAutoConfiguration.java:432)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.requestMappingHandlerAdapter(WebMvcConfigurationSupport.java:520)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration.requestMappingHandlerAdapter(WebMvcAutoConfiguration.java:384)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$76d1545e.CGLIB$requestMappingHandlerAdapter$3(<generated>)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$76d1545e$$FastClassBySpringCGLIB$$7a9d25b0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$76d1545e.requestMappingHandlerAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 49 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1084)
+	at org.springframework.data.repository.support.Repositories.cacheRepositoryFactory(Repositories.java:95)
+	at org.springframework.data.repository.support.Repositories.populateRepositoryFactoryInformation(Repositories.java:88)
+	at org.springframework.data.repository.support.Repositories.<init>(Repositories.java:81)
+	at org.springframework.data.repository.support.DomainClassConverter.setApplicationContext(DomainClassConverter.java:98)
+	at org.springframework.data.web.config.SpringDataWebConfiguration.addFormatters(SpringDataWebConfiguration.java:95)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.addFormatters(WebMvcConfigurerComposite.java:80)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.addFormatters(DelegatingWebMvcConfiguration.java:77)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.mvcConversionService(WebMvcConfigurationSupport.java:588)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$76d1545e.CGLIB$mvcConversionService$32(<generated>)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$76d1545e$$FastClassBySpringCGLIB$$7a9d25b0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$76d1545e.mvcConversionService(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 50 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.hibernate.jpa.internal.metamodel.MetamodelImpl.managedType(MetamodelImpl.java:210)
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:70)
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:68)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:153)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:100)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:82)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:199)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.initAndReturn(RepositoryFactoryBeanSupport.java:277)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:263)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:101)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 75 common frames omitted
+2017-11-27 10:09:55.850 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarting 48] -| Starting ShopApplication on PC-20170830XIPK with PID 6268 (D:\mywork\shop\target\classes started by Administrator in D:\mywork\shop)
+"2017-11-27 10:09:55.851 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStartupProfileInfo 593] -| No active profile set, falling back to default profiles: default
+"2017-11-27 10:09:55.963 |-INFO  [background-preinit] org.hibernate.validator.internal.util.Version [<clinit> 30] -| HV000001: Hibernate Validator 5.3.5.Final
+"2017-11-27 10:09:55.993 |-INFO  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [prepareRefresh 583] -| Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@52ae7875: startup date [Mon Nov 27 10:09:55 CST 2017]; root of context hierarchy
+"2017-11-27 10:09:56.953 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [initialize 89] -| Tomcat initialized with port(s): 8080 (http)
+"2017-11-27 10:09:56.959 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Starting service [Tomcat]
+"2017-11-27 10:09:56.959 |-INFO  [restartedMain] org.apache.catalina.core.StandardEngine [log 179] -| Starting Servlet Engine: Apache Tomcat/8.5.23
+"2017-11-27 10:09:57.014 |-INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring embedded WebApplicationContext
+"2017-11-27 10:09:57.014 |-INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader [prepareEmbeddedWebApplicationContext 276] -| Root WebApplicationContext: initialization completed in 1021 ms
+"2017-11-27 10:09:57.113 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'dispatcherServlet' to [/]
+"2017-11-27 10:09:57.114 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.DruidStatViewServlet' to [/druid/*]
+"2017-11-27 10:09:57.115 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.TestServlet' to [/servlet/testServlet]
+"2017-11-27 10:09:57.116 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+"2017-11-27 10:09:57.117 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+"2017-11-27 10:09:57.117 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'httpPutFormContentFilter' to: [/*]
+"2017-11-27 10:09:57.117 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'requestContextFilter' to: [/*]
+"2017-11-27 10:09:57.117 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'druidWebStatFilter' to urls: [/*]
+"2017-11-27 10:09:57.117 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'testFilter' to urls: [/*]
+"2017-11-27 10:09:57.125 |-INFO  [localhost-startStop-1] com.yt.shop.common.filter.TestFilter [init 21] -| test execute filter....init 
+"2017-11-27 10:09:57.258 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [init 932] -| {dataSource-1} inited
+"2017-11-27 10:09:57.383 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [createNativeEntityManagerFactory 349] -| Building JPA container EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:09:57.391 |-INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper [logPersistenceUnitInformation 31] -| HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+"2017-11-27 10:09:57.427 |-INFO  [restartedMain] org.hibernate.Version [logVersion 37] -| HHH000412: Hibernate Core {5.0.12.Final}
+"2017-11-27 10:09:57.428 |-INFO  [restartedMain] org.hibernate.cfg.Environment [<clinit> 213] -| HHH000206: hibernate.properties not found
+"2017-11-27 10:09:57.429 |-INFO  [restartedMain] org.hibernate.cfg.Environment [buildBytecodeProvider 317] -| HHH000021: Bytecode provider name : javassist
+"2017-11-27 10:09:57.451 |-INFO  [restartedMain] org.hibernate.annotations.common.Version [<clinit> 66] -| HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+"2017-11-27 10:09:57.526 |-INFO  [restartedMain] org.hibernate.dialect.Dialect [<init> 156] -| HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+"2017-11-27 10:09:57.782 |-INFO  [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate [execute 105] -| HHH000228: Running hbm2ddl schema update
+"2017-11-27 10:09:57.823 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [buildNativeEntityManagerFactory 379] -| Initialized JPA EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:09:57.940 |-INFO  [restartedMain] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [initiateService 47] -| HHH000397: Using ASTQueryTranslatorFactory
+"2017-11-27 10:09:58.150 |-WARN  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [refresh 551] -| Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+"2017-11-27 10:09:58.151 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [destroy 548] -| Closing JPA EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:09:58.154 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [close 1712] -| {dataSource-1} closed
+"2017-11-27 10:09:58.155 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Stopping service [Tomcat]
+"2017-11-27 10:09:58.156 |-INFO  [localhost-startStop-1] com.yt.shop.common.filter.TestFilter [destroy 35] -| test execute filter destroy
+"2017-11-27 10:09:58.163 |-INFO  [restartedMain] org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer [logAutoConfigurationReport 101] -| 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+"2017-11-27 10:09:58.168 |-ERROR [restartedMain] org.springframework.boot.SpringApplication [reportFailure 771] -| Application startup failed
+"org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.yt.shop.ShopApplication.main(ShopApplication.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 23 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.obtainBeanInstanceFromFactory(ConfigurationClassEnhancer.java:389)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$404d1326.mvcConversionService(<generated>)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.getConfigurableWebBindingInitializer(WebMvcConfigurationSupport.java:560)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration.getConfigurableWebBindingInitializer(WebMvcAutoConfiguration.java:432)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.requestMappingHandlerAdapter(WebMvcConfigurationSupport.java:520)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration.requestMappingHandlerAdapter(WebMvcAutoConfiguration.java:384)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$404d1326.CGLIB$requestMappingHandlerAdapter$8(<generated>)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$404d1326$$FastClassBySpringCGLIB$$b67876a7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$404d1326.requestMappingHandlerAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 49 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1084)
+	at org.springframework.data.repository.support.Repositories.cacheRepositoryFactory(Repositories.java:95)
+	at org.springframework.data.repository.support.Repositories.populateRepositoryFactoryInformation(Repositories.java:88)
+	at org.springframework.data.repository.support.Repositories.<init>(Repositories.java:81)
+	at org.springframework.data.repository.support.DomainClassConverter.setApplicationContext(DomainClassConverter.java:98)
+	at org.springframework.data.web.config.SpringDataWebConfiguration.addFormatters(SpringDataWebConfiguration.java:95)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.addFormatters(WebMvcConfigurerComposite.java:80)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.addFormatters(DelegatingWebMvcConfiguration.java:77)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.mvcConversionService(WebMvcConfigurationSupport.java:588)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$404d1326.CGLIB$mvcConversionService$32(<generated>)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$404d1326$$FastClassBySpringCGLIB$$b67876a7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$404d1326.mvcConversionService(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 50 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.hibernate.jpa.internal.metamodel.MetamodelImpl.managedType(MetamodelImpl.java:210)
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:70)
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:68)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:153)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:100)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:82)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:199)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.initAndReturn(RepositoryFactoryBeanSupport.java:277)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:263)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:101)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 75 common frames omitted
+2017-11-27 10:11:05.303 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarting 48] -| Starting ShopApplication on PC-20170830XIPK with PID 5572 (D:\mywork\shop\target\classes started by Administrator in D:\mywork\shop)
+"2017-11-27 10:11:05.305 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStartupProfileInfo 593] -| No active profile set, falling back to default profiles: default
+"2017-11-27 10:11:05.416 |-INFO  [background-preinit] org.hibernate.validator.internal.util.Version [<clinit> 30] -| HV000001: Hibernate Validator 5.3.5.Final
+"2017-11-27 10:11:05.448 |-INFO  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [prepareRefresh 583] -| Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5e233892: startup date [Mon Nov 27 10:11:05 CST 2017]; root of context hierarchy
+"2017-11-27 10:11:06.418 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [initialize 89] -| Tomcat initialized with port(s): 8080 (http)
+"2017-11-27 10:11:06.423 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Starting service [Tomcat]
+"2017-11-27 10:11:06.424 |-INFO  [restartedMain] org.apache.catalina.core.StandardEngine [log 179] -| Starting Servlet Engine: Apache Tomcat/8.5.23
+"2017-11-27 10:11:06.477 |-INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring embedded WebApplicationContext
+"2017-11-27 10:11:06.477 |-INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader [prepareEmbeddedWebApplicationContext 276] -| Root WebApplicationContext: initialization completed in 1029 ms
+"2017-11-27 10:11:06.575 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'dispatcherServlet' to [/]
+"2017-11-27 10:11:06.576 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.DruidStatViewServlet' to [/druid/*]
+"2017-11-27 10:11:06.576 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.TestServlet' to [/servlet/testServlet]
+"2017-11-27 10:11:06.578 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+"2017-11-27 10:11:06.578 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+"2017-11-27 10:11:06.578 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'httpPutFormContentFilter' to: [/*]
+"2017-11-27 10:11:06.578 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'requestContextFilter' to: [/*]
+"2017-11-27 10:11:06.578 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'druidWebStatFilter' to urls: [/*]
+"2017-11-27 10:11:06.579 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'testFilter' to urls: [/*]
+"2017-11-27 10:11:06.586 |-INFO  [localhost-startStop-1] com.yt.shop.common.filter.TestFilter [init 21] -| test execute filter....init 
+"2017-11-27 10:11:06.721 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [init 932] -| {dataSource-1} inited
+"2017-11-27 10:11:06.843 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [createNativeEntityManagerFactory 349] -| Building JPA container EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:11:06.850 |-INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper [logPersistenceUnitInformation 31] -| HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+"2017-11-27 10:11:06.886 |-INFO  [restartedMain] org.hibernate.Version [logVersion 37] -| HHH000412: Hibernate Core {5.0.12.Final}
+"2017-11-27 10:11:06.887 |-INFO  [restartedMain] org.hibernate.cfg.Environment [<clinit> 213] -| HHH000206: hibernate.properties not found
+"2017-11-27 10:11:06.888 |-INFO  [restartedMain] org.hibernate.cfg.Environment [buildBytecodeProvider 317] -| HHH000021: Bytecode provider name : javassist
+"2017-11-27 10:11:06.911 |-INFO  [restartedMain] org.hibernate.annotations.common.Version [<clinit> 66] -| HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+"2017-11-27 10:11:06.983 |-INFO  [restartedMain] org.hibernate.dialect.Dialect [<init> 156] -| HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+"2017-11-27 10:11:07.236 |-INFO  [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate [execute 105] -| HHH000228: Running hbm2ddl schema update
+"2017-11-27 10:11:07.275 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [buildNativeEntityManagerFactory 379] -| Initialized JPA EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:11:07.391 |-INFO  [restartedMain] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [initiateService 47] -| HHH000397: Using ASTQueryTranslatorFactory
+"2017-11-27 10:11:07.607 |-WARN  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [refresh 551] -| Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+"2017-11-27 10:11:07.607 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [destroy 548] -| Closing JPA EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:11:07.610 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [close 1712] -| {dataSource-1} closed
+"2017-11-27 10:11:07.612 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Stopping service [Tomcat]
+"2017-11-27 10:11:07.613 |-INFO  [localhost-startStop-1] com.yt.shop.common.filter.TestFilter [destroy 35] -| test execute filter destroy
+"2017-11-27 10:11:07.619 |-INFO  [restartedMain] org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer [logAutoConfigurationReport 101] -| 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+"2017-11-27 10:11:07.624 |-ERROR [restartedMain] org.springframework.boot.SpringApplication [reportFailure 771] -| Application startup failed
+"org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.yt.shop.ShopApplication.main(ShopApplication.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 23 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcConversionService' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.obtainBeanInstanceFromFactory(ConfigurationClassEnhancer.java:389)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$dc1e6b3a.mvcConversionService(<generated>)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.getConfigurableWebBindingInitializer(WebMvcConfigurationSupport.java:560)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration.getConfigurableWebBindingInitializer(WebMvcAutoConfiguration.java:432)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.requestMappingHandlerAdapter(WebMvcConfigurationSupport.java:520)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration.requestMappingHandlerAdapter(WebMvcAutoConfiguration.java:384)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$dc1e6b3a.CGLIB$requestMappingHandlerAdapter$8(<generated>)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$dc1e6b3a$$FastClassBySpringCGLIB$$b58132a2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$dc1e6b3a.requestMappingHandlerAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 49 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1084)
+	at org.springframework.data.repository.support.Repositories.cacheRepositoryFactory(Repositories.java:95)
+	at org.springframework.data.repository.support.Repositories.populateRepositoryFactoryInformation(Repositories.java:88)
+	at org.springframework.data.repository.support.Repositories.<init>(Repositories.java:81)
+	at org.springframework.data.repository.support.DomainClassConverter.setApplicationContext(DomainClassConverter.java:98)
+	at org.springframework.data.web.config.SpringDataWebConfiguration.addFormatters(SpringDataWebConfiguration.java:95)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.addFormatters(WebMvcConfigurerComposite.java:80)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.addFormatters(DelegatingWebMvcConfiguration.java:77)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.mvcConversionService(WebMvcConfigurationSupport.java:588)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$dc1e6b3a.CGLIB$mvcConversionService$32(<generated>)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$dc1e6b3a$$FastClassBySpringCGLIB$$b58132a2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
+	at org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$dc1e6b3a.mvcConversionService(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 50 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class java.lang.Object
+	at org.hibernate.jpa.internal.metamodel.MetamodelImpl.managedType(MetamodelImpl.java:210)
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:70)
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:68)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:153)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:100)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:82)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:199)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.initAndReturn(RepositoryFactoryBeanSupport.java:277)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:263)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:101)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 75 common frames omitted
+2017-11-27 10:12:06.241 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarting 48] -| Starting ShopApplication on PC-20170830XIPK with PID 6188 (D:\mywork\shop\target\classes started by Administrator in D:\mywork\shop)
+"2017-11-27 10:12:06.242 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStartupProfileInfo 593] -| No active profile set, falling back to default profiles: default
+"2017-11-27 10:12:06.362 |-INFO  [background-preinit] org.hibernate.validator.internal.util.Version [<clinit> 30] -| HV000001: Hibernate Validator 5.3.5.Final
+"2017-11-27 10:12:06.385 |-INFO  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [prepareRefresh 583] -| Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@40f2bbbb: startup date [Mon Nov 27 10:12:06 CST 2017]; root of context hierarchy
+"2017-11-27 10:12:07.363 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [initialize 89] -| Tomcat initialized with port(s): 8080 (http)
+"2017-11-27 10:12:07.368 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Starting service [Tomcat]
+"2017-11-27 10:12:07.369 |-INFO  [restartedMain] org.apache.catalina.core.StandardEngine [log 179] -| Starting Servlet Engine: Apache Tomcat/8.5.23
+"2017-11-27 10:12:07.421 |-INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring embedded WebApplicationContext
+"2017-11-27 10:12:07.421 |-INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader [prepareEmbeddedWebApplicationContext 276] -| Root WebApplicationContext: initialization completed in 1036 ms
+"2017-11-27 10:12:07.520 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'dispatcherServlet' to [/]
+"2017-11-27 10:12:07.521 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.DruidStatViewServlet' to [/druid/*]
+"2017-11-27 10:12:07.522 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.TestServlet' to [/servlet/testServlet]
+"2017-11-27 10:12:07.524 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+"2017-11-27 10:12:07.525 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+"2017-11-27 10:12:07.525 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'httpPutFormContentFilter' to: [/*]
+"2017-11-27 10:12:07.525 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'requestContextFilter' to: [/*]
+"2017-11-27 10:12:07.525 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'druidWebStatFilter' to urls: [/*]
+"2017-11-27 10:12:07.525 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'testFilter' to urls: [/*]
+"2017-11-27 10:12:07.533 |-INFO  [localhost-startStop-1] com.yt.shop.common.filter.TestFilter [init 21] -| test execute filter....init 
+"2017-11-27 10:12:07.669 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [init 932] -| {dataSource-1} inited
+"2017-11-27 10:12:07.796 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [createNativeEntityManagerFactory 349] -| Building JPA container EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:12:07.804 |-INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper [logPersistenceUnitInformation 31] -| HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+"2017-11-27 10:12:07.842 |-INFO  [restartedMain] org.hibernate.Version [logVersion 37] -| HHH000412: Hibernate Core {5.0.12.Final}
+"2017-11-27 10:12:07.843 |-INFO  [restartedMain] org.hibernate.cfg.Environment [<clinit> 213] -| HHH000206: hibernate.properties not found
+"2017-11-27 10:12:07.844 |-INFO  [restartedMain] org.hibernate.cfg.Environment [buildBytecodeProvider 317] -| HHH000021: Bytecode provider name : javassist
+"2017-11-27 10:12:07.868 |-INFO  [restartedMain] org.hibernate.annotations.common.Version [<clinit> 66] -| HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+"2017-11-27 10:12:07.944 |-INFO  [restartedMain] org.hibernate.dialect.Dialect [<init> 156] -| HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+"2017-11-27 10:12:08.206 |-INFO  [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate [execute 105] -| HHH000228: Running hbm2ddl schema update
+"2017-11-27 10:12:08.246 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [buildNativeEntityManagerFactory 379] -| Initialized JPA EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:12:08.363 |-INFO  [restartedMain] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [initiateService 47] -| HHH000397: Using ASTQueryTranslatorFactory
+"2017-11-27 10:12:08.619 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [initControllerAdviceCache 534] -| Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@40f2bbbb: startup date [Mon Nov 27 10:12:06 CST 2017]; root of context hierarchy
+"2017-11-27 10:12:08.655 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test]}" onto public java.lang.String com.yt.shop.controller.TestController.test()
+"2017-11-27 10:12:08.656 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/userList]}" onto public java.util.List<com.yt.shop.model.UserInfo> com.yt.shop.controller.TestController.findList()
+"2017-11-27 10:12:08.656 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/userInfo]}" onto public com.yt.shop.model.UserInfo com.yt.shop.controller.TestController.findUserInfo()
+"2017-11-27 10:12:08.657 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test2]}" onto public java.lang.String com.yt.shop.controller.TestController.test2(org.springframework.ui.Model)
+"2017-11-27 10:12:08.657 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testError]}" onto public java.lang.String com.yt.shop.controller.TestController.testError()
+"2017-11-27 10:12:08.657 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testuploadimg],methods=[POST]}" onto public java.lang.String com.yt.shop.controller.TestController.uploadImg(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-11-27 10:12:08.658 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/login]}" onto public com.yt.shop.model.UserInfo com.yt.shop.controller.TestController.login(java.lang.String,java.lang.String)
+"2017-11-27 10:12:08.658 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/findUserInfoList]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.yt.shop.controller.TestController.findUserInfoList()
+"2017-11-27 10:12:08.660 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+"2017-11-27 10:12:08.660 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+"2017-11-27 10:12:08.673 |-INFO  [restartedMain] com.yt.shop.common.config.WebAppConfig [addResourceHandlers 26] -| imagesPath=file:///d:/mywork/shop/upload/
+"2017-11-27 10:12:08.679 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/upload/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:12:08.679 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:12:08.679 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:12:08.689 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [initExceptionHandlerAdviceCache 273] -| Detected @ExceptionHandler methods in globalExceptionHandler
+"2017-11-27 10:12:08.702 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:12:09.022 |-INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [startServer 58] -| LiveReload server is running on port 35729
+"2017-11-27 10:12:09.061 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [afterSingletonsInstantiated 431] -| Registering beans for JMX exposure on startup
+"2017-11-27 10:12:09.062 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [autodetect 916] -| Bean with name 'dataSource' has been autodetected for JMX exposure
+"2017-11-27 10:12:09.066 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [registerBeanInstance 671] -| Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+"2017-11-27 10:12:09.074 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Initializing ProtocolHandler ["http-nio-8080"]
+"2017-11-27 10:12:09.080 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Starting ProtocolHandler ["http-nio-8080"]
+"2017-11-27 10:12:09.087 |-INFO  [restartedMain] org.apache.tomcat.util.net.NioSelectorPool [log 179] -| Using a shared selector for servlet write/read
+"2017-11-27 10:12:09.101 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [start 201] -| Tomcat started on port(s): 8080 (http)
+"2017-11-27 10:12:09.105 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarted 57] -| Started ShopApplication in 3.087 seconds (JVM running for 3.576)
 "

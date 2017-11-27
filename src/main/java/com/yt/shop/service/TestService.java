@@ -19,6 +19,8 @@ public class TestService {
 
     @Autowired
     private TestDBJPA testDBJPA;
+
+    @Autowired
     private TestDBDao testDBDao;
 
 

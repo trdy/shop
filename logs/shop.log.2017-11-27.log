@@ -903,4 +903,629 @@ Caused by: java.lang.IllegalArgumentException: Not a managed type: class java.la
 "2017-11-27 10:16:24.983 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/login.html
 "2017-11-27 10:16:25.063 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
 "2017-11-27 10:16:25.065 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/favicon.ico
+"2017-11-27 10:17:02.795 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarting 48] -| Starting ShopApplication on PC-20170830XIPK with PID 2760 (D:\mywork\shop\target\classes started by Administrator in D:\mywork\shop)
+"2017-11-27 10:17:02.796 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStartupProfileInfo 593] -| No active profile set, falling back to default profiles: default
+"2017-11-27 10:17:02.897 |-INFO  [background-preinit] org.hibernate.validator.internal.util.Version [<clinit> 30] -| HV000001: Hibernate Validator 5.3.5.Final
+"2017-11-27 10:17:02.929 |-INFO  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [prepareRefresh 583] -| Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c987fee: startup date [Mon Nov 27 10:17:02 CST 2017]; root of context hierarchy
+"2017-11-27 10:17:03.888 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [initialize 89] -| Tomcat initialized with port(s): 8080 (http)
+"2017-11-27 10:17:03.894 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Starting service [Tomcat]
+"2017-11-27 10:17:03.894 |-INFO  [restartedMain] org.apache.catalina.core.StandardEngine [log 179] -| Starting Servlet Engine: Apache Tomcat/8.5.23
+"2017-11-27 10:17:03.947 |-INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring embedded WebApplicationContext
+"2017-11-27 10:17:03.947 |-INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader [prepareEmbeddedWebApplicationContext 276] -| Root WebApplicationContext: initialization completed in 1018 ms
+"2017-11-27 10:17:04.046 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'dispatcherServlet' to [/]
+"2017-11-27 10:17:04.047 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.DruidStatViewServlet' to [/druid/*]
+"2017-11-27 10:17:04.047 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.TestServlet' to [/servlet/testServlet]
+"2017-11-27 10:17:04.049 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+"2017-11-27 10:17:04.049 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+"2017-11-27 10:17:04.049 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'httpPutFormContentFilter' to: [/*]
+"2017-11-27 10:17:04.049 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'requestContextFilter' to: [/*]
+"2017-11-27 10:17:04.049 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'druidWebStatFilter' to urls: [/*]
+"2017-11-27 10:17:04.049 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'testFilter' to urls: [/*]
+"2017-11-27 10:17:04.058 |-INFO  [localhost-startStop-1] com.yt.shop.common.filter.TestFilter [init 21] -| test execute filter....init 
+"2017-11-27 10:17:04.198 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [init 932] -| {dataSource-1} inited
+"2017-11-27 10:17:04.317 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [createNativeEntityManagerFactory 349] -| Building JPA container EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:17:04.325 |-INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper [logPersistenceUnitInformation 31] -| HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+"2017-11-27 10:17:04.361 |-INFO  [restartedMain] org.hibernate.Version [logVersion 37] -| HHH000412: Hibernate Core {5.0.12.Final}
+"2017-11-27 10:17:04.361 |-INFO  [restartedMain] org.hibernate.cfg.Environment [<clinit> 213] -| HHH000206: hibernate.properties not found
+"2017-11-27 10:17:04.362 |-INFO  [restartedMain] org.hibernate.cfg.Environment [buildBytecodeProvider 317] -| HHH000021: Bytecode provider name : javassist
+"2017-11-27 10:17:04.384 |-INFO  [restartedMain] org.hibernate.annotations.common.Version [<clinit> 66] -| HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+"2017-11-27 10:17:04.441 |-INFO  [restartedMain] org.hibernate.dialect.Dialect [<init> 156] -| HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+"2017-11-27 10:17:04.766 |-INFO  [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate [execute 105] -| HHH000228: Running hbm2ddl schema update
+"2017-11-27 10:17:04.808 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [buildNativeEntityManagerFactory 379] -| Initialized JPA EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:17:04.929 |-INFO  [restartedMain] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [initiateService 47] -| HHH000397: Using ASTQueryTranslatorFactory
+"2017-11-27 10:17:05.166 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [initControllerAdviceCache 534] -| Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c987fee: startup date [Mon Nov 27 10:17:02 CST 2017]; root of context hierarchy
+"2017-11-27 10:17:05.203 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test]}" onto public java.lang.String com.yt.shop.controller.TestController.test()
+"2017-11-27 10:17:05.204 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/userList]}" onto public java.util.List<com.yt.shop.model.UserInfo> com.yt.shop.controller.TestController.findList()
+"2017-11-27 10:17:05.204 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/userInfo]}" onto public com.yt.shop.model.UserInfo com.yt.shop.controller.TestController.findUserInfo()
+"2017-11-27 10:17:05.206 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test2]}" onto public java.lang.String com.yt.shop.controller.TestController.test2(org.springframework.ui.Model)
+"2017-11-27 10:17:05.206 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testError]}" onto public java.lang.String com.yt.shop.controller.TestController.testError()
+"2017-11-27 10:17:05.206 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testuploadimg],methods=[POST]}" onto public java.lang.String com.yt.shop.controller.TestController.uploadImg(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-11-27 10:17:05.206 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/login]}" onto public com.yt.shop.model.UserInfo com.yt.shop.controller.TestController.login(java.lang.String,java.lang.String)
+"2017-11-27 10:17:05.207 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/findUserInfoList]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.yt.shop.controller.TestController.findUserInfoList()
+"2017-11-27 10:17:05.208 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+"2017-11-27 10:17:05.208 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+"2017-11-27 10:17:05.221 |-INFO  [restartedMain] com.yt.shop.common.config.WebAppConfig [addResourceHandlers 26] -| imagesPath=file:///d:/mywork/shop/upload/
+"2017-11-27 10:17:05.227 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/upload/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:17:05.227 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:17:05.227 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:17:05.237 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [initExceptionHandlerAdviceCache 273] -| Detected @ExceptionHandler methods in globalExceptionHandler
+"2017-11-27 10:17:05.250 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:17:05.550 |-INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [startServer 58] -| LiveReload server is running on port 35729
+"2017-11-27 10:17:05.585 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [afterSingletonsInstantiated 431] -| Registering beans for JMX exposure on startup
+"2017-11-27 10:17:05.586 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [autodetect 916] -| Bean with name 'dataSource' has been autodetected for JMX exposure
+"2017-11-27 10:17:05.589 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [registerBeanInstance 671] -| Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+"2017-11-27 10:17:05.597 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Initializing ProtocolHandler ["http-nio-8080"]
+"2017-11-27 10:17:05.602 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Starting ProtocolHandler ["http-nio-8080"]
+"2017-11-27 10:17:05.608 |-INFO  [restartedMain] org.apache.tomcat.util.net.NioSelectorPool [log 179] -| Using a shared selector for servlet write/read
+"2017-11-27 10:17:05.619 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [start 201] -| Tomcat started on port(s): 8080 (http)
+"2017-11-27 10:17:05.623 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarted 57] -| Started ShopApplication in 3.055 seconds (JVM running for 3.528)
+"2017-11-27 10:17:15.602 |-INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring FrameworkServlet 'dispatcherServlet'
+"2017-11-27 10:17:15.603 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 489] -| FrameworkServlet 'dispatcherServlet': initialization started
+"2017-11-27 10:17:15.615 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 508] -| FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+"2017-11-27 10:17:15.622 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:17:15.622 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/test/test
+"2017-11-27 10:17:21.184 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:17:21.184 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/test
+"2017-11-27 10:17:21.185 |-INFO  [http-nio-8080-exec-2] com.yt.shop.controller.TestController [test 42] -| call TestController test method ......
+"2017-11-27 10:17:21.199 |-INFO  [http-nio-8080-exec-2] org.thymeleaf.TemplateEngine [initialize 825] -| [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+"2017-11-27 10:17:21.226 |-INFO  [http-nio-8080-exec-2] org.thymeleaf.templateresolver.AbstractTemplateResolver [initialize 99] -| [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+"2017-11-27 10:17:21.226 |-INFO  [http-nio-8080-exec-2] org.thymeleaf.templateresolver.AbstractTemplateResolver [initialize 110] -| [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+"2017-11-27 10:17:21.227 |-INFO  [http-nio-8080-exec-2] org.thymeleaf.messageresolver.AbstractMessageResolver [initialize 72] -| [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+"2017-11-27 10:17:21.227 |-INFO  [http-nio-8080-exec-2] org.thymeleaf.messageresolver.AbstractMessageResolver [initialize 78] -| [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+"2017-11-27 10:17:21.229 |-INFO  [http-nio-8080-exec-2] org.thymeleaf.TemplateEngine.CONFIG [printConfiguration 123] -| [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * XML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * XHTML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+"2017-11-27 10:17:21.229 |-INFO  [http-nio-8080-exec-2] org.thymeleaf.TemplateEngine [initialize 838] -| [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+"2017-11-27 10:17:25.305 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:17:25.306 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/test2
+"2017-11-27 10:17:25.308 |-INFO  [http-nio-8080-exec-3] com.yt.shop.controller.TestController [test2 53] -| call TestController test2 method.......
+"2017-11-27 10:17:25.405 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:17:25.405 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/upload/goodsPic/abc.jpg
+"2017-11-27 10:17:31.203 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:17:31.204 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/login.html
+"2017-11-27 10:19:16.638 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarting 48] -| Starting ShopApplication on PC-20170830XIPK with PID 5512 (D:\mywork\shop\target\classes started by Administrator in D:\mywork\shop)
+"2017-11-27 10:19:16.639 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStartupProfileInfo 593] -| No active profile set, falling back to default profiles: default
+"2017-11-27 10:19:16.740 |-INFO  [background-preinit] org.hibernate.validator.internal.util.Version [<clinit> 30] -| HV000001: Hibernate Validator 5.3.5.Final
+"2017-11-27 10:19:16.771 |-INFO  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [prepareRefresh 583] -| Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6efaa541: startup date [Mon Nov 27 10:19:16 CST 2017]; root of context hierarchy
+"2017-11-27 10:19:17.719 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [initialize 89] -| Tomcat initialized with port(s): 8080 (http)
+"2017-11-27 10:19:17.725 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Starting service [Tomcat]
+"2017-11-27 10:19:17.725 |-INFO  [restartedMain] org.apache.catalina.core.StandardEngine [log 179] -| Starting Servlet Engine: Apache Tomcat/8.5.23
+"2017-11-27 10:19:17.780 |-INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring embedded WebApplicationContext
+"2017-11-27 10:19:17.781 |-INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader [prepareEmbeddedWebApplicationContext 276] -| Root WebApplicationContext: initialization completed in 1010 ms
+"2017-11-27 10:19:17.883 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'dispatcherServlet' to [/]
+"2017-11-27 10:19:17.884 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.DruidStatViewServlet' to [/druid/*]
+"2017-11-27 10:19:17.885 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.TestServlet' to [/servlet/testServlet]
+"2017-11-27 10:19:17.886 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+"2017-11-27 10:19:17.887 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+"2017-11-27 10:19:17.887 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'httpPutFormContentFilter' to: [/*]
+"2017-11-27 10:19:17.887 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'requestContextFilter' to: [/*]
+"2017-11-27 10:19:17.887 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'druidWebStatFilter' to urls: [/*]
+"2017-11-27 10:19:17.887 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'testFilter' to urls: [/*]
+"2017-11-27 10:19:17.897 |-INFO  [localhost-startStop-1] com.yt.shop.common.filter.TestFilter [init 21] -| test execute filter....init 
+"2017-11-27 10:19:18.034 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [init 932] -| {dataSource-1} inited
+"2017-11-27 10:19:18.162 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [createNativeEntityManagerFactory 349] -| Building JPA container EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:19:18.171 |-INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper [logPersistenceUnitInformation 31] -| HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+"2017-11-27 10:19:18.208 |-INFO  [restartedMain] org.hibernate.Version [logVersion 37] -| HHH000412: Hibernate Core {5.0.12.Final}
+"2017-11-27 10:19:18.209 |-INFO  [restartedMain] org.hibernate.cfg.Environment [<clinit> 213] -| HHH000206: hibernate.properties not found
+"2017-11-27 10:19:18.209 |-INFO  [restartedMain] org.hibernate.cfg.Environment [buildBytecodeProvider 317] -| HHH000021: Bytecode provider name : javassist
+"2017-11-27 10:19:18.234 |-INFO  [restartedMain] org.hibernate.annotations.common.Version [<clinit> 66] -| HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+"2017-11-27 10:19:18.315 |-INFO  [restartedMain] org.hibernate.dialect.Dialect [<init> 156] -| HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+"2017-11-27 10:19:18.581 |-INFO  [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate [execute 105] -| HHH000228: Running hbm2ddl schema update
+"2017-11-27 10:19:18.621 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [buildNativeEntityManagerFactory 379] -| Initialized JPA EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:19:18.743 |-INFO  [restartedMain] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [initiateService 47] -| HHH000397: Using ASTQueryTranslatorFactory
+"2017-11-27 10:19:18.976 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [initControllerAdviceCache 534] -| Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6efaa541: startup date [Mon Nov 27 10:19:16 CST 2017]; root of context hierarchy
+"2017-11-27 10:19:19.013 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test]}" onto public java.lang.String com.yt.shop.controller.TestController.test()
+"2017-11-27 10:19:19.014 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/userList]}" onto public java.util.List<com.yt.shop.model.UserInfo> com.yt.shop.controller.TestController.findList()
+"2017-11-27 10:19:19.014 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/userInfo]}" onto public com.yt.shop.model.UserInfo com.yt.shop.controller.TestController.findUserInfo()
+"2017-11-27 10:19:19.015 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test2]}" onto public java.lang.String com.yt.shop.controller.TestController.test2(org.springframework.ui.Model)
+"2017-11-27 10:19:19.016 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testError]}" onto public java.lang.String com.yt.shop.controller.TestController.testError()
+"2017-11-27 10:19:19.016 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testuploadimg],methods=[POST]}" onto public java.lang.String com.yt.shop.controller.TestController.uploadImg(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-11-27 10:19:19.016 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/login]}" onto public java.lang.String com.yt.shop.controller.TestController.toLogin()
+"2017-11-27 10:19:19.016 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/login]}" onto public com.yt.shop.model.UserInfo com.yt.shop.controller.TestController.login(java.lang.String,java.lang.String)
+"2017-11-27 10:19:19.017 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/findUserInfoList]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.yt.shop.controller.TestController.findUserInfoList()
+"2017-11-27 10:19:19.018 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+"2017-11-27 10:19:19.018 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+"2017-11-27 10:19:19.031 |-INFO  [restartedMain] com.yt.shop.common.config.WebAppConfig [addResourceHandlers 26] -| imagesPath=file:///d:/mywork/shop/upload/
+"2017-11-27 10:19:19.036 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/upload/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:19:19.037 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:19:19.037 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:19:19.046 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [initExceptionHandlerAdviceCache 273] -| Detected @ExceptionHandler methods in globalExceptionHandler
+"2017-11-27 10:19:19.059 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:19:19.374 |-INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [startServer 58] -| LiveReload server is running on port 35729
+"2017-11-27 10:19:19.413 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [afterSingletonsInstantiated 431] -| Registering beans for JMX exposure on startup
+"2017-11-27 10:19:19.414 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [autodetect 916] -| Bean with name 'dataSource' has been autodetected for JMX exposure
+"2017-11-27 10:19:19.419 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [registerBeanInstance 671] -| Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+"2017-11-27 10:19:19.428 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Initializing ProtocolHandler ["http-nio-8080"]
+"2017-11-27 10:19:19.435 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Starting ProtocolHandler ["http-nio-8080"]
+"2017-11-27 10:19:19.443 |-INFO  [restartedMain] org.apache.tomcat.util.net.NioSelectorPool [log 179] -| Using a shared selector for servlet write/read
+"2017-11-27 10:19:19.454 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [start 201] -| Tomcat started on port(s): 8080 (http)
+"2017-11-27 10:19:19.458 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarted 57] -| Started ShopApplication in 3.034 seconds (JVM running for 3.499)
+"2017-11-27 10:19:22.564 |-INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring FrameworkServlet 'dispatcherServlet'
+"2017-11-27 10:19:22.564 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 489] -| FrameworkServlet 'dispatcherServlet': initialization started
+"2017-11-27 10:19:22.580 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 508] -| FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+"2017-11-27 10:19:22.586 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:19:22.587 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/login
+"2017-11-27 10:19:22.605 |-INFO  [http-nio-8080-exec-1] org.thymeleaf.TemplateEngine [initialize 825] -| [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+"2017-11-27 10:19:22.628 |-INFO  [http-nio-8080-exec-1] org.thymeleaf.templateresolver.AbstractTemplateResolver [initialize 99] -| [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+"2017-11-27 10:19:22.628 |-INFO  [http-nio-8080-exec-1] org.thymeleaf.templateresolver.AbstractTemplateResolver [initialize 110] -| [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+"2017-11-27 10:19:22.628 |-INFO  [http-nio-8080-exec-1] org.thymeleaf.messageresolver.AbstractMessageResolver [initialize 72] -| [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+"2017-11-27 10:19:22.629 |-INFO  [http-nio-8080-exec-1] org.thymeleaf.messageresolver.AbstractMessageResolver [initialize 78] -| [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+"2017-11-27 10:19:22.630 |-INFO  [http-nio-8080-exec-1] org.thymeleaf.TemplateEngine.CONFIG [printConfiguration 123] -| [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * XML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * XHTML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+"2017-11-27 10:19:22.631 |-INFO  [http-nio-8080-exec-1] org.thymeleaf.TemplateEngine [initialize 838] -| [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+"2017-11-27 10:19:28.385 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:19:28.387 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/user/login
+"2017-11-27 10:19:28.413 |-INFO  [http-nio-8080-exec-2] com.yt.shop.controller.TestController [login 144] -| 验证用户名:admin和密码：123
+"2017-11-27 10:19:28.436 |-DEBUG [http-nio-8080-exec-2] org.hibernate.SQL [logStatement 92] -| select userinfo0_.user_id as user_id1_0_, userinfo0_.birth as birth2_0_, userinfo0_.user_name as user_nam3_0_, userinfo0_.user_pass as user_pas4_0_ from tab_user userinfo0_ where userinfo0_.user_name=? and userinfo0_.user_pass=?
+"2017-11-27 10:19:28.444 |-TRACE [http-nio-8080-exec-2] org.hibernate.type.descriptor.sql.BasicBinder [bind 65] -| binding parameter [1] as [VARCHAR] - [admin]
+"2017-11-27 10:19:28.445 |-TRACE [http-nio-8080-exec-2] org.hibernate.type.descriptor.sql.BasicBinder [bind 65] -| binding parameter [2] as [VARCHAR] - [123]
+"2017-11-27 10:19:28.464 |-INFO  [http-nio-8080-exec-2] com.yt.shop.controller.TestController [login 146] -| 查询数据库返回userinfo:UserInfo{userId=1, userName='admin', userPass='123', birth=2017-11-24 15:39:27.0}
+"2017-11-27 10:20:12.243 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:20:12.244 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/user/findUserInfoList
+"2017-11-27 10:20:12.283 |-INFO  [http-nio-8080-exec-5] org.springframework.beans.factory.xml.XmlBeanDefinitionReader [loadBeanDefinitions 317] -| Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+"2017-11-27 10:20:12.315 |-INFO  [http-nio-8080-exec-5] org.springframework.jdbc.support.SQLErrorCodesFactory [<init> 127] -| SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+"2017-11-27 10:20:12.329 |-WARN  [http-nio-8080-exec-5] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [logException 189] -| Resolved exception caused by Handler execution: org.springframework.dao.TransientDataAccessResourceException: PreparedStatementCallback; SQL [select * from tab_user]; Invalid argument value: java.io.NotSerializableException; nested exception is java.sql.SQLException: Invalid argument value: java.io.NotSerializableException
+"2017-11-27 10:27:08.041 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarting 48] -| Starting ShopApplication on PC-20170830XIPK with PID 3556 (D:\mywork\shop\target\classes started by Administrator in D:\mywork\shop)
+"2017-11-27 10:27:08.042 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStartupProfileInfo 593] -| No active profile set, falling back to default profiles: default
+"2017-11-27 10:27:08.153 |-INFO  [background-preinit] org.hibernate.validator.internal.util.Version [<clinit> 30] -| HV000001: Hibernate Validator 5.3.5.Final
+"2017-11-27 10:27:08.187 |-INFO  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [prepareRefresh 583] -| Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7f6f19a: startup date [Mon Nov 27 10:27:08 CST 2017]; root of context hierarchy
+"2017-11-27 10:27:09.175 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [initialize 89] -| Tomcat initialized with port(s): 8080 (http)
+"2017-11-27 10:27:09.180 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Starting service [Tomcat]
+"2017-11-27 10:27:09.180 |-INFO  [restartedMain] org.apache.catalina.core.StandardEngine [log 179] -| Starting Servlet Engine: Apache Tomcat/8.5.23
+"2017-11-27 10:27:09.239 |-INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring embedded WebApplicationContext
+"2017-11-27 10:27:09.239 |-INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader [prepareEmbeddedWebApplicationContext 276] -| Root WebApplicationContext: initialization completed in 1052 ms
+"2017-11-27 10:27:09.341 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'dispatcherServlet' to [/]
+"2017-11-27 10:27:09.342 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.DruidStatViewServlet' to [/druid/*]
+"2017-11-27 10:27:09.343 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.TestServlet' to [/servlet/testServlet]
+"2017-11-27 10:27:09.345 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+"2017-11-27 10:27:09.345 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+"2017-11-27 10:27:09.345 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'httpPutFormContentFilter' to: [/*]
+"2017-11-27 10:27:09.345 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'requestContextFilter' to: [/*]
+"2017-11-27 10:27:09.345 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'druidWebStatFilter' to urls: [/*]
+"2017-11-27 10:27:09.345 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'testFilter' to urls: [/*]
+"2017-11-27 10:27:09.354 |-INFO  [localhost-startStop-1] com.yt.shop.common.filter.TestFilter [init 21] -| test execute filter....init 
+"2017-11-27 10:27:09.496 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [init 932] -| {dataSource-1} inited
+"2017-11-27 10:27:09.623 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [createNativeEntityManagerFactory 349] -| Building JPA container EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:27:09.630 |-INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper [logPersistenceUnitInformation 31] -| HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+"2017-11-27 10:27:09.666 |-INFO  [restartedMain] org.hibernate.Version [logVersion 37] -| HHH000412: Hibernate Core {5.0.12.Final}
+"2017-11-27 10:27:09.667 |-INFO  [restartedMain] org.hibernate.cfg.Environment [<clinit> 213] -| HHH000206: hibernate.properties not found
+"2017-11-27 10:27:09.667 |-INFO  [restartedMain] org.hibernate.cfg.Environment [buildBytecodeProvider 317] -| HHH000021: Bytecode provider name : javassist
+"2017-11-27 10:27:09.691 |-INFO  [restartedMain] org.hibernate.annotations.common.Version [<clinit> 66] -| HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+"2017-11-27 10:27:09.753 |-INFO  [restartedMain] org.hibernate.dialect.Dialect [<init> 156] -| HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+"2017-11-27 10:27:10.025 |-INFO  [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate [execute 105] -| HHH000228: Running hbm2ddl schema update
+"2017-11-27 10:27:10.067 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [buildNativeEntityManagerFactory 379] -| Initialized JPA EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:27:10.190 |-INFO  [restartedMain] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [initiateService 47] -| HHH000397: Using ASTQueryTranslatorFactory
+"2017-11-27 10:27:10.436 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [initControllerAdviceCache 534] -| Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7f6f19a: startup date [Mon Nov 27 10:27:08 CST 2017]; root of context hierarchy
+"2017-11-27 10:27:10.476 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test]}" onto public java.lang.String com.yt.shop.controller.TestController.test()
+"2017-11-27 10:27:10.477 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/userList]}" onto public java.util.List<com.yt.shop.model.UserInfo> com.yt.shop.controller.TestController.findList()
+"2017-11-27 10:27:10.477 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/userInfo]}" onto public com.yt.shop.model.UserInfo com.yt.shop.controller.TestController.findUserInfo()
+"2017-11-27 10:27:10.478 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test2]}" onto public java.lang.String com.yt.shop.controller.TestController.test2(org.springframework.ui.Model)
+"2017-11-27 10:27:10.478 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testError]}" onto public java.lang.String com.yt.shop.controller.TestController.testError()
+"2017-11-27 10:27:10.478 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testuploadimg],methods=[POST]}" onto public java.lang.String com.yt.shop.controller.TestController.uploadImg(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-11-27 10:27:10.479 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/login]}" onto public java.lang.String com.yt.shop.controller.TestController.toLogin()
+"2017-11-27 10:27:10.479 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/login]}" onto public com.yt.shop.model.UserInfo com.yt.shop.controller.TestController.login(java.lang.String,java.lang.String)
+"2017-11-27 10:27:10.479 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/findUserInfoList]}" onto public java.util.List<com.yt.shop.model.UserInfo> com.yt.shop.controller.TestController.findUserInfoList()
+"2017-11-27 10:27:10.480 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+"2017-11-27 10:27:10.481 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+"2017-11-27 10:27:10.496 |-INFO  [restartedMain] com.yt.shop.common.config.WebAppConfig [addResourceHandlers 26] -| imagesPath=file:///d:/mywork/shop/upload/
+"2017-11-27 10:27:10.502 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/upload/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:27:10.503 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:27:10.503 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:27:10.513 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [initExceptionHandlerAdviceCache 273] -| Detected @ExceptionHandler methods in globalExceptionHandler
+"2017-11-27 10:27:10.527 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:27:10.838 |-INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [startServer 58] -| LiveReload server is running on port 35729
+"2017-11-27 10:27:10.875 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [afterSingletonsInstantiated 431] -| Registering beans for JMX exposure on startup
+"2017-11-27 10:27:10.876 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [autodetect 916] -| Bean with name 'dataSource' has been autodetected for JMX exposure
+"2017-11-27 10:27:10.879 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [registerBeanInstance 671] -| Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+"2017-11-27 10:27:10.887 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Initializing ProtocolHandler ["http-nio-8080"]
+"2017-11-27 10:27:10.892 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Starting ProtocolHandler ["http-nio-8080"]
+"2017-11-27 10:27:10.899 |-INFO  [restartedMain] org.apache.tomcat.util.net.NioSelectorPool [log 179] -| Using a shared selector for servlet write/read
+"2017-11-27 10:27:10.909 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [start 201] -| Tomcat started on port(s): 8080 (http)
+"2017-11-27 10:27:10.913 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarted 57] -| Started ShopApplication in 3.127 seconds (JVM running for 3.603)
+"2017-11-27 10:27:18.182 |-INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring FrameworkServlet 'dispatcherServlet'
+"2017-11-27 10:27:18.183 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 489] -| FrameworkServlet 'dispatcherServlet': initialization started
+"2017-11-27 10:27:18.202 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 508] -| FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+"2017-11-27 10:27:18.209 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:27:18.209 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/user/findUserInfoList
+"2017-11-27 10:27:18.231 |-DEBUG [http-nio-8080-exec-1] org.hibernate.SQL [logStatement 92] -| select userinfo0_.user_id as user_id1_0_, userinfo0_.birth as birth2_0_, userinfo0_.user_name as user_nam3_0_, userinfo0_.user_pass as user_pas4_0_ from tab_user userinfo0_
+"2017-11-27 10:27:18.324 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:27:18.324 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/favicon.ico
+"2017-11-27 10:29:19.755 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:19.755 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid
+"2017-11-27 10:29:19.759 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:19.760 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/login.html
+"2017-11-27 10:29:19.778 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:19.778 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/bootstrap.min.css
+"2017-11-27 10:29:19.778 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:19.778 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/jquery.min.js
+"2017-11-27 10:29:21.757 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:21.758 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/submitLogin
+"2017-11-27 10:29:21.777 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:21.778 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/index.html
+"2017-11-27 10:29:21.790 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:21.791 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:21.791 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/style.css
+"2017-11-27 10:29:21.791 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/bootstrap.min.css
+"2017-11-27 10:29:21.795 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:21.795 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/jquery.min.js
+"2017-11-27 10:29:21.797 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:21.797 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/lang.js
+"2017-11-27 10:29:21.799 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:21.800 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/common.js
+"2017-11-27 10:29:21.881 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:21.881 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:21.881 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/header.html
+"2017-11-27 10:29:21.881 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/basic.json
+"2017-11-27 10:29:25.004 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:25.005 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/datasource.html
+"2017-11-27 10:29:25.039 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:25.040 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/style.css
+"2017-11-27 10:29:25.039 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:25.041 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/bootstrap.min.css
+"2017-11-27 10:29:25.042 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:25.042 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/bootstrap.min.js
+"2017-11-27 10:29:25.043 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:25.044 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/jquery.min.js
+"2017-11-27 10:29:25.044 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:25.045 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/doT.js
+"2017-11-27 10:29:25.049 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:25.049 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/lang.js
+"2017-11-27 10:29:25.052 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:25.052 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/common.js
+"2017-11-27 10:29:25.122 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:25.122 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:25.123 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/header.html
+"2017-11-27 10:29:25.124 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/datasource.json
+"2017-11-27 10:29:31.893 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:31.894 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/sql.html
+"2017-11-27 10:29:31.915 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:31.916 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/jquery.min.js
+"2017-11-27 10:29:31.927 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:31.928 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/lang.js
+"2017-11-27 10:29:31.929 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:31.931 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/bootstrap.min.css
+"2017-11-27 10:29:31.929 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:31.931 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/common.js
+"2017-11-27 10:29:31.930 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:31.940 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/style.css
+"2017-11-27 10:29:31.956 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:31.956 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/bootstrap.min.js
+"2017-11-27 10:29:32.018 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:32.019 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/header.html
+"2017-11-27 10:29:32.019 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:32.019 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:32.019 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/sql.json
+"2017-11-27 10:29:32.019 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/sql.json
+"2017-11-27 10:29:33.543 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:33.544 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/wall.html
+"2017-11-27 10:29:33.563 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:33.564 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/style.css
+"2017-11-27 10:29:33.566 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:33.567 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/bootstrap.min.js
+"2017-11-27 10:29:33.569 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:33.569 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/bootstrap.min.css
+"2017-11-27 10:29:33.570 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:33.571 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/jquery.min.js
+"2017-11-27 10:29:33.594 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:33.594 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:33.595 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/common.js
+"2017-11-27 10:29:33.595 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/lang.js
+"2017-11-27 10:29:33.656 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:33.656 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:33.656 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/wall.json
+"2017-11-27 10:29:33.656 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/header.html
+"2017-11-27 10:29:36.565 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:36.566 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/webapp.html
+"2017-11-27 10:29:36.589 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:36.589 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/doT.js
+"2017-11-27 10:29:36.589 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:36.592 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/bootstrap.min.css
+"2017-11-27 10:29:36.592 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:36.593 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/bootstrap.min.js
+"2017-11-27 10:29:36.596 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:36.597 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/lang.js
+"2017-11-27 10:29:36.590 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:36.601 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/style.css
+"2017-11-27 10:29:36.591 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:36.604 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/jquery.min.js
+"2017-11-27 10:29:36.632 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:36.633 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/common.js
+"2017-11-27 10:29:36.652 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:36.652 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:36.653 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/webapp.json
+"2017-11-27 10:29:36.653 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/header.html
+"2017-11-27 10:29:38.292 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:38.293 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/wall.html
+"2017-11-27 10:29:38.308 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:38.311 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/bootstrap.min.css
+"2017-11-27 10:29:38.311 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:38.315 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/style.css
+"2017-11-27 10:29:38.318 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:38.318 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/bootstrap.min.js
+"2017-11-27 10:29:38.320 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:38.320 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/jquery.min.js
+"2017-11-27 10:29:38.345 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:38.345 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:38.346 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/common.js
+"2017-11-27 10:29:38.346 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/lang.js
+"2017-11-27 10:29:38.412 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:38.412 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:38.412 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/header.html
+"2017-11-27 10:29:38.412 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/wall.json
+"2017-11-27 10:29:43.418 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:43.418 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/wall.json
+"2017-11-27 10:29:45.319 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:45.320 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/webapp.html
+"2017-11-27 10:29:45.350 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:45.350 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:45.350 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:45.351 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/style.css
+"2017-11-27 10:29:45.351 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:45.351 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/jquery.min.js
+"2017-11-27 10:29:45.350 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/bootstrap.min.css
+"2017-11-27 10:29:45.352 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:45.352 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/bootstrap.min.js
+"2017-11-27 10:29:45.354 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:45.354 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/lang.js
+"2017-11-27 10:29:45.350 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/doT.js
+"2017-11-27 10:29:45.368 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:45.368 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/common.js
+"2017-11-27 10:29:45.406 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:45.407 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:45.407 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/header.html
+"2017-11-27 10:29:45.407 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/webapp.json
+"2017-11-27 10:29:52.541 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:52.542 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/weburi.html
+"2017-11-27 10:29:52.561 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:52.561 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/bootstrap.min.css
+"2017-11-27 10:29:52.568 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:52.568 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/style.css
+"2017-11-27 10:29:52.570 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:52.571 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/jquery.min.js
+"2017-11-27 10:29:52.575 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:52.575 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/common.js
+"2017-11-27 10:29:52.576 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:52.576 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/lang.js
+"2017-11-27 10:29:52.642 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:52.642 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:52.642 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/header.html
+"2017-11-27 10:29:52.642 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:52.642 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/weburi.json
+"2017-11-27 10:29:52.643 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/weburi.json
+"2017-11-27 10:29:57.645 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:57.646 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/weburi.json
+"2017-11-27 10:29:58.276 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:58.277 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/websession.html
+"2017-11-27 10:29:58.295 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:58.295 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/style.css
+"2017-11-27 10:29:58.299 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:58.299 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/jquery.min.js
+"2017-11-27 10:29:58.300 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:58.300 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/lang.js
+"2017-11-27 10:29:58.299 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:58.304 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/common.js
+"2017-11-27 10:29:58.308 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:58.308 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/bootstrap.min.css
+"2017-11-27 10:29:58.393 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:58.393 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:58.393 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/websession.json
+"2017-11-27 10:29:58.393 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/header.html
+"2017-11-27 10:29:59.872 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:59.873 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/spring.html
+"2017-11-27 10:29:59.899 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:59.899 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:59.900 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/common.js
+"2017-11-27 10:29:59.900 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:59.901 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/jquery.min.js
+"2017-11-27 10:29:59.900 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/bootstrap.min.css
+"2017-11-27 10:29:59.900 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:59.903 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/style.css
+"2017-11-27 10:29:59.901 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:59.908 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/lang.js
+"2017-11-27 10:29:59.994 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:59.994 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:29:59.995 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/spring.json
+"2017-11-27 10:29:59.995 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/header.html
+"2017-11-27 10:30:01.380 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:30:01.380 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/websession.html
+"2017-11-27 10:30:01.400 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:30:01.401 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/style.css
+"2017-11-27 10:30:01.402 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:30:01.402 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/jquery.min.js
+"2017-11-27 10:30:01.402 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:30:01.403 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/common.js
+"2017-11-27 10:30:01.404 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:30:01.404 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/lang.js
+"2017-11-27 10:30:01.400 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:30:01.405 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/bootstrap.min.css
+"2017-11-27 10:30:01.500 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:30:01.500 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:30:01.500 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/websession.json
+"2017-11-27 10:30:01.500 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/header.html
+"2017-11-27 10:30:02.204 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:30:02.205 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/api.html
+"2017-11-27 10:30:02.220 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:30:02.221 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:30:02.222 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/style.css
+"2017-11-27 10:30:02.221 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/css/bootstrap.min.css
+"2017-11-27 10:30:02.221 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:30:02.223 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/jquery.min.js
+"2017-11-27 10:30:02.222 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:30:02.224 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/lang.js
+"2017-11-27 10:30:02.255 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:30:02.256 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/js/common.js
+"2017-11-27 10:30:02.305 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:30:02.305 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/druid/header.html
+"2017-11-27 10:30:33.314 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarting 48] -| Starting ShopApplication on PC-20170830XIPK with PID 6808 (D:\mywork\shop\target\classes started by Administrator in D:\mywork\shop)
+"2017-11-27 10:30:33.315 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStartupProfileInfo 593] -| No active profile set, falling back to default profiles: default
+"2017-11-27 10:30:33.432 |-INFO  [background-preinit] org.hibernate.validator.internal.util.Version [<clinit> 30] -| HV000001: Hibernate Validator 5.3.5.Final
+"2017-11-27 10:30:33.465 |-INFO  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [prepareRefresh 583] -| Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@772d38de: startup date [Mon Nov 27 10:30:33 CST 2017]; root of context hierarchy
+"2017-11-27 10:30:34.517 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [initialize 89] -| Tomcat initialized with port(s): 8080 (http)
+"2017-11-27 10:30:34.523 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Starting service [Tomcat]
+"2017-11-27 10:30:34.523 |-INFO  [restartedMain] org.apache.catalina.core.StandardEngine [log 179] -| Starting Servlet Engine: Apache Tomcat/8.5.23
+"2017-11-27 10:30:34.579 |-INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring embedded WebApplicationContext
+"2017-11-27 10:30:34.579 |-INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader [prepareEmbeddedWebApplicationContext 276] -| Root WebApplicationContext: initialization completed in 1114 ms
+"2017-11-27 10:30:34.683 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'dispatcherServlet' to [/]
+"2017-11-27 10:30:34.685 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.DruidStatViewServlet' to [/druid/*]
+"2017-11-27 10:30:34.685 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.TestServlet' to [/servlet/testServlet]
+"2017-11-27 10:30:34.687 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+"2017-11-27 10:30:34.687 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+"2017-11-27 10:30:34.687 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'httpPutFormContentFilter' to: [/*]
+"2017-11-27 10:30:34.688 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'requestContextFilter' to: [/*]
+"2017-11-27 10:30:34.688 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'druidWebStatFilter' to urls: [/*]
+"2017-11-27 10:30:34.688 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'testFilter' to urls: [/*]
+"2017-11-27 10:30:34.696 |-INFO  [localhost-startStop-1] com.yt.shop.common.filter.TestFilter [init 21] -| test execute filter....init 
+"2017-11-27 10:30:34.836 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [init 932] -| {dataSource-1} inited
+"2017-11-27 10:30:34.962 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [createNativeEntityManagerFactory 349] -| Building JPA container EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:30:34.972 |-INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper [logPersistenceUnitInformation 31] -| HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+"2017-11-27 10:30:35.010 |-INFO  [restartedMain] org.hibernate.Version [logVersion 37] -| HHH000412: Hibernate Core {5.0.12.Final}
+"2017-11-27 10:30:35.011 |-INFO  [restartedMain] org.hibernate.cfg.Environment [<clinit> 213] -| HHH000206: hibernate.properties not found
+"2017-11-27 10:30:35.012 |-INFO  [restartedMain] org.hibernate.cfg.Environment [buildBytecodeProvider 317] -| HHH000021: Bytecode provider name : javassist
+"2017-11-27 10:30:35.034 |-INFO  [restartedMain] org.hibernate.annotations.common.Version [<clinit> 66] -| HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+"2017-11-27 10:30:35.116 |-INFO  [restartedMain] org.hibernate.dialect.Dialect [<init> 156] -| HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+"2017-11-27 10:30:35.378 |-INFO  [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate [execute 105] -| HHH000228: Running hbm2ddl schema update
+"2017-11-27 10:30:35.418 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [buildNativeEntityManagerFactory 379] -| Initialized JPA EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:30:35.541 |-INFO  [restartedMain] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [initiateService 47] -| HHH000397: Using ASTQueryTranslatorFactory
+"2017-11-27 10:30:35.787 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [initControllerAdviceCache 534] -| Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@772d38de: startup date [Mon Nov 27 10:30:33 CST 2017]; root of context hierarchy
+"2017-11-27 10:30:35.824 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test]}" onto public java.lang.String com.yt.shop.controller.TestController.test()
+"2017-11-27 10:30:35.825 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test2]}" onto public java.lang.String com.yt.shop.controller.TestController.test2(org.springframework.ui.Model)
+"2017-11-27 10:30:35.825 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/userInfo]}" onto public com.yt.shop.model.UserInfo com.yt.shop.controller.TestController.findUserInfo()
+"2017-11-27 10:30:35.826 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/userList]}" onto public java.util.List<com.yt.shop.model.UserInfo> com.yt.shop.controller.TestController.findList()
+"2017-11-27 10:30:35.826 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testError]}" onto public java.lang.String com.yt.shop.controller.TestController.testError()
+"2017-11-27 10:30:35.826 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testuploadimg],methods=[POST]}" onto public java.lang.String com.yt.shop.controller.TestController.uploadImg(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-11-27 10:30:35.826 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/login]}" onto public java.lang.String com.yt.shop.controller.TestController.toLogin()
+"2017-11-27 10:30:35.826 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/login]}" onto public com.yt.shop.model.UserInfo com.yt.shop.controller.TestController.login(java.lang.String,java.lang.String)
+"2017-11-27 10:30:35.826 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/findUserInfoList]}" onto public java.util.List<com.yt.shop.model.UserInfo> com.yt.shop.controller.TestController.findUserInfoList()
+"2017-11-27 10:30:35.828 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+"2017-11-27 10:30:35.828 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+"2017-11-27 10:30:35.842 |-INFO  [restartedMain] com.yt.shop.common.config.WebAppConfig [addResourceHandlers 26] -| imagesPath=file:///d:/mywork/shop/upload/
+"2017-11-27 10:30:35.847 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/upload/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:30:35.847 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:30:35.848 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:30:35.857 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [initExceptionHandlerAdviceCache 273] -| Detected @ExceptionHandler methods in globalExceptionHandler
+"2017-11-27 10:30:35.870 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:30:36.169 |-INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [startServer 58] -| LiveReload server is running on port 35729
+"2017-11-27 10:30:36.207 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [afterSingletonsInstantiated 431] -| Registering beans for JMX exposure on startup
+"2017-11-27 10:30:36.209 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [autodetect 916] -| Bean with name 'dataSource' has been autodetected for JMX exposure
+"2017-11-27 10:30:36.212 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [registerBeanInstance 671] -| Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+"2017-11-27 10:30:36.219 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Initializing ProtocolHandler ["http-nio-8080"]
+"2017-11-27 10:30:36.224 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Starting ProtocolHandler ["http-nio-8080"]
+"2017-11-27 10:30:36.231 |-INFO  [restartedMain] org.apache.tomcat.util.net.NioSelectorPool [log 179] -| Using a shared selector for servlet write/read
+"2017-11-27 10:30:36.243 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [start 201] -| Tomcat started on port(s): 8080 (http)
+"2017-11-27 10:30:36.246 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarted 57] -| Started ShopApplication in 3.168 seconds (JVM running for 3.664)
+"2017-11-27 10:30:39.607 |-INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring FrameworkServlet 'dispatcherServlet'
+"2017-11-27 10:30:39.607 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 489] -| FrameworkServlet 'dispatcherServlet': initialization started
+"2017-11-27 10:30:39.618 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 508] -| FrameworkServlet 'dispatcherServlet': initialization completed in 11 ms
+"2017-11-27 10:30:39.625 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:30:39.625 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/user/findUserInfoList
+"2017-11-27 10:30:39.678 |-WARN  [http-nio-8080-exec-1] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [logException 189] -| Resolved exception caused by Handler execution: org.springframework.jdbc.IncorrectResultSetColumnCountException: Incorrect column count: expected 1, actual 4
+"2017-11-27 10:30:39.708 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:30:39.709 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/favicon.ico
+"2017-11-27 10:35:21.867 |-INFO  [Thread-12] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [doClose 984] -| Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@772d38de: startup date [Mon Nov 27 10:30:33 CST 2017]; root of context hierarchy
+"2017-11-27 10:35:21.869 |-WARN  [Thread-12] org.springframework.beans.factory.support.DisposableBeanAdapter [destroy 281] -| Invocation of destroy method failed on bean with name 'classPathFileSystemWatcher': java.lang.NullPointerException
+"2017-11-27 10:35:21.869 |-INFO  [Thread-12] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [destroy 449] -| Unregistering JMX-exposed beans on shutdown
+"2017-11-27 10:35:21.869 |-INFO  [Thread-12] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [unregisterBeans 241] -| Unregistering JMX-exposed beans
+"2017-11-27 10:35:21.870 |-INFO  [Thread-12] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [destroy 548] -| Closing JPA EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:35:21.874 |-INFO  [Thread-12] com.alibaba.druid.pool.DruidDataSource [close 1712] -| {dataSource-1} closed
+"2017-11-27 10:35:21.945 |-INFO  [localhost-startStop-2] com.yt.shop.common.filter.TestFilter [destroy 35] -| test execute filter destroy
+"2017-11-27 10:35:22.117 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarting 48] -| Starting ShopApplication on PC-20170830XIPK with PID 6808 (D:\mywork\shop\target\classes started by Administrator in D:\mywork\shop)
+"2017-11-27 10:35:22.117 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStartupProfileInfo 593] -| No active profile set, falling back to default profiles: default
+"2017-11-27 10:35:22.119 |-INFO  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [prepareRefresh 583] -| Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a455337: startup date [Mon Nov 27 10:35:22 CST 2017]; root of context hierarchy
+"2017-11-27 10:35:22.449 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [initialize 89] -| Tomcat initialized with port(s): 8080 (http)
+"2017-11-27 10:35:22.449 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Starting service [Tomcat]
+"2017-11-27 10:35:22.449 |-INFO  [restartedMain] org.apache.catalina.core.StandardEngine [log 179] -| Starting Servlet Engine: Apache Tomcat/8.5.23
+"2017-11-27 10:35:22.461 |-INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring embedded WebApplicationContext
+"2017-11-27 10:35:22.462 |-INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader [prepareEmbeddedWebApplicationContext 276] -| Root WebApplicationContext: initialization completed in 343 ms
+"2017-11-27 10:35:22.506 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'dispatcherServlet' to [/]
+"2017-11-27 10:35:22.507 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.DruidStatViewServlet' to [/druid/*]
+"2017-11-27 10:35:22.507 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.TestServlet' to [/servlet/testServlet]
+"2017-11-27 10:35:22.508 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+"2017-11-27 10:35:22.508 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+"2017-11-27 10:35:22.508 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'httpPutFormContentFilter' to: [/*]
+"2017-11-27 10:35:22.508 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'requestContextFilter' to: [/*]
+"2017-11-27 10:35:22.508 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'druidWebStatFilter' to urls: [/*]
+"2017-11-27 10:35:22.508 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'testFilter' to urls: [/*]
+"2017-11-27 10:35:22.509 |-INFO  [localhost-startStop-1] com.yt.shop.common.filter.TestFilter [init 21] -| test execute filter....init 
+"2017-11-27 10:35:22.547 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [init 932] -| {dataSource-2} inited
+"2017-11-27 10:35:22.558 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [createNativeEntityManagerFactory 349] -| Building JPA container EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:35:22.558 |-INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper [logPersistenceUnitInformation 31] -| HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+"2017-11-27 10:35:22.563 |-INFO  [restartedMain] org.hibernate.dialect.Dialect [<init> 156] -| HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+"2017-11-27 10:35:22.575 |-INFO  [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate [execute 105] -| HHH000228: Running hbm2ddl schema update
+"2017-11-27 10:35:22.591 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [buildNativeEntityManagerFactory 379] -| Initialized JPA EntityManagerFactory for persistence unit 'default'
+"2017-11-27 10:35:22.611 |-INFO  [restartedMain] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [initiateService 47] -| HHH000397: Using ASTQueryTranslatorFactory
+"2017-11-27 10:35:22.675 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [initControllerAdviceCache 534] -| Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a455337: startup date [Mon Nov 27 10:35:22 CST 2017]; root of context hierarchy
+"2017-11-27 10:35:22.683 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test]}" onto public java.lang.String com.yt.shop.controller.TestController.test()
+"2017-11-27 10:35:22.684 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test2]}" onto public java.lang.String com.yt.shop.controller.TestController.test2(org.springframework.ui.Model)
+"2017-11-27 10:35:22.684 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/userInfo]}" onto public com.yt.shop.model.UserInfo com.yt.shop.controller.TestController.findUserInfo()
+"2017-11-27 10:35:22.684 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/userList]}" onto public java.util.List<com.yt.shop.model.UserInfo> com.yt.shop.controller.TestController.findList()
+"2017-11-27 10:35:22.684 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testError]}" onto public java.lang.String com.yt.shop.controller.TestController.testError()
+"2017-11-27 10:35:22.685 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testuploadimg],methods=[POST]}" onto public java.lang.String com.yt.shop.controller.TestController.uploadImg(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-11-27 10:35:22.685 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/login]}" onto public java.lang.String com.yt.shop.controller.TestController.toLogin()
+"2017-11-27 10:35:22.685 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/login]}" onto public com.yt.shop.model.UserInfo com.yt.shop.controller.TestController.login(java.lang.String,java.lang.String)
+"2017-11-27 10:35:22.685 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/findUserInfoList]}" onto public java.util.List<com.yt.shop.model.UserInfo> com.yt.shop.controller.TestController.findUserInfoList()
+"2017-11-27 10:35:22.687 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+"2017-11-27 10:35:22.687 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+"2017-11-27 10:35:22.691 |-INFO  [restartedMain] com.yt.shop.common.config.WebAppConfig [addResourceHandlers 26] -| imagesPath=file:///d:/mywork/shop/upload/
+"2017-11-27 10:35:22.692 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/upload/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:35:22.692 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:35:22.693 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:35:22.699 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [initExceptionHandlerAdviceCache 273] -| Detected @ExceptionHandler methods in globalExceptionHandler
+"2017-11-27 10:35:22.703 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 10:35:22.744 |-INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [startServer 58] -| LiveReload server is running on port 35729
+"2017-11-27 10:35:22.774 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [afterSingletonsInstantiated 431] -| Registering beans for JMX exposure on startup
+"2017-11-27 10:35:22.774 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [autodetect 916] -| Bean with name 'dataSource' has been autodetected for JMX exposure
+"2017-11-27 10:35:22.777 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [registerBeanInstance 671] -| Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+"2017-11-27 10:35:22.780 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Initializing ProtocolHandler ["http-nio-8080"]
+"2017-11-27 10:35:22.781 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Starting ProtocolHandler ["http-nio-8080"]
+"2017-11-27 10:35:22.781 |-INFO  [restartedMain] org.apache.tomcat.util.net.NioSelectorPool [log 179] -| Using a shared selector for servlet write/read
+"2017-11-27 10:35:22.785 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [start 201] -| Tomcat started on port(s): 8080 (http)
+"2017-11-27 10:35:22.786 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarted 57] -| Started ShopApplication in 0.698 seconds (JVM running for 290.185)
+"2017-11-27 10:35:30.385 |-INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring FrameworkServlet 'dispatcherServlet'
+"2017-11-27 10:35:30.386 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 489] -| FrameworkServlet 'dispatcherServlet': initialization started
+"2017-11-27 10:35:30.397 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 508] -| FrameworkServlet 'dispatcherServlet': initialization completed in 11 ms
+"2017-11-27 10:35:30.398 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:35:30.399 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/user/findUserInfoList
+"2017-11-27 10:35:30.459 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 10:35:30.459 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/favicon.ico
 "

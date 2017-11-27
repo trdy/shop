@@ -32,7 +32,7 @@ public class TestService {
 
 
     @Transactional
-    public List<Map<String,Object>> findUserInfoList() {
+    public List<UserInfo> findUserInfoList() {
         return testDBDao.findUserInfoList();
     }
 

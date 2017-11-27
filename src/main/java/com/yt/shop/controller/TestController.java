@@ -124,6 +124,15 @@ public class TestController {
     }
 
     /**
+     * 转到template目录下的login.html
+     * @return
+     */
+    @RequestMapping("/login")
+    public String toLogin(){
+        return "login";
+    }
+
+    /**
      * 测试jpa数据库操作
      * @param userName
      * @param userPass
@@ -144,7 +153,7 @@ public class TestController {
      */
     @RequestMapping("/user/findUserInfoList")
     @ResponseBody
-    public List<Map<String,Object>> findUserInfoList(){
+    public List<UserInfo> findUserInfoList(){
         return testService.findUserInfoList();
     }
 

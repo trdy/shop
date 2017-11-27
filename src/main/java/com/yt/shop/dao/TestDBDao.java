@@ -18,5 +18,5 @@ import org.springframework.stereotype.Repository;
 public interface TestDBDao extends JpaSpecificationExecutor<UserInfo>,PagingAndSortingRepository<UserInfo, Long> {
 
     @Query(value = "from UserInfo u where u.userName=:userName and u.userPass=:userPass")
-    public UserInfo findUserInfoByNameAndPass(@Param("userName") String userName, @Param("userPass") String userPass);
+    UserInfo findUserInfoByNameAndPass(@Param("userName") String userName, @Param("userPass") String userPass);
 }

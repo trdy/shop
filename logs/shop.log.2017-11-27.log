@@ -2636,4 +2636,1008 @@ Caused by: java.lang.IllegalArgumentException: Not a managed type: class java.la
 "2017-11-27 14:26:36.516 |-INFO  [http-nio-8080-exec-3] com.yt.shop.controller.TestController [userInfoEdit 163] -| 转到用户信息编辑页面
 "2017-11-27 14:26:36.517 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
 "2017-11-27 14:26:36.530 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 14:52:42.770 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarting 48] -| Starting ShopApplication on PC-20170830XIPK with PID 5956 (D:\mywork\shop\target\classes started by Administrator in D:\mywork\shop)
+"2017-11-27 14:52:42.771 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStartupProfileInfo 593] -| No active profile set, falling back to default profiles: default
+"2017-11-27 14:52:42.895 |-INFO  [background-preinit] org.hibernate.validator.internal.util.Version [<clinit> 30] -| HV000001: Hibernate Validator 5.3.5.Final
+"2017-11-27 14:52:42.923 |-INFO  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [prepareRefresh 583] -| Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@772d38de: startup date [Mon Nov 27 14:52:42 CST 2017]; root of context hierarchy
+"2017-11-27 14:52:43.891 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [initialize 89] -| Tomcat initialized with port(s): 8080 (http)
+"2017-11-27 14:52:43.897 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Starting service [Tomcat]
+"2017-11-27 14:52:43.897 |-INFO  [restartedMain] org.apache.catalina.core.StandardEngine [log 179] -| Starting Servlet Engine: Apache Tomcat/8.5.23
+"2017-11-27 14:52:43.952 |-INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring embedded WebApplicationContext
+"2017-11-27 14:52:43.952 |-INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader [prepareEmbeddedWebApplicationContext 276] -| Root WebApplicationContext: initialization completed in 1029 ms
+"2017-11-27 14:52:44.052 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'dispatcherServlet' to [/]
+"2017-11-27 14:52:44.053 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.DruidStatViewServlet' to [/druid/*]
+"2017-11-27 14:52:44.053 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.TestServlet' to [/servlet/testServlet]
+"2017-11-27 14:52:44.054 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+"2017-11-27 14:52:44.055 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+"2017-11-27 14:52:44.055 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'httpPutFormContentFilter' to: [/*]
+"2017-11-27 14:52:44.055 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'requestContextFilter' to: [/*]
+"2017-11-27 14:52:44.055 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'druidWebStatFilter' to urls: [/*]
+"2017-11-27 14:52:44.055 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'testFilter' to urls: [/*]
+"2017-11-27 14:52:44.063 |-INFO  [localhost-startStop-1] com.yt.shop.common.filter.TestFilter [init 21] -| test execute filter....init 
+"2017-11-27 14:52:44.200 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [init 932] -| {dataSource-1} inited
+"2017-11-27 14:53:05.240 |-ERROR [Druid-ConnectionPool-Create-1213293856] com.alibaba.druid.pool.DruidDataSource [run 2336] -| create connection SQLException, url: jdbc:mysql://192.168.0.201:3306/netshop, errorCode 0, state 08S01
+"com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2408)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1468)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2017-11-27 14:53:26.246 |-ERROR [Druid-ConnectionPool-Create-1213293856] com.alibaba.druid.pool.DruidDataSource [run 2336] -| create connection SQLException, url: jdbc:mysql://192.168.0.201:3306/netshop, errorCode 0, state 08S01
+"com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2408)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1468)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2017-11-27 14:53:47.746 |-ERROR [Druid-ConnectionPool-Create-1213293856] com.alibaba.druid.pool.DruidDataSource [run 2336] -| create connection SQLException, url: jdbc:mysql://192.168.0.201:3306/netshop, errorCode 0, state 08S01
+"com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2408)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1468)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2017-11-27 14:54:09.256 |-ERROR [Druid-ConnectionPool-Create-1213293856] com.alibaba.druid.pool.DruidDataSource [run 2336] -| create connection SQLException, url: jdbc:mysql://192.168.0.201:3306/netshop, errorCode 0, state 08S01
+"com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2408)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1468)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2017-11-27 14:54:30.769 |-ERROR [Druid-ConnectionPool-Create-1213293856] com.alibaba.druid.pool.DruidDataSource [run 2336] -| create connection SQLException, url: jdbc:mysql://192.168.0.201:3306/netshop, errorCode 0, state 08S01
+"com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2408)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1468)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2017-11-27 14:54:52.274 |-ERROR [Druid-ConnectionPool-Create-1213293856] com.alibaba.druid.pool.DruidDataSource [run 2336] -| create connection SQLException, url: jdbc:mysql://192.168.0.201:3306/netshop, errorCode 0, state 08S01
+"com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2408)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1468)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2017-11-27 14:55:13.778 |-ERROR [Druid-ConnectionPool-Create-1213293856] com.alibaba.druid.pool.DruidDataSource [run 2336] -| create connection SQLException, url: jdbc:mysql://192.168.0.201:3306/netshop, errorCode 0, state 08S01
+"com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2408)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1468)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2017-11-27 14:55:35.292 |-ERROR [Druid-ConnectionPool-Create-1213293856] com.alibaba.druid.pool.DruidDataSource [run 2336] -| create connection SQLException, url: jdbc:mysql://192.168.0.201:3306/netshop, errorCode 0, state 08S01
+"com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2408)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1468)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2017-11-27 14:55:56.804 |-ERROR [Druid-ConnectionPool-Create-1213293856] com.alibaba.druid.pool.DruidDataSource [run 2336] -| create connection SQLException, url: jdbc:mysql://192.168.0.201:3306/netshop, errorCode 0, state 08S01
+"com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2408)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1468)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2017-11-27 14:56:18.315 |-ERROR [Druid-ConnectionPool-Create-1213293856] com.alibaba.druid.pool.DruidDataSource [run 2336] -| create connection SQLException, url: jdbc:mysql://192.168.0.201:3306/netshop, errorCode 0, state 08S01
+"com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2408)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1468)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2017-11-27 14:56:39.817 |-ERROR [Druid-ConnectionPool-Create-1213293856] com.alibaba.druid.pool.DruidDataSource [run 2336] -| create connection SQLException, url: jdbc:mysql://192.168.0.201:3306/netshop, errorCode 0, state 08S01
+"com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2408)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1468)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2017-11-27 14:57:01.321 |-ERROR [Druid-ConnectionPool-Create-1213293856] com.alibaba.druid.pool.DruidDataSource [run 2336] -| create connection SQLException, url: jdbc:mysql://192.168.0.201:3306/netshop, errorCode 0, state 08S01
+"com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2408)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1468)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2017-11-27 14:57:22.825 |-ERROR [Druid-ConnectionPool-Create-1213293856] com.alibaba.druid.pool.DruidDataSource [run 2336] -| create connection SQLException, url: jdbc:mysql://192.168.0.201:3306/netshop, errorCode 0, state 08S01
+"com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2408)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1468)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2017-11-27 14:57:44.326 |-ERROR [Druid-ConnectionPool-Create-1213293856] com.alibaba.druid.pool.DruidDataSource [run 2336] -| create connection SQLException, url: jdbc:mysql://192.168.0.201:3306/netshop, errorCode 0, state 08S01
+"com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2408)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1468)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2017-11-27 14:58:05.825 |-ERROR [Druid-ConnectionPool-Create-1213293856] com.alibaba.druid.pool.DruidDataSource [run 2336] -| create connection SQLException, url: jdbc:mysql://192.168.0.201:3306/netshop, errorCode 0, state 08S01
+"com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2408)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1468)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2017-11-27 14:58:27.328 |-ERROR [Druid-ConnectionPool-Create-1213293856] com.alibaba.druid.pool.DruidDataSource [run 2336] -| create connection SQLException, url: jdbc:mysql://192.168.0.201:3306/netshop, errorCode 0, state 08S01
+"com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2408)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1468)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2017-11-27 14:58:48.836 |-ERROR [Druid-ConnectionPool-Create-1213293856] com.alibaba.druid.pool.DruidDataSource [run 2336] -| create connection SQLException, url: jdbc:mysql://192.168.0.201:3306/netshop, errorCode 0, state 08S01
+"com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor36.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2408)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.GeneratedConstructorAccessor33.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1468)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 14 common frames omitted
+2017-11-27 14:59:10.345 |-ERROR [Druid-ConnectionPool-Create-1213293856] com.alibaba.druid.pool.DruidDataSource [run 2336] -| create connection SQLException, url: jdbc:mysql://192.168.0.201:3306/netshop, errorCode 0, state 08S01
+"com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor36.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2408)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.GeneratedConstructorAccessor33.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1468)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1533)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2333)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 14 common frames omitted
+2017-11-27 14:59:19.948 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarting 48] -| Starting ShopApplication on PC-20170830XIPK with PID 6460 (D:\mywork\shop\target\classes started by Administrator in D:\mywork\shop)
+"2017-11-27 14:59:19.949 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStartupProfileInfo 593] -| No active profile set, falling back to default profiles: default
+"2017-11-27 14:59:20.055 |-INFO  [background-preinit] org.hibernate.validator.internal.util.Version [<clinit> 30] -| HV000001: Hibernate Validator 5.3.5.Final
+"2017-11-27 14:59:20.092 |-INFO  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [prepareRefresh 583] -| Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5e233892: startup date [Mon Nov 27 14:59:20 CST 2017]; root of context hierarchy
+"2017-11-27 14:59:21.095 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [initialize 89] -| Tomcat initialized with port(s): 8080 (http)
+"2017-11-27 14:59:21.100 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Starting service [Tomcat]
+"2017-11-27 14:59:21.101 |-INFO  [restartedMain] org.apache.catalina.core.StandardEngine [log 179] -| Starting Servlet Engine: Apache Tomcat/8.5.23
+"2017-11-27 14:59:21.161 |-INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring embedded WebApplicationContext
+"2017-11-27 14:59:21.161 |-INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader [prepareEmbeddedWebApplicationContext 276] -| Root WebApplicationContext: initialization completed in 1069 ms
+"2017-11-27 14:59:21.268 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'dispatcherServlet' to [/]
+"2017-11-27 14:59:21.269 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.DruidStatViewServlet' to [/druid/*]
+"2017-11-27 14:59:21.269 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.TestServlet' to [/servlet/testServlet]
+"2017-11-27 14:59:21.271 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+"2017-11-27 14:59:21.271 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+"2017-11-27 14:59:21.271 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'httpPutFormContentFilter' to: [/*]
+"2017-11-27 14:59:21.271 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'requestContextFilter' to: [/*]
+"2017-11-27 14:59:21.271 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'druidWebStatFilter' to urls: [/*]
+"2017-11-27 14:59:21.271 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'testFilter' to urls: [/*]
+"2017-11-27 14:59:21.281 |-INFO  [localhost-startStop-1] com.yt.shop.common.filter.TestFilter [init 21] -| test execute filter....init 
+"2017-11-27 14:59:21.437 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [init 932] -| {dataSource-1} inited
+"2017-11-27 14:59:21.558 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [createNativeEntityManagerFactory 349] -| Building JPA container EntityManagerFactory for persistence unit 'default'
+"2017-11-27 14:59:21.565 |-INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper [logPersistenceUnitInformation 31] -| HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+"2017-11-27 14:59:21.600 |-INFO  [restartedMain] org.hibernate.Version [logVersion 37] -| HHH000412: Hibernate Core {5.0.12.Final}
+"2017-11-27 14:59:21.601 |-INFO  [restartedMain] org.hibernate.cfg.Environment [<clinit> 213] -| HHH000206: hibernate.properties not found
+"2017-11-27 14:59:21.602 |-INFO  [restartedMain] org.hibernate.cfg.Environment [buildBytecodeProvider 317] -| HHH000021: Bytecode provider name : javassist
+"2017-11-27 14:59:21.624 |-INFO  [restartedMain] org.hibernate.annotations.common.Version [<clinit> 66] -| HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+"2017-11-27 14:59:21.683 |-INFO  [restartedMain] org.hibernate.dialect.Dialect [<init> 156] -| HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+"2017-11-27 14:59:21.951 |-INFO  [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate [execute 105] -| HHH000228: Running hbm2ddl schema update
+"2017-11-27 14:59:21.993 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [buildNativeEntityManagerFactory 379] -| Initialized JPA EntityManagerFactory for persistence unit 'default'
+"2017-11-27 14:59:22.110 |-INFO  [restartedMain] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [initiateService 47] -| HHH000397: Using ASTQueryTranslatorFactory
+"2017-11-27 14:59:22.353 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [initControllerAdviceCache 534] -| Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5e233892: startup date [Mon Nov 27 14:59:20 CST 2017]; root of context hierarchy
+"2017-11-27 14:59:22.390 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test]}" onto public java.lang.String com.yt.shop.controller.TestController.test()
+"2017-11-27 14:59:22.391 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/userInfo]}" onto public com.yt.shop.model.UserInfo com.yt.shop.controller.TestController.findUserInfo()
+"2017-11-27 14:59:22.392 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test2]}" onto public java.lang.String com.yt.shop.controller.TestController.test2(org.springframework.ui.Model)
+"2017-11-27 14:59:22.393 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/userList]}" onto public java.util.List<com.yt.shop.model.UserInfo> com.yt.shop.controller.TestController.findList()
+"2017-11-27 14:59:22.393 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testError]}" onto public java.lang.String com.yt.shop.controller.TestController.testError()
+"2017-11-27 14:59:22.393 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testuploadimg],methods=[POST]}" onto public java.lang.String com.yt.shop.controller.TestController.uploadImg(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-11-27 14:59:22.393 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/login]}" onto public java.lang.String com.yt.shop.controller.TestController.toLogin()
+"2017-11-27 14:59:22.394 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/login]}" onto public com.yt.shop.model.UserInfo com.yt.shop.controller.TestController.login(java.lang.String,java.lang.String)
+"2017-11-27 14:59:22.394 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/findUserInfoList]}" onto public java.util.List<com.yt.shop.model.UserInfo> com.yt.shop.controller.TestController.findUserInfoList()
+"2017-11-27 14:59:22.394 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/userInfoEdit]}" onto public java.lang.String com.yt.shop.controller.TestController.userInfoEdit()
+"2017-11-27 14:59:22.394 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/userInfoSave]}" onto public java.lang.String com.yt.shop.controller.TestController.userInfoSave(java.lang.String,java.lang.String)
+"2017-11-27 14:59:22.396 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+"2017-11-27 14:59:22.396 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+"2017-11-27 14:59:22.409 |-INFO  [restartedMain] com.yt.shop.common.config.WebAppConfig [addResourceHandlers 28] -| imagesPath=file:///d:/mywork/shop/upload/
+"2017-11-27 14:59:22.415 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/upload/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 14:59:22.415 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 14:59:22.415 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 14:59:22.426 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [initExceptionHandlerAdviceCache 273] -| Detected @ExceptionHandler methods in globalExceptionHandler
+"2017-11-27 14:59:22.736 |-INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [startServer 58] -| LiveReload server is running on port 35729
+"2017-11-27 14:59:22.772 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [afterSingletonsInstantiated 431] -| Registering beans for JMX exposure on startup
+"2017-11-27 14:59:22.773 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [autodetect 916] -| Bean with name 'dataSource' has been autodetected for JMX exposure
+"2017-11-27 14:59:22.777 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [registerBeanInstance 671] -| Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+"2017-11-27 14:59:22.785 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Initializing ProtocolHandler ["http-nio-8080"]
+"2017-11-27 14:59:22.790 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Starting ProtocolHandler ["http-nio-8080"]
+"2017-11-27 14:59:22.796 |-INFO  [restartedMain] org.apache.tomcat.util.net.NioSelectorPool [log 179] -| Using a shared selector for servlet write/read
+"2017-11-27 14:59:22.808 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [start 201] -| Tomcat started on port(s): 8080 (http)
+"2017-11-27 14:59:22.812 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarted 57] -| Started ShopApplication in 3.119 seconds (JVM running for 3.606)
+"2017-11-27 16:12:52.362 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarting 48] -| Starting ShopApplication on PC-20170830XIPK with PID 8252 (D:\mywork\shop\target\classes started by Administrator in D:\mywork\shop)
+"2017-11-27 16:12:52.363 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStartupProfileInfo 593] -| No active profile set, falling back to default profiles: default
+"2017-11-27 16:12:52.494 |-INFO  [background-preinit] org.hibernate.validator.internal.util.Version [<clinit> 30] -| HV000001: Hibernate Validator 5.3.5.Final
+"2017-11-27 16:12:52.531 |-INFO  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [prepareRefresh 583] -| Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1b62cea7: startup date [Mon Nov 27 16:12:52 CST 2017]; root of context hierarchy
+"2017-11-27 16:12:53.532 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [initialize 89] -| Tomcat initialized with port(s): 8080 (http)
+"2017-11-27 16:12:53.544 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Starting service [Tomcat]
+"2017-11-27 16:12:53.544 |-INFO  [restartedMain] org.apache.catalina.core.StandardEngine [log 179] -| Starting Servlet Engine: Apache Tomcat/8.5.23
+"2017-11-27 16:12:53.604 |-INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring embedded WebApplicationContext
+"2017-11-27 16:12:53.604 |-INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader [prepareEmbeddedWebApplicationContext 276] -| Root WebApplicationContext: initialization completed in 1073 ms
+"2017-11-27 16:12:53.708 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'dispatcherServlet' to [/]
+"2017-11-27 16:12:53.709 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.DruidStatViewServlet' to [/druid/*]
+"2017-11-27 16:12:53.709 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.TestServlet' to [/servlet/testServlet]
+"2017-11-27 16:12:53.711 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+"2017-11-27 16:12:53.711 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+"2017-11-27 16:12:53.711 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'httpPutFormContentFilter' to: [/*]
+"2017-11-27 16:12:53.711 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'requestContextFilter' to: [/*]
+"2017-11-27 16:12:53.712 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'druidWebStatFilter' to urls: [/*]
+"2017-11-27 16:12:53.712 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'testFilter' to urls: [/*]
+"2017-11-27 16:12:53.720 |-INFO  [localhost-startStop-1] com.yt.shop.common.filter.TestFilter [init 21] -| test execute filter....init 
+"2017-11-27 16:12:53.864 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [init 932] -| {dataSource-1} inited
+"2017-11-27 16:12:53.991 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [createNativeEntityManagerFactory 349] -| Building JPA container EntityManagerFactory for persistence unit 'default'
+"2017-11-27 16:12:53.999 |-INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper [logPersistenceUnitInformation 31] -| HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+"2017-11-27 16:12:54.041 |-INFO  [restartedMain] org.hibernate.Version [logVersion 37] -| HHH000412: Hibernate Core {5.0.12.Final}
+"2017-11-27 16:12:54.042 |-INFO  [restartedMain] org.hibernate.cfg.Environment [<clinit> 213] -| HHH000206: hibernate.properties not found
+"2017-11-27 16:12:54.043 |-INFO  [restartedMain] org.hibernate.cfg.Environment [buildBytecodeProvider 317] -| HHH000021: Bytecode provider name : javassist
+"2017-11-27 16:12:54.069 |-INFO  [restartedMain] org.hibernate.annotations.common.Version [<clinit> 66] -| HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+"2017-11-27 16:12:54.151 |-INFO  [restartedMain] org.hibernate.dialect.Dialect [<init> 156] -| HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+"2017-11-27 16:12:54.440 |-INFO  [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate [execute 105] -| HHH000228: Running hbm2ddl schema update
+"2017-11-27 16:12:54.482 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [buildNativeEntityManagerFactory 379] -| Initialized JPA EntityManagerFactory for persistence unit 'default'
+"2017-11-27 16:12:54.622 |-INFO  [restartedMain] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [initiateService 47] -| HHH000397: Using ASTQueryTranslatorFactory
+"2017-11-27 16:12:54.870 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [initControllerAdviceCache 534] -| Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1b62cea7: startup date [Mon Nov 27 16:12:52 CST 2017]; root of context hierarchy
+"2017-11-27 16:12:54.912 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test]}" onto public java.lang.String com.yt.shop.controller.TestController.test()
+"2017-11-27 16:12:54.913 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test2]}" onto public java.lang.String com.yt.shop.controller.TestController.test2(org.springframework.ui.Model)
+"2017-11-27 16:12:54.914 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/userInfo]}" onto public com.yt.shop.model.UserInfo com.yt.shop.controller.TestController.findUserInfo()
+"2017-11-27 16:12:54.914 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/userList]}" onto public java.util.List<com.yt.shop.model.UserInfo> com.yt.shop.controller.TestController.findList()
+"2017-11-27 16:12:54.914 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testError]}" onto public java.lang.String com.yt.shop.controller.TestController.testError()
+"2017-11-27 16:12:54.914 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testuploadimg],methods=[POST]}" onto public java.lang.String com.yt.shop.controller.TestController.uploadImg(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-11-27 16:12:54.915 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/login]}" onto public java.lang.String com.yt.shop.controller.TestController.toLogin()
+"2017-11-27 16:12:54.915 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/login]}" onto public com.yt.shop.model.UserInfo com.yt.shop.controller.TestController.login(java.lang.String,java.lang.String)
+"2017-11-27 16:12:54.915 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/findUserInfoList]}" onto public java.util.List<com.yt.shop.model.UserInfo> com.yt.shop.controller.TestController.findUserInfoList()
+"2017-11-27 16:12:54.915 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/userInfoEdit]}" onto public java.lang.String com.yt.shop.controller.TestController.userInfoEdit()
+"2017-11-27 16:12:54.915 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/userInfoSave]}" onto public java.lang.String com.yt.shop.controller.TestController.userInfoSave(java.lang.String,java.lang.String)
+"2017-11-27 16:12:54.917 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+"2017-11-27 16:12:54.917 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+"2017-11-27 16:12:54.930 |-INFO  [restartedMain] com.yt.shop.common.config.WebAppConfig [addResourceHandlers 28] -| imagesPath=file:///d:/mywork/shop/upload/
+"2017-11-27 16:12:54.936 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/upload/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 16:12:54.936 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 16:12:54.936 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-11-27 16:12:54.946 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [initExceptionHandlerAdviceCache 273] -| Detected @ExceptionHandler methods in globalExceptionHandler
+"2017-11-27 16:12:55.257 |-WARN  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [startServer 62] -| Unable to start LiveReload server
+"2017-11-27 16:12:55.295 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [afterSingletonsInstantiated 431] -| Registering beans for JMX exposure on startup
+"2017-11-27 16:12:55.296 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [autodetect 916] -| Bean with name 'dataSource' has been autodetected for JMX exposure
+"2017-11-27 16:12:55.299 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [registerBeanInstance 671] -| Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+"2017-11-27 16:12:55.307 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Initializing ProtocolHandler ["http-nio-8080"]
+"2017-11-27 16:12:55.312 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Starting ProtocolHandler ["http-nio-8080"]
+"2017-11-27 16:12:55.318 |-INFO  [restartedMain] org.apache.tomcat.util.net.NioSelectorPool [log 179] -| Using a shared selector for servlet write/read
+"2017-11-27 16:12:55.331 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [start 201] -| Tomcat started on port(s): 8080 (http)
+"2017-11-27 16:12:55.334 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarted 57] -| Started ShopApplication in 3.188 seconds (JVM running for 3.721)
+"2017-11-27 16:13:11.402 |-INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring FrameworkServlet 'dispatcherServlet'
+"2017-11-27 16:13:11.402 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 489] -| FrameworkServlet 'dispatcherServlet': initialization started
+"2017-11-27 16:13:11.414 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 508] -| FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+"2017-11-27 16:13:11.421 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:13:11.421 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/userList
+"2017-11-27 16:13:11.426 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:13:11.432 |-INFO  [http-nio-8080-exec-1] com.yt.shop.controller.TestController [findList 76] -| call TestController return list json method......
+"2017-11-27 16:13:11.472 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:13:11.472 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:15:43.707 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:15:43.708 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/userList
+"2017-11-27 16:15:43.708 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:15:43.708 |-INFO  [http-nio-8080-exec-3] com.yt.shop.controller.TestController [findList 76] -| call TestController return list json method......
+"2017-11-27 16:15:43.710 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:15:43.711 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:15:43.733 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:15:43.734 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/userList
+"2017-11-27 16:15:43.734 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:15:43.734 |-INFO  [http-nio-8080-exec-4] com.yt.shop.controller.TestController [findList 76] -| call TestController return list json method......
+"2017-11-27 16:15:43.735 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:15:43.736 |-INFO  [http-nio-8080-exec-4] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:15:47.999 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:15:48.000 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/userList
+"2017-11-27 16:15:48.001 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:15:48.003 |-INFO  [http-nio-8080-exec-5] com.yt.shop.controller.TestController [findList 76] -| call TestController return list json method......
+"2017-11-27 16:15:48.008 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:15:48.009 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:16:01.611 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:16:01.613 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/favicon.ico
+"2017-11-27 16:16:01.641 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:16:01.664 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:16:01.664 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:16:27.839 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:16:27.839 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/userList
+"2017-11-27 16:16:27.842 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:16:27.853 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:16:27.854 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:16:30.661 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:16:30.662 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/userList
+"2017-11-27 16:16:30.663 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:16:30.664 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:16:30.665 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:16:45.047 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:16:45.048 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/userList
+"2017-11-27 16:16:45.049 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:16:45.050 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:16:45.052 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:16:48.034 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:16:48.035 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/userList
+"2017-11-27 16:16:48.036 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:16:48.037 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:16:48.038 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:17:58.380 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:17:58.380 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/userList
+"2017-11-27 16:17:58.382 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:17:58.384 |-INFO  [http-nio-8080-exec-5] com.yt.shop.controller.TestController [findList 76] -| call TestController return list json method......
+"2017-11-27 16:17:58.387 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:17:58.389 |-INFO  [http-nio-8080-exec-5] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:18:00.515 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:18:00.516 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/userList
+"2017-11-27 16:18:00.517 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:18:00.519 |-INFO  [http-nio-8080-exec-6] com.yt.shop.controller.TestController [findList 76] -| call TestController return list json method......
+"2017-11-27 16:18:00.524 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:18:00.525 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:18:05.092 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:18:05.092 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/userList
+"2017-11-27 16:18:05.093 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:18:05.095 |-INFO  [http-nio-8080-exec-7] com.yt.shop.controller.TestController [findList 76] -| call TestController return list json method......
+"2017-11-27 16:18:05.098 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:18:05.098 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:18:58.773 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:18:58.774 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/user/userInfoList
+"2017-11-27 16:18:58.779 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:18:58.786 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:18:58.788 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:19:27.727 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:19:27.727 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/user/user/findUserInfoList
+"2017-11-27 16:19:27.730 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:19:27.732 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:19:27.733 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:19:50.162 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:19:50.163 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/user/findUserInfoList
+"2017-11-27 16:19:50.163 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:19:50.191 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:19:50.191 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:20:33.247 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:20:33.247 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/user/findUserInfoList%20
+"2017-11-27 16:20:33.253 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:20:33.257 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:20:33.258 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:20:35.794 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:20:35.795 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/user/findUserInfoList%20
+"2017-11-27 16:20:35.800 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:20:35.804 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:20:35.804 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:21:00.382 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:21:00.382 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/user/findUserInfoList
+"2017-11-27 16:21:00.382 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:21:00.386 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:21:00.387 |-INFO  [http-nio-8080-exec-3] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:21:20.421 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:21:20.422 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/user/findUserInfoList%20
+"2017-11-27 16:21:20.429 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:21:20.433 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:21:20.433 |-INFO  [http-nio-8080-exec-6] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:21:35.675 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:21:35.676 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/user/findUserInfoList
+"2017-11-27 16:21:35.676 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:21:35.679 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:21:35.679 |-INFO  [http-nio-8080-exec-7] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:21:40.213 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:21:40.213 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/user/findUserInfoList
+"2017-11-27 16:21:40.214 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:21:40.220 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:21:40.220 |-INFO  [http-nio-8080-exec-9] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:21:41.972 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:21:41.973 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/user/findUserInfoList
+"2017-11-27 16:21:41.974 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:21:41.982 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:21:41.984 |-INFO  [http-nio-8080-exec-8] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:21:42.118 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:21:42.118 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/favicon.ico
+"2017-11-27 16:21:42.119 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:21:42.121 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:21:42.122 |-INFO  [http-nio-8080-exec-10] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
+"2017-11-27 16:22:20.350 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 26] -| test execute filter doFilter
+"2017-11-27 16:22:20.351 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.filter.TestFilter [doFilter 28] -| 请求地址：/user/findUserInfoList
+"2017-11-27 16:22:20.351 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.interceptor.TestInterceptor [preHandle 18] -| call TestInterceptor preHeadle method .....
+"2017-11-27 16:22:20.360 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.interceptor.TestInterceptor [postHandle 24] -| call TestInterceptor postHandle method .....
+"2017-11-27 16:22:20.361 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.interceptor.TestInterceptor [afterCompletion 30] -| call TestInterceptor afterCompletion method .....
 "

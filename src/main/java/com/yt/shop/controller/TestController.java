@@ -8,10 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
@@ -140,11 +137,17 @@ public class TestController {
      */
     @RequestMapping("/user/login")
     @ResponseBody
-    public UserInfo login(String userName,String userPass){
+    public int login(String userName,String userPass){
         log.info("验证用户名:"+userName+"和密码："+userPass);
         UserInfo userInfo=testService.findUserInfoByNameAndPass(userName,userPass);
-        log.info("查询数据库返回userinfo:"+userInfo);
-        return userInfo;
+        if(userInfo!=null){
+            log.info("查询数据库返回userinfo:"+userInfo);
+            return 1;
+        }else{
+            log.info("查询数据库未找到");
+            return 0;
+        }
+
     }
 
     /**
@@ -167,13 +170,10 @@ public class TestController {
 
     @RequestMapping("/user/userInfoSave")
     @ResponseBody
-    public String userInfoSave(String userName,String userPass){
+    public String userInfoSave(@RequestBody UserInfo userInfo){
         log.info("保存用户信息");
-        UserInfo u=new UserInfo();
-        u.setUserName(userName);
-        u.setUserPass(userPass);
-        u.setBirth(new Timestamp(System.currentTimeMillis()));
-        testService.insertUserInfo(u);
+        userInfo.setBirth(new Timestamp(System.currentTimeMillis()));
+        testService.insertUserInfo(userInfo);
 
         return "success";
     }

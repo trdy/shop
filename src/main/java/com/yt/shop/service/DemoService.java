@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service("demoService")
 public class DemoService {
 
@@ -19,5 +21,10 @@ public class DemoService {
     @Transactional
     public Person insertPerson(Person person) {
         return personJpa.save(person);
+    }
+
+    @Transactional
+    public List<Person> findPersonList() {
+        return personJpa.findAll();
     }
 }

@@ -1,9 +1,10 @@
 package com.yt.shop.common.config;
 
-import com.yt.shop.common.interceptor.TestInterceptor;
+import com.yt.shop.common.interceptor.OperLogInterceptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -30,9 +31,14 @@ public class WebAppConfig extends WebMvcConfigurerAdapter{
         super.addResourceHandlers(registry);
     }
 
+    @Bean
+    public OperLogInterceptor operLogInterceptor(){
+        return new OperLogInterceptor();
+    }
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new TestInterceptor()).addPathPatterns("/**");
+        registry.addInterceptor(operLogInterceptor()).addPathPatterns("/**");
         super.addInterceptors(registry);
     }
 }

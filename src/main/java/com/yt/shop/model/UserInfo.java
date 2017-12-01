@@ -14,7 +14,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
- * UserInfo entity. @author MyEclipse Persistence Tools
+ *
  */
 
 @Entity
@@ -25,7 +25,7 @@ public class UserInfo implements java.io.Serializable {
 	@Id
 	@GeneratedValue
 	@Column(name="user_id")
-	private Integer userId;
+	private Long userId;
 	
 	@ManyToOne
 	@JoinColumn(name="user_type_id")
@@ -81,15 +81,15 @@ public class UserInfo implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public UserInfo(int userId){
+	public UserInfo(Long userId){
 		this.userId=userId;
 	}
 
-	public Integer getUserId() {
+	public Long getUserId() {
 		return this.userId;
 	}
 
-	public void setUserId(Integer userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 
@@ -243,5 +243,31 @@ public class UserInfo implements java.io.Serializable {
 
 	public void setShopCars(Set<ShopCar> shopCars) {
 		this.shopCars = shopCars;
+	}
+
+	@Override
+	public String toString() {
+		return "UserInfo{" +
+				"userId=" + userId +
+				", userType=" + userType +
+				", userName='" + userName + '\'' +
+				", userPass='" + userPass + '\'' +
+				", name='" + name + '\'' +
+				", code='" + code + '\'' +
+				", tradePass='" + tradePass + '\'' +
+				", regTime=" + regTime +
+				", headPic='" + headPic + '\'' +
+				", email='" + email + '\'' +
+				", question='" + question + '\'' +
+				", answer='" + answer + '\'' +
+				", refuserId=" + refuserId +
+				", tuiguanScore=" + tuiguanScore +
+				", gouwuScore=" + gouwuScore +
+				", duihuanScore=" + duihuanScore +
+				", zengzhiScore=" + zengzhiScore +
+				", xianjinScore=" + xianjinScore +
+				", userState=" + userState +
+				", shopCars=" + shopCars +
+				'}';
 	}
 }

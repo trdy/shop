@@ -84,5 +84,15 @@ public class OperRecord {
 		this.operContent = operContent;
 		this.operDate =new Timestamp(System.currentTimeMillis());
 	}
-	
+
+	@Override
+	public String toString() {
+		return "OperRecord{" +
+				"opreid=" + opreid +
+				", userInfo=" + userInfo +
+				", ipAddress='" + ipAddress + '\'' +
+				", operContent='" + operContent + '\'' +
+				", operDate=" + operDate +
+				'}';
+	}
 }

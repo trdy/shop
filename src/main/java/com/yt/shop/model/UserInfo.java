@@ -69,7 +69,7 @@ public class UserInfo implements java.io.Serializable {
 	@Column(name="user_state")
 	private Integer userState;
 	
-	@OneToMany(targetEntity=ShopCar.class,mappedBy="user",fetch=FetchType.EAGER)
+	@OneToMany(targetEntity=ShopCar.class,fetch=FetchType.EAGER)
 	@JoinColumn(name="user_id")
 	private Set<ShopCar> shopCars;
 

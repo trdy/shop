@@ -41,7 +41,7 @@ public class Menu implements java.io.Serializable {
 	@JoinColumn(name="parent_menu_id")
 	private Menu parentMenu;
 	
-	@OneToMany(targetEntity=Menu.class,mappedBy="parentMenu",fetch=FetchType.EAGER)
+	@OneToMany(targetEntity=Menu.class,fetch=FetchType.EAGER)
 	@JoinColumn(name="parent_menu_id")
 	@OrderBy("menuId")
 	private Set<Menu> menus;

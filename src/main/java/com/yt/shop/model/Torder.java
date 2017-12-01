@@ -81,7 +81,7 @@ public class Torder implements java.io.Serializable {
 	@Column(name="rece_date")
 	private Timestamp receDate;
 	
-	@OneToMany(targetEntity=OrderDetail.class,mappedBy="torder",fetch=FetchType.EAGER)
+	@OneToMany(targetEntity=OrderDetail.class,fetch=FetchType.EAGER)
 	@OrderBy("odid")
 	@JoinColumn(name="order_id")
 	private Set<OrderDetail> orderDetails;

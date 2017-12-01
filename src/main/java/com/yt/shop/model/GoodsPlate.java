@@ -32,7 +32,7 @@ public class GoodsPlate implements java.io.Serializable {
 	private String gpname;
 	private String gpremark;
 	
-	@OneToMany(targetEntity=GoodsType.class,mappedBy="goodsPlate",fetch=FetchType.EAGER)
+	@OneToMany(targetEntity=GoodsType.class,fetch=FetchType.EAGER)
 	@OrderBy("gtid")
 	@JoinColumn(name="gpid")
 	private Set<GoodsType> goodsTypes;

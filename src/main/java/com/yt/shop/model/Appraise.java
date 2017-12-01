@@ -54,7 +54,7 @@ public class Appraise implements java.io.Serializable{
 	@Column(name="appr_content")
 	private String apprContent;
 	
-	@OneToMany(targetEntity=AppraiseReply.class,mappedBy="appraise",fetch=FetchType.EAGER)
+	@OneToMany(targetEntity=AppraiseReply.class,fetch=FetchType.EAGER)
 	@JoinColumn(name="apprid")
 	private Set<AppraiseReply> appraiseReplys;
 

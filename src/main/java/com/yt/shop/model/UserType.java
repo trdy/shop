@@ -29,7 +29,7 @@ public class UserType implements java.io.Serializable {
 	@Column(name="user_type_name")
 	private String userTypeName;
 	
-	@OneToMany(targetEntity=Permission.class,mappedBy="userType",fetch=FetchType.LAZY)
+	@OneToMany(targetEntity=Permission.class,fetch=FetchType.LAZY)
 	@JoinColumn(name="user_type_id")
 	private Set<Permission> permissions;
 

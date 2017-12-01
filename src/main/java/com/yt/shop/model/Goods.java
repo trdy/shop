@@ -17,6 +17,16 @@ import javax.persistence.Table;
 
 /**
  * 商品资料表
+ *
+ 商品状态
+ 0：新添加未审核
+ 3：审核未通过
+ 6：待审核
+ 10：审核
+ 20：上架
+ 30：下架
+ 90：作废
+
  */
 
 @Entity
@@ -66,17 +76,17 @@ public class Goods implements java.io.Serializable {
 		this.inputDate = inputDate;
 	}
 
-	@OneToMany(targetEntity=GoodsParam.class,fetch=FetchType.EAGER,mappedBy="goods")
+	@OneToMany(targetEntity=GoodsParam.class,fetch=FetchType.EAGER)
 	@OrderBy("paramId")
 	@JoinColumn(name="goods_id")
 	private Set<GoodsParam> goodsParams;
 	
-	@OneToMany(targetEntity=GoodsPic.class,fetch=FetchType.EAGER,mappedBy="goods")	
+	@OneToMany(targetEntity=GoodsPic.class,fetch=FetchType.EAGER)
 	@OrderBy("picId")
 	@JoinColumn(name="goods_id")
 	private Set<GoodsPic> goodsPics;
 	
-	@OneToMany(targetEntity=GoodsApprover.class,fetch=FetchType.EAGER,mappedBy="goods")
+	@OneToMany(targetEntity=GoodsApprover.class,fetch=FetchType.EAGER)
 	@OrderBy("gaid desc")
 	@JoinColumn(name="goods_id")
 	private Set<GoodsApprover> goodsApprovers;

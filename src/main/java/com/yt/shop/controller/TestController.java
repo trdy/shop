@@ -52,31 +52,7 @@ public class TestController {
         return "test/test2";
     }
 
-    /**
-     * 测试返回单个对象json
-     * @return
-     */
-    @RequestMapping("/userInfo")
-    @ResponseBody
-    public UserInfo findUserInfo(){
-        log.info("call TestController return object json method.....");
-        return new UserInfo(1,"admin","123",new Timestamp(System.currentTimeMillis()));
-    }
 
-    /**
-     * 测试返回集合对象json
-     * @return
-     */
-    @RequestMapping("/userList")
-    @ResponseBody
-    public List<UserInfo> findList(){
-        log.info("call TestController return list json method......");
-        List<UserInfo> list=new ArrayList<UserInfo>();
-        list.add(new UserInfo(1,"aaa","123",new Timestamp(System.currentTimeMillis())));
-        list.add(new UserInfo(2,"bbb","123",new Timestamp(System.currentTimeMillis())));
-        list.add(new UserInfo(3,"ccc","123",new Timestamp(System.currentTimeMillis())));
-        return list;
-    }
 
     /**
      * 测试异常处理
@@ -150,31 +126,5 @@ public class TestController {
 
     }
 
-    /**
-     * 测试jdbc数据库操作
-     * @return
-     */
-    @RequestMapping("/user/findUserInfoList")
-    @ResponseBody
-    public List<UserInfo> findUserInfoList(){
-        return testService.findUserInfoList();
-    }
 
-
-    @RequestMapping("/user/userInfoEdit")
-    public String userInfoEdit(){
-        log.info("转到用户信息编辑页面");
-        return "userInfoEdit";
-
-    }
-
-    @RequestMapping("/user/userInfoSave")
-    @ResponseBody
-    public String userInfoSave(@RequestBody UserInfo userInfo){
-        log.info("保存用户信息");
-        userInfo.setBirth(new Timestamp(System.currentTimeMillis()));
-        testService.insertUserInfo(userInfo);
-
-        return "success";
-    }
 }

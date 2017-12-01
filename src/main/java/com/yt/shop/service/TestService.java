@@ -1,6 +1,5 @@
 package com.yt.shop.service;
 
-import com.yt.shop.dao.TestDBDao;
 import com.yt.shop.dao.TestDBJPA;
 import com.yt.shop.model.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +7,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * anthor:liyun
@@ -20,8 +18,6 @@ public class TestService {
     @Autowired
     private TestDBJPA testDBJPA;
 
-    @Autowired
-    private TestDBDao testDBDao;
 
 
     @Transactional
@@ -31,13 +27,4 @@ public class TestService {
     }
 
 
-    @Transactional
-    public List<UserInfo> findUserInfoList() {
-        return testDBDao.findUserInfoList();
-    }
-
-    @Transactional
-    public void insertUserInfo(UserInfo u) {
-        testDBJPA.save(u);
-    }
 }

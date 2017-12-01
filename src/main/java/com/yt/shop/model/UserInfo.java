@@ -1,78 +1,247 @@
 package com.yt.shop.model;
 
-import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 /**
- * anthor:liyun
- * create:2017-11-22 13:51
- *
- * create table tab_user(user_id int primary key auto_increment,user_name varchar(20),user_pass varchar(20),birth TIMESTAMP)
+ * UserInfo entity. @author MyEclipse Persistence Tools
  */
+
 @Entity
-@Table(name = "tab_user")
-public class UserInfo implements java.io.Serializable{
-    @Id
-    @GeneratedValue
-    @Column(name = "user_id")
-    private int userId;
+@Table(name="user_info")
+public class UserInfo implements java.io.Serializable {
 
-    @Column(name="user_name")
-    private String userName;
+	// Fields
+	@Id
+	@GeneratedValue
+	@Column(name="user_id")
+	private Integer userId;
+	
+	@ManyToOne
+	@JoinColumn(name="user_type_id")
+	private UserType userType;
+	
+	@Column(name="user_name")
+	private String userName;
+	
+	@Column(name="user_pass")
+	private String userPass;
+	
+	private String name;
+	private String code;
+	
+	@Column(name="trade_pass")
+	private String tradePass;
+	
+	@Column(name="reg_time")
+	private Timestamp regTime;
+	
+	@Column(name="head_pic")
+	private String headPic;
+	private String email;
+	private String question;
+	private String answer;
+	
+	@Column(name="refuser_id")
+	private Integer refuserId;
+	
+	@Column(name="tuiguan_score")
+	private Double tuiguanScore;
+	@Column(name="gouwu_score")
+	private Double gouwuScore;
+	@Column(name="duihuan_score")
+	private Double duihuanScore;
+	@Column(name="zengzhi_score")
+	private Double zengzhiScore;
+	@Column(name="xianjin_score")
+	private Double xianjinScore;
+	
+	@Column(name="user_state")
+	private Integer userState;
+	
+	@OneToMany(targetEntity=ShopCar.class,mappedBy="user",fetch=FetchType.EAGER)
+	@JoinColumn(name="user_id")
+	private Set<ShopCar> shopCars;
 
-    @Column(name = "user_pass")
-    private String userPass;
+	// Constructors
 
-    private Timestamp birth;
 
-    public UserInfo() {
-    }
+	/** default constructor */
+	public UserInfo() {
+	}
 
-    public UserInfo(int userId, String userName, String userPass,Timestamp birth) {
-        this.userId = userId;
-        this.userName = userName;
-        this.userPass = userPass;
-        this.birth = birth;
-    }
+	/** minimal constructor */
+	public UserInfo(int userId){
+		this.userId=userId;
+	}
 
-    public int getUserId() {
-        return userId;
-    }
+	public Integer getUserId() {
+		return this.userId;
+	}
 
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
 
-    public String getUserName() {
-        return userName;
-    }
+	public UserType getUserType() {
+		return userType;
+	}
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
+	public void setUserType(UserType userType) {
+		this.userType = userType;
+	}
 
-    public String getUserPass() {
-        return userPass;
-    }
+	public String getUserName() {
+		return this.userName;
+	}
 
-    public void setUserPass(String userPass) {
-        this.userPass = userPass;
-    }
-    public Timestamp getBirth() {
-        return birth;
-    }
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 
-    public void setBirth(Timestamp birth) {
-        this.birth = birth;
-    }
+	public String getUserPass() {
+		return this.userPass;
+	}
 
-    @Override
-    public String toString() {
-        return "UserInfo{" +
-                "userId=" + userId +
-                ", userName='" + userName + '\'' +
-                ", userPass='" + userPass + '\'' +
-                ", birth=" + birth +
-                '}';
-    }
+	public void setUserPass(String userPass) {
+		this.userPass = userPass;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getCode() {
+		return this.code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public String getTradePass() {
+		return this.tradePass;
+	}
+
+	public void setTradePass(String tradePass) {
+		this.tradePass = tradePass;
+	}
+
+	public Timestamp getRegTime() {
+		return this.regTime;
+	}
+
+	public void setRegTime(Timestamp regTime) {
+		this.regTime = regTime;
+	}
+
+	public String getHeadPic() {
+		return this.headPic;
+	}
+
+	public void setHeadPic(String headPic) {
+		this.headPic = headPic;
+	}
+
+	public String getEmail() {
+		return this.email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getQuestion() {
+		return this.question;
+	}
+
+	public void setQuestion(String question) {
+		this.question = question;
+	}
+
+	public String getAnswer() {
+		return this.answer;
+	}
+
+	public void setAnswer(String answer) {
+		this.answer = answer;
+	}
+
+	public Integer getRefuserId() {
+		return this.refuserId;
+	}
+
+	public void setRefuserId(Integer refuserId) {
+		this.refuserId = refuserId;
+	}
+
+	public Double getTuiguanScore() {
+		return this.tuiguanScore;
+	}
+
+	public void setTuiguanScore(Double tuiguanScore) {
+		this.tuiguanScore = tuiguanScore;
+	}
+
+	public Double getGouwuScore() {
+		return this.gouwuScore;
+	}
+
+	public void setGouwuScore(Double gouwuScore) {
+		this.gouwuScore = gouwuScore;
+	}
+
+	public Double getDuihuanScore() {
+		return this.duihuanScore;
+	}
+
+	public void setDuihuanScore(Double duihuanScore) {
+		this.duihuanScore = duihuanScore;
+	}
+
+	public Double getZengzhiScore() {
+		return this.zengzhiScore;
+	}
+
+	public void setZengzhiScore(Double zengzhiScore) {
+		this.zengzhiScore = zengzhiScore;
+	}
+
+	public Double getXianjinScore() {
+		return this.xianjinScore;
+	}
+
+	public void setXianjinScore(Double xianjinScore) {
+		this.xianjinScore = xianjinScore;
+	}
+
+	public Integer getUserState() {
+		return userState;
+	}
+
+	public void setUserState(Integer userState) {
+		this.userState = userState;
+	}
+
+	public Set<ShopCar> getShopCars() {
+		return shopCars;
+	}
+
+	public void setShopCars(Set<ShopCar> shopCars) {
+		this.shopCars = shopCars;
+	}
 }

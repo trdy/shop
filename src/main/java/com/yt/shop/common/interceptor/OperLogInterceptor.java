@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,7 +19,7 @@ import javax.servlet.http.HttpSession;
 import java.sql.Timestamp;
 
 
-public class OperLogInterceptor implements HandlerInterceptor{
+public class OperLogInterceptor extends HandlerInterceptorAdapter {
 
     private Logger log= LoggerFactory.getLogger(this.getClass());
 
@@ -30,11 +31,22 @@ public class OperLogInterceptor implements HandlerInterceptor{
 
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
-
-        log.info(httpServletRequest.getRequestURI());
-        saveLog2DB(httpServletRequest,o);
-
+        showLog(httpServletRequest,o);
         return true;
+    }
+
+    /**
+     * 只记录log日志
+     * @param httpServletRequest
+     * @param o
+     */
+    private void showLog(HttpServletRequest httpServletRequest,Object o){
+        HandlerMethod method= (HandlerMethod) o;
+        String ipaddr=httpServletRequest.getRemoteAddr();
+        String operClass=method.getBean().getClass().getName();
+        String operMethod=method.getMethod().getName();
+        String strUrl=httpServletRequest.getRequestURI();
+        log.debug(ipaddr+" 访问 "+strUrl+" --> 调用 "+operClass+" -> "+operMethod);
     }
 
     /**
@@ -60,12 +72,12 @@ public class OperLogInterceptor implements HandlerInterceptor{
         operRecord.setIpAddress(ipaddr);
         operRecord.setOperContent("call "+operClass+"->"+operMethod);
         operRecord.setOperDate(new Timestamp(System.currentTimeMillis()));
-
+        log.debug("call "+operClass+"->"+operMethod);
         log.debug("操作日志对象："+operRecord);
 
         //operRecordDao.insertOperRecord(operRecord);
-        //operRecordJpa.save(operRecord);
-        //log.debug("拦截器记录操作到数据库。。");
+        operRecordJpa.save(operRecord);
+        log.debug("拦截器记录操作到数据库。。");
     }
 
     @Override

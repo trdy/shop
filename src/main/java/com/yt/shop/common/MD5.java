@@ -4,18 +4,18 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /*
- * MD5 �㷨
+ * MD5 算法
 */
 public class MD5 {
-    
-    // ȫ������
+
+    // 全局数组
     private final static String[] strDigits = { "0", "1", "2", "3", "4", "5",
             "6", "7", "8", "9", "a", "b", "c", "d", "e", "f" };
 
     public MD5() {
     }
 
-    // ������ʽΪ���ָ��ַ���
+    // 返回形式为数字跟字符串
     private static String byteToArrayString(byte bByte) {
         int iRet = bByte;
         // System.out.println("iRet="+iRet);
@@ -27,7 +27,7 @@ public class MD5 {
         return strDigits[iD1] + strDigits[iD2];
     }
 
-    // ������ʽֻΪ����
+    // 返回形式只为数字
     private static String byteToNum(byte bByte) {
         int iRet = bByte;
         System.out.println("iRet1=" + iRet);
@@ -37,7 +37,7 @@ public class MD5 {
         return String.valueOf(iRet);
     }
 
-    // ת���ֽ�����Ϊ16�����ִ�
+    // 转换字节数组为16进制字串
     private static String byteToString(byte[] bByte) {
         StringBuffer sBuffer = new StringBuffer();
         for (int i = 0; i < bByte.length; i++) {
@@ -51,7 +51,7 @@ public class MD5 {
         try {
             resultString = new String(strObj);
             MessageDigest md = MessageDigest.getInstance("MD5");
-            // md.digest() �ú�������ֵΪ��Ź�ϣֵ�����byte����
+            // md.digest() 该函数返回值为存放哈希值结果的byte数组
             resultString = byteToString(md.digest(strObj.getBytes()));
         } catch (NoSuchAlgorithmException ex) {
             ex.printStackTrace();

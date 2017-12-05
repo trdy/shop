@@ -32,7 +32,16 @@ public class OperLogInterceptor implements HandlerInterceptor{
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
 
         log.info(httpServletRequest.getRequestURI());
+        saveLog2DB(httpServletRequest,o);
 
+        return true;
+    }
+
+    /**
+     * 记录日志到数据库
+     * @param httpServletRequest
+     */
+    private void saveLog2DB(HttpServletRequest httpServletRequest,Object o){
         HttpSession session=httpServletRequest.getSession();
         UserInfo userInfo= (UserInfo) session.getAttribute(Constract.ADMIN_LOGIN_FLAG);
         if(null==userInfo){
@@ -55,9 +64,8 @@ public class OperLogInterceptor implements HandlerInterceptor{
         log.debug("操作日志对象："+operRecord);
 
         //operRecordDao.insertOperRecord(operRecord);
-        operRecordJpa.save(operRecord);
-        log.debug("拦截器记录操作到数据库。。");
-        return true;
+        //operRecordJpa.save(operRecord);
+        //log.debug("拦截器记录操作到数据库。。");
     }
 
     @Override

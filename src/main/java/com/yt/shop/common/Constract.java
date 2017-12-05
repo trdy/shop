@@ -14,4 +14,6 @@ public class Constract {
 	public final static String ADMIN_LOGIN_FLAG="admin";
 	
 	public final static String SMS_CODE="sms_code";
+
+	public final static String VERIFY_CODE="verifyCode";
 }

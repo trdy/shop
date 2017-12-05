@@ -1,0 +1,1067 @@
+2017-12-05 08:45:36.091 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarting 48] -| Starting ShopApplication on PC-20170830XIPK with PID 3196 (D:\mywork\shop\target\classes started by Administrator in D:\mywork\shop)
+"2017-12-05 08:45:36.091 |-DEBUG [restartedMain] com.yt.shop.ShopApplication [logStarting 51] -| Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+"2017-12-05 08:45:36.091 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStartupProfileInfo 593] -| No active profile set, falling back to default profiles: default
+"2017-12-05 08:45:36.200 |-INFO  [background-preinit] org.hibernate.validator.internal.util.Version [<clinit> 30] -| HV000001: Hibernate Validator 5.3.5.Final
+"2017-12-05 08:45:36.247 |-INFO  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [prepareRefresh 583] -| Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@122ff396: startup date [Tue Dec 05 08:45:36 CST 2017]; root of context hierarchy
+"2017-12-05 08:45:37.651 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [initialize 89] -| Tomcat initialized with port(s): 8080 (http)
+"2017-12-05 08:45:37.666 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Starting service [Tomcat]
+"2017-12-05 08:45:37.666 |-INFO  [restartedMain] org.apache.catalina.core.StandardEngine [log 179] -| Starting Servlet Engine: Apache Tomcat/8.5.23
+"2017-12-05 08:45:37.729 |-INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring embedded WebApplicationContext
+"2017-12-05 08:45:37.729 |-INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader [prepareEmbeddedWebApplicationContext 276] -| Root WebApplicationContext: initialization completed in 1482 ms
+"2017-12-05 08:45:37.822 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'dispatcherServlet' to [/]
+"2017-12-05 08:45:37.822 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.DruidStatViewServlet' to [/druid/*]
+"2017-12-05 08:45:37.822 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.TestServlet' to [/servlet/testServlet]
+"2017-12-05 08:45:37.838 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+"2017-12-05 08:45:37.838 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+"2017-12-05 08:45:37.838 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'httpPutFormContentFilter' to: [/*]
+"2017-12-05 08:45:37.838 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'requestContextFilter' to: [/*]
+"2017-12-05 08:45:37.838 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'druidWebStatFilter' to urls: [/*]
+"2017-12-05 08:45:37.838 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'testFilter' to urls: [/*]
+"2017-12-05 08:45:37.994 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [init 932] -| {dataSource-1} inited
+"2017-12-05 08:45:38.150 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [createNativeEntityManagerFactory 349] -| Building JPA container EntityManagerFactory for persistence unit 'default'
+"2017-12-05 08:45:38.150 |-INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper [logPersistenceUnitInformation 31] -| HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+"2017-12-05 08:45:38.228 |-INFO  [restartedMain] org.hibernate.Version [logVersion 37] -| HHH000412: Hibernate Core {5.0.12.Final}
+"2017-12-05 08:45:38.228 |-INFO  [restartedMain] org.hibernate.cfg.Environment [<clinit> 213] -| HHH000206: hibernate.properties not found
+"2017-12-05 08:45:38.228 |-INFO  [restartedMain] org.hibernate.cfg.Environment [buildBytecodeProvider 317] -| HHH000021: Bytecode provider name : javassist
+"2017-12-05 08:45:38.259 |-INFO  [restartedMain] org.hibernate.annotations.common.Version [<clinit> 66] -| HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+"2017-12-05 08:45:38.477 |-INFO  [restartedMain] org.hibernate.dialect.Dialect [<init> 156] -| HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+"2017-12-05 08:45:38.930 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [buildNativeEntityManagerFactory 379] -| Initialized JPA EntityManagerFactory for persistence unit 'default'
+"2017-12-05 08:45:39.148 |-INFO  [restartedMain] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [initiateService 47] -| HHH000397: Using ASTQueryTranslatorFactory
+"2017-12-05 08:45:39.367 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [initControllerAdviceCache 534] -| Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@122ff396: startup date [Tue Dec 05 08:45:36 CST 2017]; root of context hierarchy
+"2017-12-05 08:45:39.413 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/savePerson]}" onto public int com.yt.shop.controller.DemoController.savePerson(com.yt.shop.model.Person)
+"2017-12-05 08:45:39.413 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/listPerson]}" onto public java.util.List<com.yt.shop.model.Person> com.yt.shop.controller.DemoController.listPerson()
+"2017-12-05 08:45:39.413 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/personUpload]}" onto public java.lang.String com.yt.shop.controller.DemoController.personUpload()
+"2017-12-05 08:45:39.413 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/savePerson1]}" onto public int com.yt.shop.controller.DemoController.savePerson1(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-12-05 08:45:39.413 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test]}" onto public java.lang.String com.yt.shop.controller.TestController.test()
+"2017-12-05 08:45:39.413 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test2]}" onto public java.lang.String com.yt.shop.controller.TestController.test2(org.springframework.ui.Model)
+"2017-12-05 08:45:39.413 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testError]}" onto public java.lang.String com.yt.shop.controller.TestController.testError()
+"2017-12-05 08:45:39.413 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/login]}" onto public java.lang.String com.yt.shop.controller.TestController.toLogin()
+"2017-12-05 08:45:39.413 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/login]}" onto public int com.yt.shop.controller.TestController.login(java.lang.String,java.lang.String)
+"2017-12-05 08:45:39.413 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testuploadimg],methods=[POST]}" onto public java.lang.String com.yt.shop.controller.TestController.uploadImg(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-12-05 08:45:39.413 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/valiCode]}" onto public void com.yt.shop.controller.UserInfoController.authImage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+"2017-12-05 08:45:39.413 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/admin/validUser]}" onto public int com.yt.shop.controller.UserInfoController.validUser(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+"2017-12-05 08:45:39.429 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+"2017-12-05 08:45:39.429 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+"2017-12-05 08:45:39.429 |-INFO  [restartedMain] com.yt.shop.common.config.WebAppConfig [addResourceHandlers 29] -| imagesPath=file:///usr/shop/upload
+"2017-12-05 08:45:39.445 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/upload/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-12-05 08:45:39.445 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-12-05 08:45:39.445 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-12-05 08:45:39.460 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [initExceptionHandlerAdviceCache 273] -| Detected @ExceptionHandler methods in globalExceptionHandler
+"2017-12-05 08:45:39.788 |-INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [startServer 58] -| LiveReload server is running on port 35729
+"2017-12-05 08:45:39.819 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [afterSingletonsInstantiated 431] -| Registering beans for JMX exposure on startup
+"2017-12-05 08:45:39.819 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [autodetect 916] -| Bean with name 'dataSource' has been autodetected for JMX exposure
+"2017-12-05 08:45:39.835 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [registerBeanInstance 671] -| Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+"2017-12-05 08:45:39.835 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Initializing ProtocolHandler ["http-nio-8080"]
+"2017-12-05 08:45:39.835 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Starting ProtocolHandler ["http-nio-8080"]
+"2017-12-05 08:45:39.850 |-INFO  [restartedMain] org.apache.tomcat.util.net.NioSelectorPool [log 179] -| Using a shared selector for servlet write/read
+"2017-12-05 08:45:39.866 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [start 201] -| Tomcat started on port(s): 8080 (http)
+"2017-12-05 08:45:39.866 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarted 57] -| Started ShopApplication in 4.165 seconds (JVM running for 4.977)
+"2017-12-05 08:46:11.916 |-INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring FrameworkServlet 'dispatcherServlet'
+"2017-12-05 08:46:11.917 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 489] -| FrameworkServlet 'dispatcherServlet': initialization started
+"2017-12-05 08:46:11.928 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 508] -| FrameworkServlet 'dispatcherServlet': initialization completed in 11 ms
+"2017-12-05 08:46:11.945 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /admin/validUser
+"2017-12-05 08:46:11.951 |-DEBUG [http-nio-8080-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 08:46:11.952 |-DEBUG [http-nio-8080-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='127.0.0.1', operContent='call com.yt.shop.controller.UserInfoController->validUser', operDate=2017-12-05 08:46:11.952}
+"2017-12-05 08:46:11.959 |-INFO  [http-nio-8080-exec-1] com.yt.shop.controller.UserInfoController [validUser 62] -| 验证用户登陆信息。。。
+"2017-12-05 08:46:11.959 |-INFO  [http-nio-8080-exec-1] com.yt.shop.controller.UserInfoController [validUser 76] -| 验证码不正确
+"2017-12-05 08:46:12.000 |-WARN  [http-nio-8080-exec-1] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [logException 189] -| Resolved exception caused by Handler execution: java.lang.IllegalArgumentException: Unknown return value type: java.lang.Integer
+"2017-12-05 08:46:12.122 |-INFO  [http-nio-8080-exec-2] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /error
+"2017-12-05 08:46:12.122 |-DEBUG [http-nio-8080-exec-2] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 08:46:12.123 |-DEBUG [http-nio-8080-exec-2] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='127.0.0.1', operContent='call org.springframework.boot.autoconfigure.web.BasicErrorController->error', operDate=2017-12-05 08:46:12.122}
+"2017-12-05 08:47:39.088 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarting 48] -| Starting ShopApplication on PC-20170830XIPK with PID 6916 (D:\mywork\shop\target\classes started by Administrator in D:\mywork\shop)
+"2017-12-05 08:47:39.088 |-DEBUG [restartedMain] com.yt.shop.ShopApplication [logStarting 51] -| Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+"2017-12-05 08:47:39.088 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStartupProfileInfo 593] -| No active profile set, falling back to default profiles: default
+"2017-12-05 08:47:39.198 |-INFO  [background-preinit] org.hibernate.validator.internal.util.Version [<clinit> 30] -| HV000001: Hibernate Validator 5.3.5.Final
+"2017-12-05 08:47:39.229 |-INFO  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [prepareRefresh 583] -| Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@30c37012: startup date [Tue Dec 05 08:47:39 CST 2017]; root of context hierarchy
+"2017-12-05 08:47:40.258 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [initialize 89] -| Tomcat initialized with port(s): 8080 (http)
+"2017-12-05 08:47:40.258 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Starting service [Tomcat]
+"2017-12-05 08:47:40.258 |-INFO  [restartedMain] org.apache.catalina.core.StandardEngine [log 179] -| Starting Servlet Engine: Apache Tomcat/8.5.23
+"2017-12-05 08:47:40.321 |-INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring embedded WebApplicationContext
+"2017-12-05 08:47:40.321 |-INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader [prepareEmbeddedWebApplicationContext 276] -| Root WebApplicationContext: initialization completed in 1092 ms
+"2017-12-05 08:47:40.414 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'dispatcherServlet' to [/]
+"2017-12-05 08:47:40.414 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.DruidStatViewServlet' to [/druid/*]
+"2017-12-05 08:47:40.430 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.TestServlet' to [/servlet/testServlet]
+"2017-12-05 08:47:40.430 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+"2017-12-05 08:47:40.430 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+"2017-12-05 08:47:40.430 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'httpPutFormContentFilter' to: [/*]
+"2017-12-05 08:47:40.430 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'requestContextFilter' to: [/*]
+"2017-12-05 08:47:40.430 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'druidWebStatFilter' to urls: [/*]
+"2017-12-05 08:47:40.430 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'testFilter' to urls: [/*]
+"2017-12-05 08:47:40.570 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [init 932] -| {dataSource-1} inited
+"2017-12-05 08:47:40.695 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [createNativeEntityManagerFactory 349] -| Building JPA container EntityManagerFactory for persistence unit 'default'
+"2017-12-05 08:47:40.695 |-INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper [logPersistenceUnitInformation 31] -| HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+"2017-12-05 08:47:40.742 |-INFO  [restartedMain] org.hibernate.Version [logVersion 37] -| HHH000412: Hibernate Core {5.0.12.Final}
+"2017-12-05 08:47:40.742 |-INFO  [restartedMain] org.hibernate.cfg.Environment [<clinit> 213] -| HHH000206: hibernate.properties not found
+"2017-12-05 08:47:40.742 |-INFO  [restartedMain] org.hibernate.cfg.Environment [buildBytecodeProvider 317] -| HHH000021: Bytecode provider name : javassist
+"2017-12-05 08:47:40.773 |-INFO  [restartedMain] org.hibernate.annotations.common.Version [<clinit> 66] -| HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+"2017-12-05 08:47:40.945 |-INFO  [restartedMain] org.hibernate.dialect.Dialect [<init> 156] -| HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+"2017-12-05 08:47:41.366 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [buildNativeEntityManagerFactory 379] -| Initialized JPA EntityManagerFactory for persistence unit 'default'
+"2017-12-05 08:47:41.609 |-INFO  [restartedMain] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [initiateService 47] -| HHH000397: Using ASTQueryTranslatorFactory
+"2017-12-05 08:47:41.845 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [initControllerAdviceCache 534] -| Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@30c37012: startup date [Tue Dec 05 08:47:39 CST 2017]; root of context hierarchy
+"2017-12-05 08:47:41.884 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/listPerson]}" onto public java.util.List<com.yt.shop.model.Person> com.yt.shop.controller.DemoController.listPerson()
+"2017-12-05 08:47:41.885 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/savePerson]}" onto public int com.yt.shop.controller.DemoController.savePerson(com.yt.shop.model.Person)
+"2017-12-05 08:47:41.885 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/personUpload]}" onto public java.lang.String com.yt.shop.controller.DemoController.personUpload()
+"2017-12-05 08:47:41.886 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/savePerson1]}" onto public int com.yt.shop.controller.DemoController.savePerson1(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-12-05 08:47:41.886 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test]}" onto public java.lang.String com.yt.shop.controller.TestController.test()
+"2017-12-05 08:47:41.887 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test2]}" onto public java.lang.String com.yt.shop.controller.TestController.test2(org.springframework.ui.Model)
+"2017-12-05 08:47:41.887 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testError]}" onto public java.lang.String com.yt.shop.controller.TestController.testError()
+"2017-12-05 08:47:41.887 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/login]}" onto public java.lang.String com.yt.shop.controller.TestController.toLogin()
+"2017-12-05 08:47:41.887 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/login]}" onto public int com.yt.shop.controller.TestController.login(java.lang.String,java.lang.String)
+"2017-12-05 08:47:41.887 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testuploadimg],methods=[POST]}" onto public java.lang.String com.yt.shop.controller.TestController.uploadImg(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-12-05 08:47:41.888 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/valiCode]}" onto public void com.yt.shop.controller.UserInfoController.authImage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+"2017-12-05 08:47:41.888 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/admin/validUser]}" onto public int com.yt.shop.controller.UserInfoController.validUser(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+"2017-12-05 08:47:41.890 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+"2017-12-05 08:47:41.890 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+"2017-12-05 08:47:41.904 |-INFO  [restartedMain] com.yt.shop.common.config.WebAppConfig [addResourceHandlers 29] -| imagesPath=file:///usr/shop/upload
+"2017-12-05 08:47:41.911 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/upload/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-12-05 08:47:41.911 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-12-05 08:47:41.911 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-12-05 08:47:41.922 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [initExceptionHandlerAdviceCache 273] -| Detected @ExceptionHandler methods in globalExceptionHandler
+"2017-12-05 08:47:42.250 |-INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [startServer 58] -| LiveReload server is running on port 35729
+"2017-12-05 08:47:42.271 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [afterSingletonsInstantiated 431] -| Registering beans for JMX exposure on startup
+"2017-12-05 08:47:42.271 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [autodetect 916] -| Bean with name 'dataSource' has been autodetected for JMX exposure
+"2017-12-05 08:47:42.287 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [registerBeanInstance 671] -| Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+"2017-12-05 08:47:42.287 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Initializing ProtocolHandler ["http-nio-8080"]
+"2017-12-05 08:47:42.287 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Starting ProtocolHandler ["http-nio-8080"]
+"2017-12-05 08:47:42.303 |-INFO  [restartedMain] org.apache.tomcat.util.net.NioSelectorPool [log 179] -| Using a shared selector for servlet write/read
+"2017-12-05 08:47:42.303 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [start 201] -| Tomcat started on port(s): 8080 (http)
+"2017-12-05 08:47:42.319 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarted 57] -| Started ShopApplication in 3.527 seconds (JVM running for 4.106)
+"2017-12-05 08:47:42.556 |-INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring FrameworkServlet 'dispatcherServlet'
+"2017-12-05 08:47:42.556 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 489] -| FrameworkServlet 'dispatcherServlet': initialization started
+"2017-12-05 08:47:42.572 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 508] -| FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+"2017-12-05 08:47:42.572 |-INFO  [http-nio-8080-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /admin/validUser
+"2017-12-05 08:47:42.588 |-DEBUG [http-nio-8080-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 08:47:42.588 |-DEBUG [http-nio-8080-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='127.0.0.1', operContent='call com.yt.shop.controller.UserInfoController->validUser', operDate=2017-12-05 08:47:42.588}
+"2017-12-05 08:47:42.595 |-INFO  [http-nio-8080-exec-1] com.yt.shop.controller.UserInfoController [validUser 64] -| 验证用户登陆信息。。。
+"2017-12-05 08:47:42.596 |-INFO  [http-nio-8080-exec-1] com.yt.shop.controller.UserInfoController [validUser 78] -| 验证码不正确
+"2017-12-05 08:59:51.539 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarting 48] -| Starting ShopApplication on PC-20170830XIPK with PID 5008 (D:\mywork\shop\target\classes started by Administrator in D:\mywork\shop)
+"2017-12-05 08:59:51.540 |-DEBUG [restartedMain] com.yt.shop.ShopApplication [logStarting 51] -| Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+"2017-12-05 08:59:51.540 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStartupProfileInfo 593] -| No active profile set, falling back to default profiles: default
+"2017-12-05 08:59:51.648 |-INFO  [background-preinit] org.hibernate.validator.internal.util.Version [<clinit> 30] -| HV000001: Hibernate Validator 5.3.5.Final
+"2017-12-05 08:59:51.695 |-INFO  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [prepareRefresh 583] -| Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@12b5c273: startup date [Tue Dec 05 08:59:51 CST 2017]; root of context hierarchy
+"2017-12-05 08:59:52.730 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [initialize 89] -| Tomcat initialized with port(s): 8080 (http)
+"2017-12-05 08:59:52.730 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Starting service [Tomcat]
+"2017-12-05 08:59:52.730 |-INFO  [restartedMain] org.apache.catalina.core.StandardEngine [log 179] -| Starting Servlet Engine: Apache Tomcat/8.5.23
+"2017-12-05 08:59:52.776 |-INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring embedded WebApplicationContext
+"2017-12-05 08:59:52.776 |-INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader [prepareEmbeddedWebApplicationContext 276] -| Root WebApplicationContext: initialization completed in 1081 ms
+"2017-12-05 08:59:52.887 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'dispatcherServlet' to [/]
+"2017-12-05 08:59:52.887 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.DruidStatViewServlet' to [/druid/*]
+"2017-12-05 08:59:52.887 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.TestServlet' to [/servlet/testServlet]
+"2017-12-05 08:59:52.887 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+"2017-12-05 08:59:52.887 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+"2017-12-05 08:59:52.887 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'httpPutFormContentFilter' to: [/*]
+"2017-12-05 08:59:52.887 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'requestContextFilter' to: [/*]
+"2017-12-05 08:59:52.887 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'druidWebStatFilter' to urls: [/*]
+"2017-12-05 08:59:52.887 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'testFilter' to urls: [/*]
+"2017-12-05 08:59:53.012 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [init 932] -| {dataSource-1} inited
+"2017-12-05 08:59:53.137 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [createNativeEntityManagerFactory 349] -| Building JPA container EntityManagerFactory for persistence unit 'default'
+"2017-12-05 08:59:53.153 |-INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper [logPersistenceUnitInformation 31] -| HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+"2017-12-05 08:59:53.184 |-INFO  [restartedMain] org.hibernate.Version [logVersion 37] -| HHH000412: Hibernate Core {5.0.12.Final}
+"2017-12-05 08:59:53.184 |-INFO  [restartedMain] org.hibernate.cfg.Environment [<clinit> 213] -| HHH000206: hibernate.properties not found
+"2017-12-05 08:59:53.184 |-INFO  [restartedMain] org.hibernate.cfg.Environment [buildBytecodeProvider 317] -| HHH000021: Bytecode provider name : javassist
+"2017-12-05 08:59:53.213 |-INFO  [restartedMain] org.hibernate.annotations.common.Version [<clinit> 66] -| HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+"2017-12-05 08:59:53.372 |-INFO  [restartedMain] org.hibernate.dialect.Dialect [<init> 156] -| HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+"2017-12-05 08:59:53.815 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [buildNativeEntityManagerFactory 379] -| Initialized JPA EntityManagerFactory for persistence unit 'default'
+"2017-12-05 08:59:54.004 |-INFO  [restartedMain] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [initiateService 47] -| HHH000397: Using ASTQueryTranslatorFactory
+"2017-12-05 08:59:54.207 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [initControllerAdviceCache 534] -| Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@12b5c273: startup date [Tue Dec 05 08:59:51 CST 2017]; root of context hierarchy
+"2017-12-05 08:59:54.254 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/savePerson]}" onto public int com.yt.shop.controller.DemoController.savePerson(com.yt.shop.model.Person)
+"2017-12-05 08:59:54.254 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/listPerson]}" onto public java.util.List<com.yt.shop.model.Person> com.yt.shop.controller.DemoController.listPerson()
+"2017-12-05 08:59:54.254 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/personUpload]}" onto public java.lang.String com.yt.shop.controller.DemoController.personUpload()
+"2017-12-05 08:59:54.254 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/savePerson1]}" onto public int com.yt.shop.controller.DemoController.savePerson1(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-12-05 08:59:54.254 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test]}" onto public java.lang.String com.yt.shop.controller.TestController.test()
+"2017-12-05 08:59:54.254 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test2]}" onto public java.lang.String com.yt.shop.controller.TestController.test2(org.springframework.ui.Model)
+"2017-12-05 08:59:54.254 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testError]}" onto public java.lang.String com.yt.shop.controller.TestController.testError()
+"2017-12-05 08:59:54.254 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/login]}" onto public java.lang.String com.yt.shop.controller.TestController.toLogin()
+"2017-12-05 08:59:54.254 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/login]}" onto public int com.yt.shop.controller.TestController.login(java.lang.String,java.lang.String)
+"2017-12-05 08:59:54.254 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testuploadimg],methods=[POST]}" onto public java.lang.String com.yt.shop.controller.TestController.uploadImg(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-12-05 08:59:54.254 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/valiCode]}" onto public void com.yt.shop.controller.UserInfoController.authImage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+"2017-12-05 08:59:54.254 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/admin/validUser],methods=[POST]}" onto public int com.yt.shop.controller.UserInfoController.validUser(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+"2017-12-05 08:59:54.254 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+"2017-12-05 08:59:54.254 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+"2017-12-05 08:59:54.283 |-INFO  [restartedMain] com.yt.shop.common.config.WebAppConfig [addResourceHandlers 29] -| imagesPath=file:///usr/shop/upload
+"2017-12-05 08:59:54.288 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/upload/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-12-05 08:59:54.289 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-12-05 08:59:54.289 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-12-05 08:59:54.298 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [initExceptionHandlerAdviceCache 273] -| Detected @ExceptionHandler methods in globalExceptionHandler
+"2017-12-05 08:59:54.567 |-INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [startServer 58] -| LiveReload server is running on port 35729
+"2017-12-05 08:59:54.598 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [afterSingletonsInstantiated 431] -| Registering beans for JMX exposure on startup
+"2017-12-05 08:59:54.598 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [autodetect 916] -| Bean with name 'dataSource' has been autodetected for JMX exposure
+"2017-12-05 08:59:54.598 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [registerBeanInstance 671] -| Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+"2017-12-05 08:59:54.598 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Initializing ProtocolHandler ["http-nio-8080"]
+"2017-12-05 08:59:54.614 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Starting ProtocolHandler ["http-nio-8080"]
+"2017-12-05 08:59:54.614 |-INFO  [restartedMain] org.apache.tomcat.util.net.NioSelectorPool [log 179] -| Using a shared selector for servlet write/read
+"2017-12-05 08:59:54.629 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [start 201] -| Tomcat started on port(s): 8080 (http)
+"2017-12-05 08:59:54.629 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarted 57] -| Started ShopApplication in 3.355 seconds (JVM running for 3.888)
+"2017-12-05 09:00:26.634 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarting 48] -| Starting ShopApplication on PC-20170830XIPK with PID 6240 (D:\mywork\shop\target\classes started by Administrator in D:\mywork\shop)
+"2017-12-05 09:00:26.636 |-DEBUG [restartedMain] com.yt.shop.ShopApplication [logStarting 51] -| Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+"2017-12-05 09:00:26.636 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStartupProfileInfo 593] -| No active profile set, falling back to default profiles: default
+"2017-12-05 09:00:26.769 |-INFO  [background-preinit] org.hibernate.validator.internal.util.Version [<clinit> 30] -| HV000001: Hibernate Validator 5.3.5.Final
+"2017-12-05 09:00:26.821 |-INFO  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [prepareRefresh 583] -| Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@126c7eef: startup date [Tue Dec 05 09:00:26 CST 2017]; root of context hierarchy
+"2017-12-05 09:00:27.906 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [initialize 89] -| Tomcat initialized with port(s): 8081 (http)
+"2017-12-05 09:00:27.906 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Starting service [Tomcat]
+"2017-12-05 09:00:27.921 |-INFO  [restartedMain] org.apache.catalina.core.StandardEngine [log 179] -| Starting Servlet Engine: Apache Tomcat/8.5.23
+"2017-12-05 09:00:27.968 |-INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring embedded WebApplicationContext
+"2017-12-05 09:00:27.968 |-INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader [prepareEmbeddedWebApplicationContext 276] -| Root WebApplicationContext: initialization completed in 1147 ms
+"2017-12-05 09:00:28.077 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'dispatcherServlet' to [/]
+"2017-12-05 09:00:28.077 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.DruidStatViewServlet' to [/druid/*]
+"2017-12-05 09:00:28.077 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.TestServlet' to [/servlet/testServlet]
+"2017-12-05 09:00:28.077 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+"2017-12-05 09:00:28.077 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+"2017-12-05 09:00:28.077 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'httpPutFormContentFilter' to: [/*]
+"2017-12-05 09:00:28.077 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'requestContextFilter' to: [/*]
+"2017-12-05 09:00:28.077 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'druidWebStatFilter' to urls: [/*]
+"2017-12-05 09:00:28.077 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'testFilter' to urls: [/*]
+"2017-12-05 09:00:28.216 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [init 932] -| {dataSource-1} inited
+"2017-12-05 09:00:28.326 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [createNativeEntityManagerFactory 349] -| Building JPA container EntityManagerFactory for persistence unit 'default'
+"2017-12-05 09:00:28.342 |-INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper [logPersistenceUnitInformation 31] -| HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+"2017-12-05 09:00:28.373 |-INFO  [restartedMain] org.hibernate.Version [logVersion 37] -| HHH000412: Hibernate Core {5.0.12.Final}
+"2017-12-05 09:00:28.373 |-INFO  [restartedMain] org.hibernate.cfg.Environment [<clinit> 213] -| HHH000206: hibernate.properties not found
+"2017-12-05 09:00:28.373 |-INFO  [restartedMain] org.hibernate.cfg.Environment [buildBytecodeProvider 317] -| HHH000021: Bytecode provider name : javassist
+"2017-12-05 09:00:28.404 |-INFO  [restartedMain] org.hibernate.annotations.common.Version [<clinit> 66] -| HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+"2017-12-05 09:00:28.467 |-INFO  [restartedMain] org.hibernate.dialect.Dialect [<init> 156] -| HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+"2017-12-05 09:00:28.939 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [buildNativeEntityManagerFactory 379] -| Initialized JPA EntityManagerFactory for persistence unit 'default'
+"2017-12-05 09:00:29.126 |-INFO  [restartedMain] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [initiateService 47] -| HHH000397: Using ASTQueryTranslatorFactory
+"2017-12-05 09:00:29.344 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [initControllerAdviceCache 534] -| Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@126c7eef: startup date [Tue Dec 05 09:00:26 CST 2017]; root of context hierarchy
+"2017-12-05 09:00:29.391 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/savePerson]}" onto public int com.yt.shop.controller.DemoController.savePerson(com.yt.shop.model.Person)
+"2017-12-05 09:00:29.407 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/listPerson]}" onto public java.util.List<com.yt.shop.model.Person> com.yt.shop.controller.DemoController.listPerson()
+"2017-12-05 09:00:29.407 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/personUpload]}" onto public java.lang.String com.yt.shop.controller.DemoController.personUpload()
+"2017-12-05 09:00:29.407 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/savePerson1]}" onto public int com.yt.shop.controller.DemoController.savePerson1(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-12-05 09:00:29.407 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test]}" onto public java.lang.String com.yt.shop.controller.TestController.test()
+"2017-12-05 09:00:29.407 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test2]}" onto public java.lang.String com.yt.shop.controller.TestController.test2(org.springframework.ui.Model)
+"2017-12-05 09:00:29.407 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testError]}" onto public java.lang.String com.yt.shop.controller.TestController.testError()
+"2017-12-05 09:00:29.407 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/login]}" onto public java.lang.String com.yt.shop.controller.TestController.toLogin()
+"2017-12-05 09:00:29.407 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/login]}" onto public int com.yt.shop.controller.TestController.login(java.lang.String,java.lang.String)
+"2017-12-05 09:00:29.407 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testuploadimg],methods=[POST]}" onto public java.lang.String com.yt.shop.controller.TestController.uploadImg(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-12-05 09:00:29.407 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/admin/validUser],methods=[POST]}" onto public int com.yt.shop.controller.UserInfoController.validUser(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+"2017-12-05 09:00:29.407 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/valiCode]}" onto public void com.yt.shop.controller.UserInfoController.authImage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+"2017-12-05 09:00:29.407 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+"2017-12-05 09:00:29.407 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+"2017-12-05 09:00:29.422 |-INFO  [restartedMain] com.yt.shop.common.config.WebAppConfig [addResourceHandlers 29] -| imagesPath=file:///usr/shop/upload
+"2017-12-05 09:00:29.422 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/upload/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-12-05 09:00:29.422 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-12-05 09:00:29.422 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-12-05 09:00:29.422 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [initExceptionHandlerAdviceCache 273] -| Detected @ExceptionHandler methods in globalExceptionHandler
+"2017-12-05 09:00:29.752 |-INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [startServer 58] -| LiveReload server is running on port 35729
+"2017-12-05 09:00:29.789 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [afterSingletonsInstantiated 431] -| Registering beans for JMX exposure on startup
+"2017-12-05 09:00:29.791 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [autodetect 916] -| Bean with name 'dataSource' has been autodetected for JMX exposure
+"2017-12-05 09:00:29.794 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [registerBeanInstance 671] -| Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+"2017-12-05 09:00:29.801 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Initializing ProtocolHandler ["http-nio-8081"]
+"2017-12-05 09:00:29.807 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Starting ProtocolHandler ["http-nio-8081"]
+"2017-12-05 09:00:29.813 |-INFO  [restartedMain] org.apache.tomcat.util.net.NioSelectorPool [log 179] -| Using a shared selector for servlet write/read
+"2017-12-05 09:00:29.824 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [start 201] -| Tomcat started on port(s): 8081 (http)
+"2017-12-05 09:00:29.827 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarted 57] -| Started ShopApplication in 3.461 seconds (JVM running for 4.006)
+"2017-12-05 09:03:15.559 |-INFO  [http-nio-8081-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring FrameworkServlet 'dispatcherServlet'
+"2017-12-05 09:03:15.560 |-INFO  [http-nio-8081-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 489] -| FrameworkServlet 'dispatcherServlet': initialization started
+"2017-12-05 09:03:15.569 |-INFO  [http-nio-8081-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 508] -| FrameworkServlet 'dispatcherServlet': initialization completed in 9 ms
+"2017-12-05 09:03:15.587 |-WARN  [http-nio-8081-exec-1] org.springframework.web.servlet.PageNotFound [handleHttpRequestMethodNotSupported 215] -| Request method 'GET' not supported
+"2017-12-05 09:03:15.588 |-WARN  [http-nio-8081-exec-1] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver [logException 189] -| Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+"2017-12-05 09:03:15.596 |-INFO  [http-nio-8081-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /error
+"2017-12-05 09:03:15.598 |-DEBUG [http-nio-8081-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:03:15.599 |-DEBUG [http-nio-8081-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='127.0.0.1', operContent='call org.springframework.boot.autoconfigure.web.BasicErrorController->errorHtml', operDate=2017-12-05 09:03:15.599}
+"2017-12-05 09:03:15.683 |-INFO  [http-nio-8081-exec-2] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /error
+"2017-12-05 09:03:15.683 |-DEBUG [http-nio-8081-exec-2] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:03:15.683 |-DEBUG [http-nio-8081-exec-2] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='127.0.0.1', operContent='call org.springframework.boot.autoconfigure.web.BasicErrorController->error', operDate=2017-12-05 09:03:15.683}
+"2017-12-05 09:03:19.293 |-WARN  [http-nio-8081-exec-3] org.springframework.web.servlet.PageNotFound [handleHttpRequestMethodNotSupported 215] -| Request method 'GET' not supported
+"2017-12-05 09:03:19.294 |-WARN  [http-nio-8081-exec-3] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver [logException 189] -| Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+"2017-12-05 09:03:19.297 |-INFO  [http-nio-8081-exec-3] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /error
+"2017-12-05 09:03:19.298 |-DEBUG [http-nio-8081-exec-3] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:03:19.298 |-DEBUG [http-nio-8081-exec-3] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='127.0.0.1', operContent='call org.springframework.boot.autoconfigure.web.BasicErrorController->errorHtml', operDate=2017-12-05 09:03:19.298}
+"2017-12-05 09:10:07.439 |-INFO  [http-nio-8081-exec-8] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /valiCode
+"2017-12-05 09:10:07.439 |-DEBUG [http-nio-8081-exec-8] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:10:07.439 |-DEBUG [http-nio-8081-exec-8] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='192.168.1.204', operContent='call com.yt.shop.controller.UserInfoController->authImage', operDate=2017-12-05 09:10:07.439}
+"2017-12-05 09:11:21.583 |-WARN  [http-nio-8081-exec-10] org.springframework.web.servlet.PageNotFound [handleHttpRequestMethodNotSupported 215] -| Request method 'GET' not supported
+"2017-12-05 09:11:21.583 |-WARN  [http-nio-8081-exec-10] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver [logException 189] -| Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+"2017-12-05 09:11:21.583 |-INFO  [http-nio-8081-exec-10] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /error
+"2017-12-05 09:11:21.583 |-DEBUG [http-nio-8081-exec-10] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:11:21.583 |-DEBUG [http-nio-8081-exec-10] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='192.168.1.204', operContent='call org.springframework.boot.autoconfigure.web.BasicErrorController->errorHtml', operDate=2017-12-05 09:11:21.583}
+"2017-12-05 09:11:21.677 |-INFO  [http-nio-8081-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /error
+"2017-12-05 09:11:21.677 |-DEBUG [http-nio-8081-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:11:21.677 |-DEBUG [http-nio-8081-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='192.168.1.204', operContent='call org.springframework.boot.autoconfigure.web.BasicErrorController->error', operDate=2017-12-05 09:11:21.677}
+"2017-12-05 09:11:44.148 |-WARN  [http-nio-8081-exec-3] org.springframework.web.servlet.PageNotFound [handleHttpRequestMethodNotSupported 215] -| Request method 'GET' not supported
+"2017-12-05 09:11:44.163 |-WARN  [http-nio-8081-exec-3] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver [logException 189] -| Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+"2017-12-05 09:11:44.163 |-INFO  [http-nio-8081-exec-3] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /error
+"2017-12-05 09:11:44.163 |-DEBUG [http-nio-8081-exec-3] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:11:44.163 |-DEBUG [http-nio-8081-exec-3] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='192.168.1.204', operContent='call org.springframework.boot.autoconfigure.web.BasicErrorController->errorHtml', operDate=2017-12-05 09:11:44.163}
+"2017-12-05 09:11:46.628 |-WARN  [http-nio-8081-exec-4] org.springframework.web.servlet.PageNotFound [handleHttpRequestMethodNotSupported 215] -| Request method 'GET' not supported
+"2017-12-05 09:11:46.628 |-WARN  [http-nio-8081-exec-4] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver [logException 189] -| Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+"2017-12-05 09:11:46.628 |-INFO  [http-nio-8081-exec-4] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /error
+"2017-12-05 09:11:46.628 |-DEBUG [http-nio-8081-exec-4] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:11:46.628 |-DEBUG [http-nio-8081-exec-4] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='192.168.1.204', operContent='call org.springframework.boot.autoconfigure.web.BasicErrorController->errorHtml', operDate=2017-12-05 09:11:46.628}
+"2017-12-05 09:17:55.449 |-INFO  [http-nio-8081-exec-9] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /error
+"2017-12-05 09:17:55.450 |-DEBUG [http-nio-8081-exec-9] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:17:55.450 |-DEBUG [http-nio-8081-exec-9] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='192.168.1.204', operContent='call org.springframework.boot.autoconfigure.web.BasicErrorController->error', operDate=2017-12-05 09:17:55.45}
+"2017-12-05 09:19:11.609 |-INFO  [http-nio-8081-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /admin/validUser
+"2017-12-05 09:19:11.610 |-DEBUG [http-nio-8081-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:19:11.610 |-DEBUG [http-nio-8081-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='192.168.1.204', operContent='call com.yt.shop.controller.UserInfoController->validUser', operDate=2017-12-05 09:19:11.61}
+"2017-12-05 09:19:11.611 |-INFO  [http-nio-8081-exec-1] com.yt.shop.controller.UserInfoController [validUser 65] -| 验证用户登陆信息。。。
+"2017-12-05 09:19:11.611 |-INFO  [http-nio-8081-exec-1] com.yt.shop.controller.UserInfoController [validUser 79] -| 验证码不正确
+"2017-12-05 09:19:42.865 |-INFO  [http-nio-8081-exec-2] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /admin/validUser
+"2017-12-05 09:19:42.865 |-DEBUG [http-nio-8081-exec-2] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:19:42.865 |-DEBUG [http-nio-8081-exec-2] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='192.168.1.204', operContent='call com.yt.shop.controller.UserInfoController->validUser', operDate=2017-12-05 09:19:42.865}
+"2017-12-05 09:19:42.866 |-INFO  [http-nio-8081-exec-2] com.yt.shop.controller.UserInfoController [validUser 65] -| 验证用户登陆信息。。。
+"2017-12-05 09:19:42.866 |-INFO  [http-nio-8081-exec-2] com.yt.shop.controller.UserInfoController [validUser 79] -| 验证码不正确
+"2017-12-05 09:24:05.537 |-INFO  [http-nio-8081-exec-4] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /valiCode
+"2017-12-05 09:24:05.538 |-DEBUG [http-nio-8081-exec-4] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:24:05.538 |-DEBUG [http-nio-8081-exec-4] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='192.168.1.204', operContent='call com.yt.shop.controller.UserInfoController->authImage', operDate=2017-12-05 09:24:05.538}
+"2017-12-05 09:24:06.297 |-INFO  [http-nio-8081-exec-5] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /valiCode
+"2017-12-05 09:24:06.298 |-DEBUG [http-nio-8081-exec-5] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:24:06.298 |-DEBUG [http-nio-8081-exec-5] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='192.168.1.204', operContent='call com.yt.shop.controller.UserInfoController->authImage', operDate=2017-12-05 09:24:06.298}
+"2017-12-05 09:24:07.251 |-INFO  [http-nio-8081-exec-6] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /valiCode
+"2017-12-05 09:24:07.251 |-DEBUG [http-nio-8081-exec-6] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:24:07.251 |-DEBUG [http-nio-8081-exec-6] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='192.168.1.204', operContent='call com.yt.shop.controller.UserInfoController->authImage', operDate=2017-12-05 09:24:07.251}
+"2017-12-05 09:24:48.618 |-INFO  [http-nio-8081-exec-9] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /valiCode
+"2017-12-05 09:24:48.618 |-DEBUG [http-nio-8081-exec-9] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:24:48.618 |-DEBUG [http-nio-8081-exec-9] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='192.168.1.204', operContent='call com.yt.shop.controller.UserInfoController->authImage', operDate=2017-12-05 09:24:48.618}
+"2017-12-05 09:25:25.204 |-INFO  [http-nio-8081-exec-10] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /valiCode
+"2017-12-05 09:25:25.204 |-DEBUG [http-nio-8081-exec-10] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:25:25.204 |-DEBUG [http-nio-8081-exec-10] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='192.168.1.204', operContent='call com.yt.shop.controller.UserInfoController->authImage', operDate=2017-12-05 09:25:25.204}
+"2017-12-05 09:28:46.957 |-INFO  [http-nio-8081-exec-2] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /valiCode
+"2017-12-05 09:28:46.957 |-DEBUG [http-nio-8081-exec-2] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:28:46.957 |-DEBUG [http-nio-8081-exec-2] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='192.168.1.204', operContent='call com.yt.shop.controller.UserInfoController->authImage', operDate=2017-12-05 09:28:46.957}
+"2017-12-05 09:28:48.244 |-INFO  [http-nio-8081-exec-3] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /admin/validUser
+"2017-12-05 09:28:48.245 |-DEBUG [http-nio-8081-exec-3] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:28:48.252 |-ERROR [http-nio-8081-exec-3] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [log 181] -| Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.handler.AbstractHandlerMapping$PreFlightHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+"java.lang.ClassCastException: org.springframework.web.servlet.handler.AbstractHandlerMapping$PreFlightHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.yt.shop.common.interceptor.OperLogInterceptor.saveLog2DB(OperLogInterceptor.java:53)
+	at com.yt.shop.common.interceptor.OperLogInterceptor.preHandle(OperLogInterceptor.java:35)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:133)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doOptions(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.yt.shop.common.filter.TestFilter.doFilter(TestFilter.java:29)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2017-12-05 09:28:48.256 |-INFO  [http-nio-8081-exec-3] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /error
+"2017-12-05 09:28:48.256 |-DEBUG [http-nio-8081-exec-3] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:28:48.256 |-ERROR [http-nio-8081-exec-3] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [log 181] -| Servlet.service() for servlet [dispatcherServlet] threw exception
+"java.lang.ClassCastException: org.springframework.web.servlet.handler.AbstractHandlerMapping$PreFlightHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.yt.shop.common.interceptor.OperLogInterceptor.saveLog2DB(OperLogInterceptor.java:53)
+	at com.yt.shop.common.interceptor.OperLogInterceptor.preHandle(OperLogInterceptor.java:35)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:133)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doOptions(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:392)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:395)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:254)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:349)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2017-12-05 09:28:48.257 |-ERROR [http-nio-8081-exec-3] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost] [log 181] -| Exception Processing ErrorPage[errorCode=0, location=/error]
+"org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.handler.AbstractHandlerMapping$PreFlightHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)
+	at org.springframework.web.servlet.FrameworkServlet.doOptions(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:392)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:395)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:254)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:349)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: org.springframework.web.servlet.handler.AbstractHandlerMapping$PreFlightHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.yt.shop.common.interceptor.OperLogInterceptor.saveLog2DB(OperLogInterceptor.java:53)
+	at com.yt.shop.common.interceptor.OperLogInterceptor.preHandle(OperLogInterceptor.java:35)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:133)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	... 26 common frames omitted
+2017-12-05 09:28:55.657 |-INFO  [http-nio-8081-exec-4] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /valiCode
+"2017-12-05 09:28:55.658 |-DEBUG [http-nio-8081-exec-4] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:28:55.658 |-DEBUG [http-nio-8081-exec-4] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='192.168.1.204', operContent='call com.yt.shop.controller.UserInfoController->authImage', operDate=2017-12-05 09:28:55.658}
+"2017-12-05 09:29:04.142 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarting 48] -| Starting ShopApplication on PC-20170830XIPK with PID 1776 (D:\mywork\shop\target\classes started by Administrator in D:\mywork\shop)
+"2017-12-05 09:29:04.143 |-DEBUG [restartedMain] com.yt.shop.ShopApplication [logStarting 51] -| Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+"2017-12-05 09:29:04.143 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStartupProfileInfo 593] -| No active profile set, falling back to default profiles: default
+"2017-12-05 09:29:04.267 |-INFO  [background-preinit] org.hibernate.validator.internal.util.Version [<clinit> 30] -| HV000001: Hibernate Validator 5.3.5.Final
+"2017-12-05 09:29:04.285 |-INFO  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [prepareRefresh 583] -| Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7676504c: startup date [Tue Dec 05 09:29:04 CST 2017]; root of context hierarchy
+"2017-12-05 09:29:05.343 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [initialize 89] -| Tomcat initialized with port(s): 8081 (http)
+"2017-12-05 09:29:05.349 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Starting service [Tomcat]
+"2017-12-05 09:29:05.350 |-INFO  [restartedMain] org.apache.catalina.core.StandardEngine [log 179] -| Starting Servlet Engine: Apache Tomcat/8.5.23
+"2017-12-05 09:29:05.405 |-INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring embedded WebApplicationContext
+"2017-12-05 09:29:05.405 |-INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader [prepareEmbeddedWebApplicationContext 276] -| Root WebApplicationContext: initialization completed in 1120 ms
+"2017-12-05 09:29:05.514 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'dispatcherServlet' to [/]
+"2017-12-05 09:29:05.515 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.DruidStatViewServlet' to [/druid/*]
+"2017-12-05 09:29:05.516 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.TestServlet' to [/servlet/testServlet]
+"2017-12-05 09:29:05.518 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+"2017-12-05 09:29:05.518 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+"2017-12-05 09:29:05.518 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'httpPutFormContentFilter' to: [/*]
+"2017-12-05 09:29:05.518 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'requestContextFilter' to: [/*]
+"2017-12-05 09:29:05.519 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'druidWebStatFilter' to urls: [/*]
+"2017-12-05 09:29:05.519 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'testFilter' to urls: [/*]
+"2017-12-05 09:29:05.663 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [init 932] -| {dataSource-1} inited
+"2017-12-05 09:29:05.791 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [createNativeEntityManagerFactory 349] -| Building JPA container EntityManagerFactory for persistence unit 'default'
+"2017-12-05 09:29:05.799 |-INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper [logPersistenceUnitInformation 31] -| HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+"2017-12-05 09:29:05.836 |-INFO  [restartedMain] org.hibernate.Version [logVersion 37] -| HHH000412: Hibernate Core {5.0.12.Final}
+"2017-12-05 09:29:05.837 |-INFO  [restartedMain] org.hibernate.cfg.Environment [<clinit> 213] -| HHH000206: hibernate.properties not found
+"2017-12-05 09:29:05.837 |-INFO  [restartedMain] org.hibernate.cfg.Environment [buildBytecodeProvider 317] -| HHH000021: Bytecode provider name : javassist
+"2017-12-05 09:29:05.860 |-INFO  [restartedMain] org.hibernate.annotations.common.Version [<clinit> 66] -| HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+"2017-12-05 09:29:05.992 |-INFO  [restartedMain] org.hibernate.dialect.Dialect [<init> 156] -| HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+"2017-12-05 09:29:06.406 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [buildNativeEntityManagerFactory 379] -| Initialized JPA EntityManagerFactory for persistence unit 'default'
+"2017-12-05 09:29:06.610 |-INFO  [restartedMain] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [initiateService 47] -| HHH000397: Using ASTQueryTranslatorFactory
+"2017-12-05 09:29:06.866 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [initControllerAdviceCache 534] -| Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7676504c: startup date [Tue Dec 05 09:29:04 CST 2017]; root of context hierarchy
+"2017-12-05 09:29:06.910 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/savePerson]}" onto public int com.yt.shop.controller.DemoController.savePerson(com.yt.shop.model.Person)
+"2017-12-05 09:29:06.911 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/listPerson]}" onto public java.util.List<com.yt.shop.model.Person> com.yt.shop.controller.DemoController.listPerson()
+"2017-12-05 09:29:06.911 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/personUpload]}" onto public java.lang.String com.yt.shop.controller.DemoController.personUpload()
+"2017-12-05 09:29:06.911 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/savePerson1]}" onto public int com.yt.shop.controller.DemoController.savePerson1(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-12-05 09:29:06.912 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test]}" onto public java.lang.String com.yt.shop.controller.TestController.test()
+"2017-12-05 09:29:06.912 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test2]}" onto public java.lang.String com.yt.shop.controller.TestController.test2(org.springframework.ui.Model)
+"2017-12-05 09:29:06.912 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testError]}" onto public java.lang.String com.yt.shop.controller.TestController.testError()
+"2017-12-05 09:29:06.912 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/login]}" onto public java.lang.String com.yt.shop.controller.TestController.toLogin()
+"2017-12-05 09:29:06.913 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/login]}" onto public int com.yt.shop.controller.TestController.login(java.lang.String,java.lang.String)
+"2017-12-05 09:29:06.913 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testuploadimg],methods=[POST]}" onto public java.lang.String com.yt.shop.controller.TestController.uploadImg(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-12-05 09:29:06.913 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/valiCode]}" onto public void com.yt.shop.controller.UserInfoController.authImage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+"2017-12-05 09:29:06.913 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/admin/validUser],methods=[POST]}" onto public int com.yt.shop.controller.UserInfoController.validUser(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+"2017-12-05 09:29:06.915 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+"2017-12-05 09:29:06.916 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+"2017-12-05 09:29:06.946 |-INFO  [restartedMain] com.yt.shop.common.config.WebAppConfig [addResourceHandlers 29] -| imagesPath=file:///usr/shop/upload
+"2017-12-05 09:29:06.952 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/upload/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-12-05 09:29:06.952 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-12-05 09:29:06.952 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-12-05 09:29:06.961 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [initExceptionHandlerAdviceCache 273] -| Detected @ExceptionHandler methods in globalExceptionHandler
+"2017-12-05 09:29:07.256 |-INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [startServer 58] -| LiveReload server is running on port 35729
+"2017-12-05 09:29:07.292 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [afterSingletonsInstantiated 431] -| Registering beans for JMX exposure on startup
+"2017-12-05 09:29:07.293 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [autodetect 916] -| Bean with name 'dataSource' has been autodetected for JMX exposure
+"2017-12-05 09:29:07.297 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [registerBeanInstance 671] -| Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+"2017-12-05 09:29:07.306 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Initializing ProtocolHandler ["http-nio-8081"]
+"2017-12-05 09:29:07.310 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Starting ProtocolHandler ["http-nio-8081"]
+"2017-12-05 09:29:07.317 |-INFO  [restartedMain] org.apache.tomcat.util.net.NioSelectorPool [log 179] -| Using a shared selector for servlet write/read
+"2017-12-05 09:29:07.327 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [start 201] -| Tomcat started on port(s): 8081 (http)
+"2017-12-05 09:29:07.330 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarted 57] -| Started ShopApplication in 3.573 seconds (JVM running for 4.15)
+"2017-12-05 09:29:11.376 |-INFO  [http-nio-8081-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring FrameworkServlet 'dispatcherServlet'
+"2017-12-05 09:29:11.376 |-INFO  [http-nio-8081-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 489] -| FrameworkServlet 'dispatcherServlet': initialization started
+"2017-12-05 09:29:11.388 |-INFO  [http-nio-8081-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 508] -| FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+"2017-12-05 09:29:11.397 |-INFO  [http-nio-8081-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /admin/validUser
+"2017-12-05 09:29:11.400 |-DEBUG [http-nio-8081-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:29:11.407 |-ERROR [http-nio-8081-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [log 181] -| Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.handler.AbstractHandlerMapping$PreFlightHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+"java.lang.ClassCastException: org.springframework.web.servlet.handler.AbstractHandlerMapping$PreFlightHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.yt.shop.common.interceptor.OperLogInterceptor.saveLog2DB(OperLogInterceptor.java:53)
+	at com.yt.shop.common.interceptor.OperLogInterceptor.preHandle(OperLogInterceptor.java:35)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:133)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doOptions(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.yt.shop.common.filter.TestFilter.doFilter(TestFilter.java:29)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2017-12-05 09:29:11.412 |-INFO  [http-nio-8081-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /error
+"2017-12-05 09:29:11.413 |-DEBUG [http-nio-8081-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:29:11.413 |-ERROR [http-nio-8081-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [log 181] -| Servlet.service() for servlet [dispatcherServlet] threw exception
+"java.lang.ClassCastException: org.springframework.web.servlet.handler.AbstractHandlerMapping$PreFlightHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.yt.shop.common.interceptor.OperLogInterceptor.saveLog2DB(OperLogInterceptor.java:53)
+	at com.yt.shop.common.interceptor.OperLogInterceptor.preHandle(OperLogInterceptor.java:35)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:133)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doOptions(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:392)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:395)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:254)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:349)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2017-12-05 09:29:11.413 |-ERROR [http-nio-8081-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost] [log 181] -| Exception Processing ErrorPage[errorCode=0, location=/error]
+"org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.handler.AbstractHandlerMapping$PreFlightHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)
+	at org.springframework.web.servlet.FrameworkServlet.doOptions(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:392)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:395)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:254)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:349)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: org.springframework.web.servlet.handler.AbstractHandlerMapping$PreFlightHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.yt.shop.common.interceptor.OperLogInterceptor.saveLog2DB(OperLogInterceptor.java:53)
+	at com.yt.shop.common.interceptor.OperLogInterceptor.preHandle(OperLogInterceptor.java:35)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:133)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	... 26 common frames omitted
+2017-12-05 09:29:11.896 |-INFO  [http-nio-8081-exec-2] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /valiCode
+"2017-12-05 09:29:11.896 |-DEBUG [http-nio-8081-exec-2] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:29:11.896 |-DEBUG [http-nio-8081-exec-2] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='192.168.1.204', operContent='call com.yt.shop.controller.UserInfoController->authImage', operDate=2017-12-05 09:29:11.896}
+"2017-12-05 09:29:17.085 |-INFO  [http-nio-8081-exec-3] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /admin/validUser
+"2017-12-05 09:29:17.085 |-DEBUG [http-nio-8081-exec-3] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:29:17.086 |-ERROR [http-nio-8081-exec-3] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [log 181] -| Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.handler.AbstractHandlerMapping$PreFlightHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+"java.lang.ClassCastException: org.springframework.web.servlet.handler.AbstractHandlerMapping$PreFlightHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.yt.shop.common.interceptor.OperLogInterceptor.saveLog2DB(OperLogInterceptor.java:53)
+	at com.yt.shop.common.interceptor.OperLogInterceptor.preHandle(OperLogInterceptor.java:35)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:133)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doOptions(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.yt.shop.common.filter.TestFilter.doFilter(TestFilter.java:29)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2017-12-05 09:29:17.089 |-INFO  [http-nio-8081-exec-3] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /error
+"2017-12-05 09:29:17.090 |-DEBUG [http-nio-8081-exec-3] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:29:17.090 |-ERROR [http-nio-8081-exec-3] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [log 181] -| Servlet.service() for servlet [dispatcherServlet] threw exception
+"java.lang.ClassCastException: org.springframework.web.servlet.handler.AbstractHandlerMapping$PreFlightHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.yt.shop.common.interceptor.OperLogInterceptor.saveLog2DB(OperLogInterceptor.java:53)
+	at com.yt.shop.common.interceptor.OperLogInterceptor.preHandle(OperLogInterceptor.java:35)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:133)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doOptions(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:392)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:395)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:254)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:349)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2017-12-05 09:29:17.090 |-ERROR [http-nio-8081-exec-3] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost] [log 181] -| Exception Processing ErrorPage[errorCode=0, location=/error]
+"org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.handler.AbstractHandlerMapping$PreFlightHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)
+	at org.springframework.web.servlet.FrameworkServlet.doOptions(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:392)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:395)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:254)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:349)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: org.springframework.web.servlet.handler.AbstractHandlerMapping$PreFlightHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.yt.shop.common.interceptor.OperLogInterceptor.saveLog2DB(OperLogInterceptor.java:53)
+	at com.yt.shop.common.interceptor.OperLogInterceptor.preHandle(OperLogInterceptor.java:35)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:133)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	... 26 common frames omitted
+2017-12-05 09:29:32.196 |-INFO  [Thread-14] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [doClose 984] -| Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7676504c: startup date [Tue Dec 05 09:29:04 CST 2017]; root of context hierarchy
+"2017-12-05 09:29:32.198 |-WARN  [Thread-14] org.springframework.beans.factory.support.DisposableBeanAdapter [destroy 281] -| Invocation of destroy method failed on bean with name 'classPathFileSystemWatcher': java.lang.NullPointerException
+"2017-12-05 09:29:32.199 |-INFO  [Thread-14] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [destroy 449] -| Unregistering JMX-exposed beans on shutdown
+"2017-12-05 09:29:32.199 |-INFO  [Thread-14] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [unregisterBeans 241] -| Unregistering JMX-exposed beans
+"2017-12-05 09:29:32.200 |-INFO  [Thread-14] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [destroy 548] -| Closing JPA EntityManagerFactory for persistence unit 'default'
+"2017-12-05 09:29:32.203 |-INFO  [Thread-14] com.alibaba.druid.pool.DruidDataSource [close 1712] -| {dataSource-1} closed
+"2017-12-05 09:29:32.307 |-INFO  [localhost-startStop-2] com.yt.shop.common.filter.TestFilter [destroy 35] -| test execute filter destroy
+"2017-12-05 09:29:32.550 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarting 48] -| Starting ShopApplication on PC-20170830XIPK with PID 1776 (D:\mywork\shop\target\classes started by Administrator in D:\mywork\shop)
+"2017-12-05 09:29:32.550 |-DEBUG [restartedMain] com.yt.shop.ShopApplication [logStarting 51] -| Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+"2017-12-05 09:29:32.550 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStartupProfileInfo 593] -| No active profile set, falling back to default profiles: default
+"2017-12-05 09:29:32.553 |-INFO  [restartedMain] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext [prepareRefresh 583] -| Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3093460c: startup date [Tue Dec 05 09:29:32 CST 2017]; root of context hierarchy
+"2017-12-05 09:29:33.007 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [initialize 89] -| Tomcat initialized with port(s): 8081 (http)
+"2017-12-05 09:29:33.007 |-INFO  [restartedMain] org.apache.catalina.core.StandardService [log 179] -| Starting service [Tomcat]
+"2017-12-05 09:29:33.007 |-INFO  [restartedMain] org.apache.catalina.core.StandardEngine [log 179] -| Starting Servlet Engine: Apache Tomcat/8.5.23
+"2017-12-05 09:29:33.020 |-INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring embedded WebApplicationContext
+"2017-12-05 09:29:33.021 |-INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader [prepareEmbeddedWebApplicationContext 276] -| Root WebApplicationContext: initialization completed in 468 ms
+"2017-12-05 09:29:33.063 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'dispatcherServlet' to [/]
+"2017-12-05 09:29:33.064 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.DruidStatViewServlet' to [/druid/*]
+"2017-12-05 09:29:33.064 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean [onStartup 190] -| Mapping servlet: 'com.yt.shop.common.servlet.TestServlet' to [/servlet/testServlet]
+"2017-12-05 09:29:33.065 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+"2017-12-05 09:29:33.065 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+"2017-12-05 09:29:33.065 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'httpPutFormContentFilter' to: [/*]
+"2017-12-05 09:29:33.065 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 258] -| Mapping filter: 'requestContextFilter' to: [/*]
+"2017-12-05 09:29:33.065 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'druidWebStatFilter' to urls: [/*]
+"2017-12-05 09:29:33.065 |-INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean [configure 271] -| Mapping filter: 'testFilter' to urls: [/*]
+"2017-12-05 09:29:33.112 |-INFO  [restartedMain] com.alibaba.druid.pool.DruidDataSource [init 932] -| {dataSource-2} inited
+"2017-12-05 09:29:33.135 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [createNativeEntityManagerFactory 349] -| Building JPA container EntityManagerFactory for persistence unit 'default'
+"2017-12-05 09:29:33.136 |-INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper [logPersistenceUnitInformation 31] -| HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+"2017-12-05 09:29:33.145 |-INFO  [restartedMain] org.hibernate.dialect.Dialect [<init> 156] -| HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+"2017-12-05 09:29:33.278 |-INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [buildNativeEntityManagerFactory 379] -| Initialized JPA EntityManagerFactory for persistence unit 'default'
+"2017-12-05 09:29:33.385 |-INFO  [restartedMain] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [initiateService 47] -| HHH000397: Using ASTQueryTranslatorFactory
+"2017-12-05 09:29:33.505 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [initControllerAdviceCache 534] -| Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3093460c: startup date [Tue Dec 05 09:29:32 CST 2017]; root of context hierarchy
+"2017-12-05 09:29:33.514 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/savePerson]}" onto public int com.yt.shop.controller.DemoController.savePerson(com.yt.shop.model.Person)
+"2017-12-05 09:29:33.514 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/listPerson]}" onto public java.util.List<com.yt.shop.model.Person> com.yt.shop.controller.DemoController.listPerson()
+"2017-12-05 09:29:33.515 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/personUpload]}" onto public java.lang.String com.yt.shop.controller.DemoController.personUpload()
+"2017-12-05 09:29:33.515 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/savePerson1]}" onto public int com.yt.shop.controller.DemoController.savePerson1(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-12-05 09:29:33.515 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test]}" onto public java.lang.String com.yt.shop.controller.TestController.test()
+"2017-12-05 09:29:33.515 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test2]}" onto public java.lang.String com.yt.shop.controller.TestController.test2(org.springframework.ui.Model)
+"2017-12-05 09:29:33.515 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testError]}" onto public java.lang.String com.yt.shop.controller.TestController.testError()
+"2017-12-05 09:29:33.516 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/login]}" onto public java.lang.String com.yt.shop.controller.TestController.toLogin()
+"2017-12-05 09:29:33.516 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/login]}" onto public int com.yt.shop.controller.TestController.login(java.lang.String,java.lang.String)
+"2017-12-05 09:29:33.516 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testuploadimg],methods=[POST]}" onto public java.lang.String com.yt.shop.controller.TestController.uploadImg(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-12-05 09:29:33.516 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/valiCode]}" onto public void com.yt.shop.controller.UserInfoController.authImage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+"2017-12-05 09:29:33.517 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/admin/validUser],methods=[POST]}" onto public int com.yt.shop.controller.UserInfoController.validUser(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+"2017-12-05 09:29:33.518 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+"2017-12-05 09:29:33.518 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+"2017-12-05 09:29:33.524 |-INFO  [restartedMain] com.yt.shop.common.config.WebAppConfig [addResourceHandlers 29] -| imagesPath=file:///usr/shop/upload
+"2017-12-05 09:29:33.525 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/upload/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-12-05 09:29:33.525 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-12-05 09:29:33.526 |-INFO  [restartedMain] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-12-05 09:29:33.534 |-INFO  [restartedMain] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [initExceptionHandlerAdviceCache 273] -| Detected @ExceptionHandler methods in globalExceptionHandler
+"2017-12-05 09:29:33.588 |-INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [startServer 58] -| LiveReload server is running on port 35729
+"2017-12-05 09:29:33.633 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [afterSingletonsInstantiated 431] -| Registering beans for JMX exposure on startup
+"2017-12-05 09:29:33.635 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [autodetect 916] -| Bean with name 'dataSource' has been autodetected for JMX exposure
+"2017-12-05 09:29:33.639 |-INFO  [restartedMain] org.springframework.jmx.export.annotation.AnnotationMBeanExporter [registerBeanInstance 671] -| Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+"2017-12-05 09:29:33.644 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Initializing ProtocolHandler ["http-nio-8081"]
+"2017-12-05 09:29:33.645 |-INFO  [restartedMain] org.apache.coyote.http11.Http11NioProtocol [log 179] -| Starting ProtocolHandler ["http-nio-8081"]
+"2017-12-05 09:29:33.646 |-INFO  [restartedMain] org.apache.tomcat.util.net.NioSelectorPool [log 179] -| Using a shared selector for servlet write/read
+"2017-12-05 09:29:33.650 |-INFO  [restartedMain] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [start 201] -| Tomcat started on port(s): 8081 (http)
+"2017-12-05 09:29:33.652 |-INFO  [restartedMain] com.yt.shop.ShopApplication [logStarted 57] -| Started ShopApplication in 1.142 seconds (JVM running for 30.472)
+"2017-12-05 09:29:33.869 |-INFO  [main] com.yt.shop.mvctest.PersonControllerTest [logStarting 48] -| Starting PersonControllerTest on PC-20170830XIPK with PID 6160 (started by Administrator in D:\mywork\shop)
+"2017-12-05 09:29:33.870 |-DEBUG [main] com.yt.shop.mvctest.PersonControllerTest [logStarting 51] -| Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+"2017-12-05 09:29:33.870 |-INFO  [main] com.yt.shop.mvctest.PersonControllerTest [logStartupProfileInfo 593] -| No active profile set, falling back to default profiles: default
+"2017-12-05 09:29:34.034 |-INFO  [main] org.springframework.web.context.support.GenericWebApplicationContext [prepareRefresh 583] -| Refreshing org.springframework.web.context.support.GenericWebApplicationContext@776a6d9b: startup date [Tue Dec 05 09:29:34 CST 2017]; root of context hierarchy
+"2017-12-05 09:29:34.110 |-INFO  [background-preinit] org.hibernate.validator.internal.util.Version [<clinit> 30] -| HV000001: Hibernate Validator 5.3.5.Final
+"2017-12-05 09:29:35.235 |-INFO  [main] com.alibaba.druid.pool.DruidDataSource [init 932] -| {dataSource-1} inited
+"2017-12-05 09:29:35.429 |-INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [createNativeEntityManagerFactory 349] -| Building JPA container EntityManagerFactory for persistence unit 'default'
+"2017-12-05 09:29:35.447 |-INFO  [main] org.hibernate.jpa.internal.util.LogHelper [logPersistenceUnitInformation 31] -| HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+"2017-12-05 09:29:35.506 |-INFO  [main] org.hibernate.Version [logVersion 37] -| HHH000412: Hibernate Core {5.0.12.Final}
+"2017-12-05 09:29:35.507 |-INFO  [main] org.hibernate.cfg.Environment [<clinit> 213] -| HHH000206: hibernate.properties not found
+"2017-12-05 09:29:35.508 |-INFO  [main] org.hibernate.cfg.Environment [buildBytecodeProvider 317] -| HHH000021: Bytecode provider name : javassist
+"2017-12-05 09:29:35.562 |-INFO  [main] org.hibernate.annotations.common.Version [<clinit> 66] -| HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+"2017-12-05 09:29:35.645 |-INFO  [main] org.hibernate.dialect.Dialect [<init> 156] -| HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+"2017-12-05 09:29:36.417 |-INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [buildNativeEntityManagerFactory 379] -| Initialized JPA EntityManagerFactory for persistence unit 'default'
+"2017-12-05 09:29:36.731 |-INFO  [main] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [initiateService 47] -| HHH000397: Using ASTQueryTranslatorFactory
+"2017-12-05 09:29:37.273 |-INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [initControllerAdviceCache 534] -| Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@776a6d9b: startup date [Tue Dec 05 09:29:34 CST 2017]; root of context hierarchy
+"2017-12-05 09:29:37.334 |-INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/savePerson1]}" onto public int com.yt.shop.controller.DemoController.savePerson1(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-12-05 09:29:37.334 |-INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/savePerson]}" onto public int com.yt.shop.controller.DemoController.savePerson(com.yt.shop.model.Person)
+"2017-12-05 09:29:37.335 |-INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/listPerson]}" onto public java.util.List<com.yt.shop.model.Person> com.yt.shop.controller.DemoController.listPerson()
+"2017-12-05 09:29:37.335 |-INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/person/personUpload]}" onto public java.lang.String com.yt.shop.controller.DemoController.personUpload()
+"2017-12-05 09:29:37.336 |-INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test]}" onto public java.lang.String com.yt.shop.controller.TestController.test()
+"2017-12-05 09:29:37.336 |-INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testError]}" onto public java.lang.String com.yt.shop.controller.TestController.testError()
+"2017-12-05 09:29:37.336 |-INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/user/login]}" onto public int com.yt.shop.controller.TestController.login(java.lang.String,java.lang.String)
+"2017-12-05 09:29:37.336 |-INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/test2]}" onto public java.lang.String com.yt.shop.controller.TestController.test2(org.springframework.ui.Model)
+"2017-12-05 09:29:37.337 |-INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/testuploadimg],methods=[POST]}" onto public java.lang.String com.yt.shop.controller.TestController.uploadImg(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+"2017-12-05 09:29:37.337 |-INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/login]}" onto public java.lang.String com.yt.shop.controller.TestController.toLogin()
+"2017-12-05 09:29:37.337 |-INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/valiCode]}" onto public void com.yt.shop.controller.UserInfoController.authImage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+"2017-12-05 09:29:37.337 |-INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/admin/validUser],methods=[POST]}" onto public int com.yt.shop.controller.UserInfoController.validUser(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+"2017-12-05 09:29:37.339 |-INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+"2017-12-05 09:29:37.339 |-INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [register 543] -| Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+"2017-12-05 09:29:37.355 |-INFO  [main] com.yt.shop.common.config.WebAppConfig [addResourceHandlers 29] -| imagesPath=file:///usr/shop/upload
+"2017-12-05 09:29:37.362 |-INFO  [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/upload/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-12-05 09:29:37.362 |-INFO  [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-12-05 09:29:37.363 |-INFO  [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [registerHandler 362] -| Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+"2017-12-05 09:29:37.374 |-INFO  [main] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [initExceptionHandlerAdviceCache 273] -| Detected @ExceptionHandler methods in globalExceptionHandler
+"2017-12-05 09:29:37.866 |-INFO  [main] com.yt.shop.mvctest.PersonControllerTest [logStarted 57] -| Started PersonControllerTest in 4.323 seconds (JVM running for 4.953)
+"2017-12-05 09:29:37.911 |-INFO  [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext [log 440] -| Initializing Spring FrameworkServlet ''
+"2017-12-05 09:29:37.911 |-INFO  [main] org.springframework.test.web.servlet.TestDispatcherServlet [initServletBean 489] -| FrameworkServlet '': initialization started
+"2017-12-05 09:29:37.921 |-INFO  [main] org.springframework.test.web.servlet.TestDispatcherServlet [initServletBean 508] -| FrameworkServlet '': initialization completed in 10 ms
+"2017-12-05 09:29:37.938 |-INFO  [main] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /person/listPerson
+"2017-12-05 09:29:37.939 |-DEBUG [main] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| ���ؼ�鵱ǰ�û���UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:29:37.939 |-DEBUG [main] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| ������־����OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='127.0.0.1', operContent='call com.yt.shop.controller.DemoController->listPerson', operDate=2017-12-05 09:29:37.939}
+"2017-12-05 09:29:37.945 |-INFO  [main] com.yt.shop.controller.DemoController [listPerson 46] -| ���Բ�ѯperson���ϵķ���
+"2017-12-05 09:29:37.976 |-DEBUG [main] org.hibernate.SQL [logStatement 92] -| select person0_.pid as pid1_16_, person0_.birth as birth2_16_, person0_.pimg as pimg3_16_, person0_.pname as pname4_16_ from person person0_
+"2017-12-05 09:29:38.014 |-DEBUG [main] com.yt.shop.controller.DemoController [listPerson 49] -| ��ѯperson���ϳɹ�
+"2017-12-05 09:29:38.075 |-INFO  [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext [log 440] -| Initializing Spring FrameworkServlet ''
+"2017-12-05 09:29:38.076 |-INFO  [main] org.springframework.test.web.servlet.TestDispatcherServlet [initServletBean 489] -| FrameworkServlet '': initialization started
+"2017-12-05 09:29:38.078 |-INFO  [main] org.springframework.test.web.servlet.TestDispatcherServlet [initServletBean 508] -| FrameworkServlet '': initialization completed in 2 ms
+"2017-12-05 09:29:38.086 |-INFO  [main] com.yt.shop.controller.DemoController [savePerson1 67] -| call �ļ��ϴ�
+"2017-12-05 09:29:38.086 |-INFO  [main] com.yt.shop.controller.DemoController [savePerson1 79] -| �ϴ��ļ�Ŀ¼��D:\mywork\shop/upload/userHead/
+"2017-12-05 09:29:38.087 |-INFO  [main] com.yt.shop.controller.DemoController [savePerson1 84] -| �ϴ��ɹ�
+"2017-12-05 09:29:38.097 |-DEBUG [main] org.hibernate.SQL [logStatement 92] -| insert into person (birth, pimg, pname) values (?, ?, ?)
+"2017-12-05 09:29:38.099 |-TRACE [main] org.hibernate.type.descriptor.sql.BasicBinder [bind 65] -| binding parameter [1] as [TIMESTAMP] - [2017-12-05 09:29:38.086]
+"2017-12-05 09:29:38.101 |-TRACE [main] org.hibernate.type.descriptor.sql.BasicBinder [bind 65] -| binding parameter [2] as [VARCHAR] - [upload/userHead/4c20745f-7ab7-40e6-8ef5-5ac5b6575de7.gif]
+"2017-12-05 09:29:38.102 |-TRACE [main] org.hibernate.type.descriptor.sql.BasicBinder [bind 65] -| binding parameter [3] as [VARCHAR] - [aaaaa]
+"2017-12-05 09:29:38.111 |-DEBUG [main] com.yt.shop.controller.DemoController [savePerson1 95] -| �ļ��ϴ��ɹ�,������ȷ���棺Person{pid=4, pname='aaaaa', birth=2017-12-05 09:29:38.086, pimg='upload/userHead/4c20745f-7ab7-40e6-8ef5-5ac5b6575de7.gif'}
+"2017-12-05 09:29:38.114 |-INFO  [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext [log 440] -| Initializing Spring FrameworkServlet ''
+"2017-12-05 09:29:38.114 |-INFO  [main] org.springframework.test.web.servlet.TestDispatcherServlet [initServletBean 489] -| FrameworkServlet '': initialization started
+"2017-12-05 09:29:38.118 |-INFO  [main] org.springframework.test.web.servlet.TestDispatcherServlet [initServletBean 508] -| FrameworkServlet '': initialization completed in 3 ms
+"2017-12-05 09:29:38.197 |-INFO  [main] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /person/savePerson
+"2017-12-05 09:29:38.198 |-DEBUG [main] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| ���ؼ�鵱ǰ�û���UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:29:38.198 |-DEBUG [main] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| ������־����OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='127.0.0.1', operContent='call com.yt.shop.controller.DemoController->savePerson', operDate=2017-12-05 09:29:38.198}
+"2017-12-05 09:29:38.232 |-INFO  [main] com.yt.shop.controller.DemoController [savePerson 31] -| ���Ա���person�ķ���
+"2017-12-05 09:29:38.233 |-DEBUG [main] org.hibernate.SQL [logStatement 92] -| insert into person (birth, pimg, pname) values (?, ?, ?)
+"2017-12-05 09:29:38.234 |-TRACE [main] org.hibernate.type.descriptor.sql.BasicBinder [bind 65] -| binding parameter [1] as [TIMESTAMP] - [2017-12-05 09:29:38.119]
+"2017-12-05 09:29:38.235 |-TRACE [main] org.hibernate.type.descriptor.sql.BasicBinder [bind 65] -| binding parameter [2] as [VARCHAR] - [/upload/userHead/aaa.jpg]
+"2017-12-05 09:29:38.236 |-TRACE [main] org.hibernate.type.descriptor.sql.BasicBinder [bind 65] -| binding parameter [3] as [VARCHAR] - [����]
+"2017-12-05 09:29:38.242 |-DEBUG [main] com.yt.shop.controller.DemoController [savePerson 34] -| ����person����ɹ�
+"2017-12-05 09:29:38.248 |-INFO  [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext [log 440] -| Initializing Spring FrameworkServlet ''
+"2017-12-05 09:29:38.248 |-INFO  [main] org.springframework.test.web.servlet.TestDispatcherServlet [initServletBean 489] -| FrameworkServlet '': initialization started
+"2017-12-05 09:29:38.251 |-INFO  [main] org.springframework.test.web.servlet.TestDispatcherServlet [initServletBean 508] -| FrameworkServlet '': initialization completed in 3 ms
+"2017-12-05 09:29:38.253 |-INFO  [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper [buildDefaultMergedContextConfiguration 319] -| Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.yt.shop.ShopApplicationTests], using SpringBootContextLoader
+"2017-12-05 09:29:38.254 |-INFO  [main] org.springframework.test.context.support.AbstractContextLoader [generateDefaultLocations 264] -| Could not detect default resource locations for test class [com.yt.shop.ShopApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+"2017-12-05 09:29:38.255 |-INFO  [main] org.springframework.test.context.support.AnnotationConfigContextLoaderUtils [detectDefaultConfigurationClasses 81] -| Could not detect default configuration classes for test class [com.yt.shop.ShopApplicationTests]: ShopApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+"2017-12-05 09:29:38.258 |-INFO  [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper [getOrFindConfigurationClasses 206] -| Found @SpringBootConfiguration com.yt.shop.ShopApplication for test class com.yt.shop.ShopApplicationTests
+"2017-12-05 09:29:38.261 |-INFO  [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper [getDefaultTestExecutionListenerClassNames 260] -| Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+"2017-12-05 09:29:38.264 |-INFO  [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper [getTestExecutionListeners 187] -| Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49c13ecd, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2f4545c6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@482942d8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2cd52eda, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6c225adb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@69cc49ec, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6b71e98f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6ed7b9c5, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@105dc246, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1b556a88, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7f8cd5fc, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2c465259]
+"2017-12-05 09:29:38.271 |-INFO  [Thread-3] org.springframework.web.context.support.GenericWebApplicationContext [doClose 984] -| Closing org.springframework.web.context.support.GenericWebApplicationContext@776a6d9b: startup date [Tue Dec 05 09:29:34 CST 2017]; root of context hierarchy
+"2017-12-05 09:29:38.275 |-INFO  [Thread-3] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [destroy 548] -| Closing JPA EntityManagerFactory for persistence unit 'default'
+"2017-12-05 09:29:38.280 |-INFO  [Thread-3] com.alibaba.druid.pool.DruidDataSource [close 1712] -| {dataSource-1} closed
+"2017-12-05 09:29:52.213 |-INFO  [http-nio-8081-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [log 179] -| Initializing Spring FrameworkServlet 'dispatcherServlet'
+"2017-12-05 09:29:52.213 |-INFO  [http-nio-8081-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 489] -| FrameworkServlet 'dispatcherServlet': initialization started
+"2017-12-05 09:29:52.217 |-INFO  [http-nio-8081-exec-1] org.springframework.web.servlet.DispatcherServlet [initServletBean 508] -| FrameworkServlet 'dispatcherServlet': initialization completed in 4 ms
+"2017-12-05 09:29:52.218 |-INFO  [http-nio-8081-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /valiCode
+"2017-12-05 09:29:52.218 |-DEBUG [http-nio-8081-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:29:52.218 |-DEBUG [http-nio-8081-exec-1] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 64] -| 操作日志对象：OperRecord{opreid=null, userInfo=UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}, ipAddress='192.168.1.204', operContent='call com.yt.shop.controller.UserInfoController->authImage', operDate=2017-12-05 09:29:52.218}
+"2017-12-05 09:30:20.783 |-INFO  [http-nio-8081-exec-2] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /admin/validUser
+"2017-12-05 09:30:20.784 |-DEBUG [http-nio-8081-exec-2] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:30:20.785 |-ERROR [http-nio-8081-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [log 181] -| Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.handler.AbstractHandlerMapping$PreFlightHandler cannot be cast to org.springframework.web.method.HandlerMethod] with root cause
+"java.lang.ClassCastException: org.springframework.web.servlet.handler.AbstractHandlerMapping$PreFlightHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.yt.shop.common.interceptor.OperLogInterceptor.saveLog2DB(OperLogInterceptor.java:53)
+	at com.yt.shop.common.interceptor.OperLogInterceptor.preHandle(OperLogInterceptor.java:35)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:133)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doOptions(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.yt.shop.common.filter.TestFilter.doFilter(TestFilter.java:29)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2017-12-05 09:30:20.788 |-INFO  [http-nio-8081-exec-2] com.yt.shop.common.interceptor.OperLogInterceptor [preHandle 34] -| /error
+"2017-12-05 09:30:20.788 |-DEBUG [http-nio-8081-exec-2] com.yt.shop.common.interceptor.OperLogInterceptor [saveLog2DB 51] -| 拦截检查当前用户：UserInfo{userId=-1, userType=null, userName='null', userPass='null', name='null', code='null', tradePass='null', regTime=null, headPic='null', email='null', question='null', answer='null', refuserId=null, tuiguanScore=null, gouwuScore=null, duihuanScore=null, zengzhiScore=null, xianjinScore=null, userState=null, shopCars=null}
+"2017-12-05 09:30:20.789 |-ERROR [http-nio-8081-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [log 181] -| Servlet.service() for servlet [dispatcherServlet] threw exception
+"java.lang.ClassCastException: org.springframework.web.servlet.handler.AbstractHandlerMapping$PreFlightHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.yt.shop.common.interceptor.OperLogInterceptor.saveLog2DB(OperLogInterceptor.java:53)
+	at com.yt.shop.common.interceptor.OperLogInterceptor.preHandle(OperLogInterceptor.java:35)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:133)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doOptions(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:392)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:395)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:254)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:349)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2017-12-05 09:30:20.790 |-ERROR [http-nio-8081-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost] [log 181] -| Exception Processing ErrorPage[errorCode=0, location=/error]
+"org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.ClassCastException: org.springframework.web.servlet.handler.AbstractHandlerMapping$PreFlightHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)
+	at org.springframework.web.servlet.FrameworkServlet.doOptions(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:392)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:395)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:254)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:349)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: org.springframework.web.servlet.handler.AbstractHandlerMapping$PreFlightHandler cannot be cast to org.springframework.web.method.HandlerMethod
+	at com.yt.shop.common.interceptor.OperLogInterceptor.saveLog2DB(OperLogInterceptor.java:53)
+	at com.yt.shop.common.interceptor.OperLogInterceptor.preHandle(OperLogInterceptor.java:35)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:133)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	... 26 common frames omitted

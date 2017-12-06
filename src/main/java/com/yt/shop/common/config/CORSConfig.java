@@ -11,10 +11,10 @@ import static org.springframework.web.cors.CorsConfiguration.ALL;
 /**
  * CORS configuration
  */
-@Configuration
+//@Configuration
 public class CORSConfig {
 
-    @Bean
+    //@Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurerAdapter() {
             @Override

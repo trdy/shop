@@ -55,7 +55,7 @@ public class UserInfoController {
      * @return
      * @throws IOException
      */
-    @RequestMapping(value = "/admin/validUser",method= RequestMethod.POST)
+    @RequestMapping(value = "/admin/validUser",method =RequestMethod.POST)
     @ResponseBody
     public int validUser(HttpServletRequest request) throws IOException{
         String userName=request.getParameter("userName");
@@ -66,7 +66,7 @@ public class UserInfoController {
         HttpSession session=request.getSession();
         String verifyCode=(String) session.getAttribute(Constract.VERIFY_CODE);
         if(null!=verifyCode&&verifyCode.equalsIgnoreCase(checkcode)){
-            UserInfo userInfo=userInfoService.findBankUserByNameAndPass(userName, MD5.GetMD5Code(userPass));
+            UserInfo userInfo=userInfoService.findBackUserByNameAndPass(userName, MD5.GetMD5Code(userPass));
             if(userInfo!=null){
                 session.setAttribute(Constract.ADMIN_LOGIN_FLAG, userInfo);
                 log.info("登录成功。。。。:"+userInfo);

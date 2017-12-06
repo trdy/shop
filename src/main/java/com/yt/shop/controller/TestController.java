@@ -1,6 +1,7 @@
 package com.yt.shop.controller;
 
 import com.yt.shop.common.FileUtil;
+import com.yt.shop.common.MD5;
 import com.yt.shop.model.UserInfo;
 import com.yt.shop.service.TestService;
 import org.slf4j.Logger;
@@ -115,7 +116,7 @@ public class TestController {
     @ResponseBody
     public int login(String userName,String userPass){
         log.info("验证用户名:"+userName+"和密码："+userPass);
-        UserInfo userInfo=testService.findUserInfoByNameAndPass(userName,userPass);
+        UserInfo userInfo=testService.findUserInfoByNameAndPass(userName, MD5.GetMD5Code(userPass));
         if(userInfo!=null){
             log.info("查询数据库返回userinfo:"+userInfo);
             return 1;

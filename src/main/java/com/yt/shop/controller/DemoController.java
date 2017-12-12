@@ -76,11 +76,12 @@ public class DemoController {
                 String filePath = System.getProperty("user.dir") + "/upload/userHead/";
                 int n = file.getOriginalFilename().indexOf(".");
                 String fileName = UUID.randomUUID() + file.getOriginalFilename().substring(n);
+                //String fileName="abc.jpg";
                 log.info("上传文件目录：" + filePath);
 
                 try {
                     FileUtil.uploadFile(file.getBytes(), filePath, fileName);
-                    p.setPimg("upload/userHead/" + fileName);
+                    p.setPimg("/upload/userHead/" + fileName);
                     log.info("上传成功");
                     result=1;
                 } catch (Exception e) {

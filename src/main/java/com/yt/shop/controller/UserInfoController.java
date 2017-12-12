@@ -1,9 +1,10 @@
 package com.yt.shop.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.yt.shop.common.Constract;
 import com.yt.shop.common.MD5;
 import com.yt.shop.common.VerifyCodeUtils;
-import com.yt.shop.model.OperRecord;
 import com.yt.shop.model.UserInfo;
 import com.yt.shop.service.UserInfoService;
 import org.slf4j.Logger;
@@ -18,6 +19,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 @Controller
 public class UserInfoController {
@@ -57,11 +60,12 @@ public class UserInfoController {
      */
     @RequestMapping(value = "/admin/validUser",method =RequestMethod.POST)
     @ResponseBody
-    public int validUser(HttpServletRequest request) throws IOException{
+    public String validUser(HttpServletRequest request) throws IOException{
         String userName=request.getParameter("userName");
         String userPass=request.getParameter("userPass");
         String checkcode=request.getParameter("checkcode");
 
+        Map<String,Object> map=new HashMap<>();
         log.info("验证用户登陆信息。。。");
         HttpSession session=request.getSession();
         String verifyCode=(String) session.getAttribute(Constract.VERIFY_CODE);
@@ -70,14 +74,15 @@ public class UserInfoController {
             if(userInfo!=null){
                 session.setAttribute(Constract.ADMIN_LOGIN_FLAG, userInfo);
                 log.info("登录成功。。。。:"+userInfo);
-                return 1;
+
+                return "{\"code\":1}";
             }else{
                 log.info("用户名密码不正确");
-                return -1;
+                return "{\"code\":-1}";
             }
         }else{
             log.info("验证码不正确");
-            return -2;
+            return "{\"code\":-2}";
         }
     }
 }

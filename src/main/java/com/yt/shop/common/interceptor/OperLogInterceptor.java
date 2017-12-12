@@ -31,7 +31,7 @@ public class OperLogInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
-        //showLog(httpServletRequest,o);
+        showLog(httpServletRequest,o);
         return true;
     }
 

@@ -1,7 +1,5 @@
 package com.yt.shop.controller;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.yt.shop.common.Constract;
 import com.yt.shop.common.MD5;
 import com.yt.shop.common.VerifyCodeUtils;
@@ -29,6 +27,7 @@ public class UserInfoController {
 
     private Logger log= LoggerFactory.getLogger(this.getClass());
 
+    @Autowired
     private OperRecordJpa operRecordJpa;
 
     @Autowired
@@ -90,4 +89,5 @@ public class UserInfoController {
             return "{\"code\":-2}";
         }
     }
+
 }

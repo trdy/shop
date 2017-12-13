@@ -14,7 +14,7 @@ public class UserInfoService {
     private UserInfoJpa userInfoJpa;
 
     /**
-     * 根据用户名和密码查询后台用户
+     * 后台管理员登录根据用户名和密码查询后台用户
      * @param userName
      * @param userPass
      * @return

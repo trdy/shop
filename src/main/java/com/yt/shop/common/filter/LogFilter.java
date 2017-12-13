@@ -18,15 +18,15 @@ public class LogFilter implements Filter {
     private Logger log= LoggerFactory.getLogger(this.getClass());
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        log.info("test execute filter....init ");
+        //log.info("test execute filter....init ");
     }
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        log.info("test execute filter doFilter");
+        /*log.info("test execute filter doFilter");
         HttpServletRequest request = (HttpServletRequest)servletRequest;
         log.info("请求地址："+request.getRequestURI());
-        filterChain.doFilter(servletRequest,servletResponse);
+        filterChain.doFilter(servletRequest,servletResponse);*/
 
     }
 

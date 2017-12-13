@@ -13,6 +13,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+
 public class UserInfoServiceTest {
 
 
@@ -26,6 +27,6 @@ public class UserInfoServiceTest {
     public void testFindBackUserByNameAndPass(){
         UserInfo userInfo=userInfoService.findBackUserByNameAndPass("admin", MD5.GetMD5Code("1"));
         Assert.assertTrue("正确",null!=userInfo);
-        System.out.println(userInfo);
+        System.out.println("测试打印："+userInfo);
     }
 }

@@ -5,6 +5,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.yt.shop.common.Constract;
 import com.yt.shop.common.MD5;
 import com.yt.shop.common.VerifyCodeUtils;
+import com.yt.shop.dao.OperRecordJpa;
+import com.yt.shop.model.OperRecord;
 import com.yt.shop.model.UserInfo;
 import com.yt.shop.service.UserInfoService;
 import org.slf4j.Logger;
@@ -26,6 +28,8 @@ import java.util.Map;
 public class UserInfoController {
 
     private Logger log= LoggerFactory.getLogger(this.getClass());
+
+    private OperRecordJpa operRecordJpa;
 
     @Autowired
     private UserInfoService userInfoService;
@@ -63,18 +67,19 @@ public class UserInfoController {
     public String validUser(HttpServletRequest request) throws IOException{
         String userName=request.getParameter("userName");
         String userPass=request.getParameter("userPass");
-        String checkcode=request.getParameter("checkcode");
+        String checkCode=request.getParameter("checkCode");
 
         Map<String,Object> map=new HashMap<>();
         log.info("验证用户登陆信息。。。");
         HttpSession session=request.getSession();
         String verifyCode=(String) session.getAttribute(Constract.VERIFY_CODE);
-        if(null!=verifyCode&&verifyCode.equalsIgnoreCase(checkcode)){
+        if(null!=verifyCode&&verifyCode.equalsIgnoreCase(checkCode)){
             UserInfo userInfo=userInfoService.findBackUserByNameAndPass(userName, MD5.GetMD5Code(userPass));
             if(userInfo!=null){
                 session.setAttribute(Constract.ADMIN_LOGIN_FLAG, userInfo);
                 log.info("登录成功。。。。:"+userInfo);
-
+                //记录操作日志
+                operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userName+"登录成功后台管理"));
                 return "{\"code\":1}";
             }else{
                 log.info("用户名密码不正确");

@@ -6,7 +6,7 @@ import java.util.List;
  * 非数据库持久化类
  * 配置角色菜单的数据模型
  */
-public class RoleMenu {
+public class RoleMenu implements java.io.Serializable{
 
 	private Menu menu; //角色关联的菜单
 	private int flag; //是否拥有权限 0:没有，1有

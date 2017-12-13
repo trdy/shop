@@ -1,6 +1,7 @@
 package com.yt.shop.service;
 
 import com.yt.shop.dao.UserInfoDao;
+import com.yt.shop.dao.UserInfoJpa;
 import com.yt.shop.model.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,8 +13,11 @@ public class UserInfoService {
     @Autowired
     private UserInfoDao userInfoDao;
 
+    @Autowired
+    private UserInfoJpa userInfoJpa;
+
     @Transactional
     public UserInfo findBackUserByNameAndPass(String userName, String userPass) {
-        return userInfoDao.findBackUserByNameAndPass(userName,userPass);
+        return userInfoJpa.findBackUserByNameAndPass(userName,userPass);
     }
 }

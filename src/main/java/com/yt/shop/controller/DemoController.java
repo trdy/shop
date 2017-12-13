@@ -2,7 +2,6 @@ package com.yt.shop.controller;
 
 import com.yt.shop.common.FileUtil;
 import com.yt.shop.model.Person;
-import com.yt.shop.service.DemoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

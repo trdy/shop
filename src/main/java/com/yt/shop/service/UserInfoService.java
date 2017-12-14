@@ -23,4 +23,14 @@ public class UserInfoService {
     public UserInfo findBackUserByNameAndPass(String userName, String userPass) {
         return userInfoJpa.findBackUserByNameAndPass(userName,userPass);
     }
+
+    /**
+     * 后台管理员登录后，访问首页加载用户信息
+     * @param userId
+     * @return
+     */
+    @Transactional
+    public UserInfo findUserInfoById(Long userId) {
+        return userInfoJpa.findOne(userId);
+    }
 }

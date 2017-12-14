@@ -128,7 +128,7 @@ public class AdminIndexController {
      * 用户登录后，访问后台首页，加载用户信息
      * @return
      */
-    @RequestMapping("/admin/loadUser")
+    @RequestMapping(value = "/admin/loadUser",method = RequestMethod.GET)
     @ResponseBody
     public String backLoadUserInfo(HttpServletRequest request){
 
@@ -146,9 +146,7 @@ public class AdminIndexController {
         }else{
             result.put("code",-1);//未登录访问请求，返回-1
         }
-        String json=JSON.toJSONString(result);
-        System.out.println("json:"+json);
-        return json;
+        return JSON.toJSONString(result);
     }
 
 }

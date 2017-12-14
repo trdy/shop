@@ -132,6 +132,9 @@ public class AdminIndexController {
         log.info("用户登录后，访问后台首页，加载用户信息");
         operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"用户登录后，访问后台首页，加载用户信息"));
 
+        userInfo.setUserPass(null);//让返回的json没有密码关键信息
+        userInfo.setQuestion(null);
+        userInfo.setAnswer(null);
         return JsonUtil.getReturnJson(userInfo);
     }
 

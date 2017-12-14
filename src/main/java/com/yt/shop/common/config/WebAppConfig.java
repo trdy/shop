@@ -1,5 +1,6 @@
 package com.yt.shop.common.config;
 
+import com.yt.shop.common.interceptor.BackLoginInterceptor;
 import com.yt.shop.common.interceptor.OperLogInterceptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -52,9 +53,18 @@ public class WebAppConfig extends WebMvcConfigurerAdapter{
         return new OperLogInterceptor();
     }
 
+    @Bean
+    public BackLoginInterceptor backLoginInterceptor(){
+        return new BackLoginInterceptor();
+    }
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(operLogInterceptor()).addPathPatterns("/**");
+        registry.addInterceptor(backLoginInterceptor())
+                .excludePathPatterns("/valiCode")
+                .excludePathPatterns("/admin/validUser")
+                .addPathPatterns("/admin/**");
         super.addInterceptors(registry);
     }
 }

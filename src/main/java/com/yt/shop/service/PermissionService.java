@@ -119,6 +119,7 @@ public class PermissionService {
         }
     }
 
+    @Transactional
     public List<Permission> findPermissionByUserTypeId(Long userTypeId) {
         return permissionJpa.findPermissionByUserTypeId(userTypeId);
     }

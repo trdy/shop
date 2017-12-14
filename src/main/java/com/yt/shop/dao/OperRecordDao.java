@@ -9,7 +9,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 /**
- * create table oper_record
+ * 操作记录表
+ create table oper_record
  (
  opreid               int not null auto_increment,
  user_id              int,
@@ -18,6 +19,8 @@ import javax.persistence.PersistenceContext;
  oper_date            timestamp,
  primary key (opreid)
  );
+ * @author Administrator
+ *
  */
 @Repository("operRecordDao")
 public class OperRecordDao {

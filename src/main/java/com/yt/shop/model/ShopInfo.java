@@ -14,17 +14,17 @@ public class ShopInfo implements java.io.Serializable{
 	@Id
 	@GeneratedValue
 	@Column(name="siid")
-	private int siid;
+	private Long siid;
 	
 	@Column(name="net_shop_name")
 	private String nsname;
 	@Column(name="net_shop_logo")
 	private String nslogo;
 	
-	public int getSiid() {
+	public Long getSiid() {
 		return siid;
 	}
-	public void setSiid(int siid) {
+	public void setSiid(Long siid) {
 		this.siid = siid;
 	}
 	public String getNsname() {

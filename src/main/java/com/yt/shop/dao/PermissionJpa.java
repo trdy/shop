@@ -6,6 +6,17 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
+/**
+ * 后台权限配置PermissionDao
+ * create table permission
+ (
+ perid                int not null auto_increment,
+ menu_id              int,
+ user_type_id         int,
+ primary key (perid)
+ );
+
+ */
 public interface PermissionJpa extends JpaRepository<Permission,Long> {
 
     @Query(value = "select * from permission p where p.user_type_id=?1",nativeQuery = true)

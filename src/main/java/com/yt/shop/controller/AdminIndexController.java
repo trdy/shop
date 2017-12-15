@@ -10,6 +10,8 @@ import com.yt.shop.model.UserInfo;
 import com.yt.shop.model.format.MenuItem;
 import com.yt.shop.service.PermissionService;
 import com.yt.shop.service.UserInfoService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +22,9 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 
+/**
+ *
+ */
 @RestController
 public class AdminIndexController {
 
@@ -37,7 +42,56 @@ public class AdminIndexController {
     /**
      * 用户登录成功后，访问后台首页加载系统配置的用户菜单
      * @param request
-     * @return
+     * @return 该用户配置的菜单集合
+     *
+     *<p/>
+     * 请求格式：
+     * <pre>
+     *     请求地址：http://127.0.0.1:8081/admin/menu
+     *     请求方式：get
+     *     请求参数：无
+     *</pre>
+     * 回应内容：
+     *
+     * <pre>
+     *  正确回应：
+     *      {"code": [
+                    {"menuId": 0,
+                    "menuName": "首页",
+                    "menuUrl": "/admin/menu"
+                    },
+
+                    {"childMenus": [
+                            {"menuId": 130,"menuName": "网站基本信息","menuUrl": "../admin/shopInfoSet"},
+                            {"menuId": 140,"menuName": "首页轮播图设置","menuUrl": "../admin/shopBanner"}
+                            ],
+                     "menuId": 10,
+                     "menuName": "网站设置",
+                     "menuUrl": ""
+                    },
+                    {"childMenus": [
+                            {"menuId": 180,"menuName": "商品审批","menuUrl": "../admin/goodsManagerApprove"},
+                            {"menuId": 340,"menuName": "会员等级设置","menuUrl": "../admin/userTypeUpgrade"}
+                            ],
+                    "menuId": 399,
+                    "menuName": "后台查看商品",
+                    "menuUrl": "../admin/backGoodsList"
+                    }
+            ]}
+     * </pre>
+     *  <table border="1">
+     *  <tr><td>属性</td><td>含义</td><td>备注</td></tr>
+     *  <tr><td>menuId</td><td>菜单编号</td><td>&nbsp;</td></tr>
+     *  <tr><td>menuName</td><td>菜单名称</td><td>&nbsp;</td></tr>
+     *  <tr><td>menuUrl</td><td>菜单地址</td><td>&nbsp;</td></tr>
+     *  <tr><td>childMenus</td><td>子菜单集合</td><td>二级菜单无子菜单</td></tr>
+     *  </table>
+     * <pre>
+     *   错误回应：
+     *     {"code":-1} //用户未登录
+     * </pre>
+     *
+     *
      */
     @RequestMapping(value = "/admin/menu",method = RequestMethod.GET)
     public String backIndexMenu(HttpServletRequest request){
@@ -51,6 +105,14 @@ public class AdminIndexController {
 
         //定义一个待输出的菜单集合
         List<MenuItem> menuItemList=new ArrayList<>();
+
+        //默认添加一个首页菜单
+        MenuItem indexMenuItem=new MenuItem();
+        indexMenuItem.setMenuId(0L);
+        indexMenuItem.setMenuName("首页");
+        indexMenuItem.setMenuUrl("/admin/menu");
+        menuItemList.add(indexMenuItem);
+
         //检查用户身份，如果是系统默认超级管理员，直接读取所有菜单，否则根据用户配置的菜单项检查，设置菜单集合
         if(userInfo.getUserName().equals(Constract.ROOT_USER)){
             log.info("如果是系统默认超级管理员，返回最高权限");
@@ -118,6 +180,63 @@ public class AdminIndexController {
     /**
      * 用户登录后，访问后台首页，加载用户信息
      * @return
+     *
+     *<p/>
+     * 请求格式：
+     * <pre>
+     *     请求地址：http://127.0.0.1:8081/admin/loadUser
+     *     请求方式：get
+     *     请求参数：无
+     *</pre>
+     * 回应内容：
+     * <pre>
+     *     正确回应：
+     *     {
+            "code": {
+                "code": "420400197402111013",
+                "duihuanScore": 0,
+                "email": "371866295@qq.com",
+                "gouwuScore": 0,
+                "headPic": "/upload/userHead/defaultHead.jpg",
+                "name": "admin",
+                "regTime": 1513217876000,
+                "shopCars": [],
+                "tradePass": "123",
+                "tuiguanScore": 0,
+                "userId": 1,
+                "userName": "admin",
+                "userState": 1,
+                "userType": {
+                    "permissions": [],
+                    "userTypeId": 10,
+                    "userTypeName": "管理员"
+                    },
+                "xianjinScore": 0,
+                "zengzhiScore": 0
+                }
+            }
+     * </pre>
+     * <table border="1">
+     *  <tr><td>属性</td><td>含义</td><td>备注</td></tr>
+     *  <tr><td>userId</td><td>用户编号</td><td>&nbsp;</td></tr>
+     *  <tr><td>userName</td><td>用户登录名称</td><td>&nbsp;</td></tr>
+     *  <tr><td>name</td><td>用户真实姓名</td><td>&nbsp;</td></tr>
+     *  <tr><td>code</td><td>用户身份证号</td><td>&nbsp;</td></tr>
+     *  <tr><td>regTime</td><td>注册时间</td><td>&nbsp;</td></tr>
+     *  <tr><td>headPic</td><td>用户头像文件路径地址</td><td>&nbsp;</td></tr>
+     *  <tr><td>userType.userTypeId</td><td>用户类型编号</td><td>&nbsp;</td></tr>
+     *  <tr><td>userType.userTypeName</td><td>用户类型名称</td><td>&nbsp;</td></tr>
+     *  <tr><td>tuiguanScore</td><td>推广积分</td><td>&nbsp;</td></tr>
+     *  <tr><td>gouwuScore</td><td>购物积分</td><td>&nbsp;</td></tr>
+     *  <tr><td>duihuanScore</td><td>兑换积分</td><td>&nbsp;</td></tr>
+     *  <tr><td>xianjinScore</td><td>现金积分</td><td>&nbsp;</td></tr>
+     *  <tr><td>zengzhiScore</td><td>增值积分</td><td>&nbsp;</td></tr>
+     *  <tr><td>userState</td><td>用户状态</td><td>1：正常用户，0:冻结用户</td></tr>
+     *  </table>
+     * <pre>
+     *     错误回应：
+     *      {"code":-1} //用户未登录
+     * </pre>
      */
     @RequestMapping(value = "/admin/loadUser",method = RequestMethod.GET)
     public String backLoadUserInfo(HttpServletRequest request){

@@ -18,6 +18,8 @@ import static org.springframework.web.cors.CorsConfiguration.ALL;
 /**
  * anthor:liyun
  * create:2017-11-24 10:40
+ *
+ * spring boot 配置类
  */
 @Configuration
 @Component
@@ -29,6 +31,10 @@ public class WebAppConfig extends WebMvcConfigurerAdapter{
     @Value("${img.upload.path}")
     private String uploadPath;
 
+    /**
+     * 增加外部文件系统路径到上下文环境
+     * @param registry
+     */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         log.info("imagesPath="+uploadPath);
@@ -37,7 +43,10 @@ public class WebAppConfig extends WebMvcConfigurerAdapter{
     }
 
 
-    /** 跨域路由配置 */
+    /**
+     * 跨域路由配置
+     * @param registry
+     */
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")

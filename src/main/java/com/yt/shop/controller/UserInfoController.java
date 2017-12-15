@@ -7,6 +7,9 @@ import com.yt.shop.dao.OperRecordJpa;
 import com.yt.shop.model.OperRecord;
 import com.yt.shop.model.UserInfo;
 import com.yt.shop.service.UserInfoService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +25,9 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 用户登录验证控制器
+ */
 @Controller
 public class UserInfoController {
 
@@ -35,7 +41,21 @@ public class UserInfoController {
 
     /**
      * 生成图形验证码
-     * */
+     * @param request
+     * @param response
+     * @throws IOException
+     *
+     * 用户登录系统，未防止用户试探登录，生成图形验证码
+     *<p/>
+     * 请求格式：
+     * <pre>
+     *     http://127.0.0.1:8081/valiCode
+     *</pre>
+     * 回应内容：
+     * <pre>
+     *     验证码图片
+     * </pre>
+     */
     @RequestMapping("/valiCode")
     public void authImage(HttpServletRequest request, HttpServletResponse response)throws IOException {
         response.setHeader("Pragma", "No-cache");
@@ -60,6 +80,24 @@ public class UserInfoController {
      * @param request
      * @return
      * @throws IOException
+     *
+     *<p/>
+     * 请求格式：
+     * <pre>
+     *     请求地址：http://127.0.0.1:8081/admin/validUser
+     *     请求方式：post
+     *     请求参数：
+     *          userName:用户名
+     *          userPass:用户密码
+     *          checkCode：图形验证码上的文字
+     *</pre>
+     * 回应内容：
+     * <pre>
+     *     json字符串
+     *          {"code":1} 登录成功
+     *          {"code":-1} 用户名或密码不正确
+     *          {\"code\":-2} 验证码不正确
+     * </pre>
      */
     @RequestMapping(value = "/admin/validUser",method =RequestMethod.POST)
     @ResponseBody

@@ -14,6 +14,10 @@ import java.util.Map;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
+    /**
+     * 系统全局异常
+     * @return json字符串 {"code",500}
+     */
     @ExceptionHandler(RuntimeException.class)
     @ResponseBody
     public Map<String,Object> exceptionHeanler(){

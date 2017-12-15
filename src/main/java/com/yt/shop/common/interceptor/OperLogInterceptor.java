@@ -18,6 +18,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.sql.Timestamp;
 
+/**
+ * 系统日志拦截器
+ * 在运行窗口下显示当前拦截到的用户操作详情
+ */
 
 public class OperLogInterceptor extends HandlerInterceptorAdapter {
 

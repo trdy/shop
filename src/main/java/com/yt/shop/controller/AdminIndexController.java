@@ -10,8 +10,6 @@ import com.yt.shop.model.UserInfo;
 import com.yt.shop.model.format.MenuItem;
 import com.yt.shop.service.PermissionService;
 import com.yt.shop.service.UserInfoService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 
 /**
- *
+ * 后台管理首页相关数据加载控制器
  */
 @RestController
 public class AdminIndexController {

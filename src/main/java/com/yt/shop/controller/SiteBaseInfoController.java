@@ -8,7 +8,6 @@ import com.yt.shop.model.OperRecord;
 import com.yt.shop.model.ShopInfo;
 import com.yt.shop.model.UserInfo;
 import com.yt.shop.service.SiteBaseInfoService;
-import io.swagger.annotations.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

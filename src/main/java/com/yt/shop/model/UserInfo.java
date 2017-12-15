@@ -1,5 +1,7 @@
 package com.yt.shop.model;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 import java.sql.Timestamp;
 import java.util.Set;
 
@@ -42,7 +44,8 @@ public class UserInfo implements java.io.Serializable {
 	
 	@Column(name="trade_pass")
 	private String tradePass;
-	
+
+	//@JSONField(format = "yyyy-MM-dd HH:mm:ss")
 	@Column(name="reg_time")
 	private Timestamp regTime;
 	

@@ -12,7 +12,7 @@ public class JsonUtil {
      * @param obj 待转换对象
      * @return json字符串
      */
-    public static String getReturnJson(Object obj){
+    public static String getReturnJson(Object obj)  {
         Map<String,Object> result=new HashMap<>();
         result.put("code",obj);
         return JSON.toJSONString(result);

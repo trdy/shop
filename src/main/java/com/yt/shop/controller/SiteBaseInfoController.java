@@ -1,14 +1,10 @@
 package com.yt.shop.controller;
 
-import com.sun.org.apache.regexp.internal.RE;
 import com.yt.shop.common.Constract;
 import com.yt.shop.common.FileUtil;
 import com.yt.shop.common.JsonUtil;
 import com.yt.shop.dao.OperRecordJpa;
-import com.yt.shop.model.OperRecord;
-import com.yt.shop.model.ShopBanner;
-import com.yt.shop.model.ShopInfo;
-import com.yt.shop.model.UserInfo;
+import com.yt.shop.model.*;
 import com.yt.shop.service.SiteBaseInfoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,7 +31,7 @@ public class SiteBaseInfoController {
     @Autowired
     private SiteBaseInfoService siteBaseInfoService;
 
-
+    /////-------------------------------------网站设置--&gt;网站基本信息设置---------------------------------------------
     /**
      * 网站设置--&gt;网站基本信息设置，转到设置网站名称和logo页面，获得页面需要JSON数据
      * @param request 请求对象
@@ -60,7 +56,7 @@ public class SiteBaseInfoController {
      * <table border="1">
      *     <caption>json对象属性</caption>
      *  <tr><td>属性</td><td>含义</td><td>备注</td></tr>
-     *  <tr><td>nsLogo</td><td>商城lOGO文件路径地址</td><td>&nbsp;</td></tr>
+     *  <tr><td>nslogo</td><td>商城lOGO文件路径地址</td><td>&nbsp;</td></tr>
      *  <tr><td>nsname</td><td>商城名称</td><td>&nbsp;</td></tr>
      *  <tr><td>siid</td><td>记录序号</td><td>&nbsp;</td></tr>
      *  </table>
@@ -91,7 +87,7 @@ public class SiteBaseInfoController {
      * <pre>
      *     请求地址：http://127.0.0.1:8081/admin/shopBaseInfoSave
      *     请求方式：post enctype="multipart/form-data"
-     *     请求参数：nslogo,nsname,nsid
+     *     请求参数：nslogo(上传文件),nsname,nsid
      *</pre>
      * <table border="1">
      *      <caption>json对象属性</caption>
@@ -156,6 +152,8 @@ public class SiteBaseInfoController {
         }
     }
 
+    /////--------------------------------------网站设置--&gt;轮播图设置--------------------------------------------
+
     /**
      * 网站设置--&gt;轮播图设置，后台管理员访问首页轮播图列表
      * @param request 请求对象
@@ -164,7 +162,7 @@ public class SiteBaseInfoController {
      *<p>&nbsp;</p>
      * 请求格式：
      * <pre>
-     *     请求地址：http://127.0.0.1:8081/admin/shopBaseInfoSashopBanner
+     *     请求地址：http://127.0.0.1:8081/admin/shopBanner
      *     请求方式：get
      *     请求参数：无
      *</pre>
@@ -225,6 +223,7 @@ public class SiteBaseInfoController {
      * <pre>
      *    正确回应：
      *      {"code",1} //删除成功
+     *      {"code",0} //删除失败
      * </pre>
      * <pre>
      *    错误回应：
@@ -235,11 +234,14 @@ public class SiteBaseInfoController {
     public String backShopBannerDel(@PathVariable Long shopBannerId,HttpServletRequest request){
         log.info("后台管理员删除轮播图");
         UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
-
-        siteBaseInfoService.deleteShopBanner(shopBannerId);
-
         operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员删除轮播图"));
-        return JsonUtil.getReturnJson("1");
+
+        try {
+            siteBaseInfoService.deleteShopBanner(shopBannerId);
+            return JsonUtil.getReturnJson("1");
+        }catch (Exception e){
+            return JsonUtil.getReturnJson("0");
+        }
     }
 
     /**
@@ -304,7 +306,7 @@ public class SiteBaseInfoController {
      * <pre>
      *     请求地址：http://127.0.0.1:8081/admin/shopBanner
      *     请求方式：post  enctype="multipart/form-data"
-     *     请求参数：bannerUrl,bannerDesc,banid
+     *     请求参数：bannerUrl,bannerDesc,banid,bannerFile(上传文件)
      *</pre>
      * <table border="1">
      *      <caption>json对象属性</caption>
@@ -312,6 +314,7 @@ public class SiteBaseInfoController {
      *  <tr><td>bannerUrl</td><td>轮播图关联的宣传页链接地址</td><td>&nbsp;</td></tr>
      *  <tr><td>bannerDesc</td><td>轮播图描述</td><td>&nbsp;</td></tr>
      *  <tr><td>banid</td><td>轮播图id编号</td><td>如果有该参数，则修改变成修改数据</td></tr>
+     *  <tr><td>bannerFile</td><td>轮播图文件</td><td>&nbsp;</td></tr>
      *  </table>
      *
      * 回应内容：
@@ -373,6 +376,190 @@ public class SiteBaseInfoController {
         }
     }
 
+    /////-----------------------------------网站设置--&gt;会员类型设置-------------------------------------------------
 
+    /**
+     * 网站设置--&gt;会员类型设置，查询所有会员类型列表
+     * @param request 请求对象
+     * @return 会员类型列表 json字符串
+     *
+     *<p>&nbsp;</p>
+     * 请求格式：
+     * <pre>
+     *     请求地址：http://127.0.0.1:8081/admin/userType
+     *     请求方式：get
+     *     请求参数：无
+     *</pre>
+     *
+     *
+     * 回应内容：
+     * <pre>
+     *    正确回应：
+     *      {
+            "code": [
+                {
+                "permissions": [],
+                "userTypeId": 10,
+                "userTypeName": "管理员"
+                },
+                {
+                "permissions": [],
+                "userTypeId": 30,
+                "userTypeName": "网站操作员"
+                }]
+            }
+     * </pre>
+     * <table border="1">
+     *      <caption>json对象属性</caption>
+     *  <tr><td>参数</td><td>含义</td><td>备注</td></tr>
+     *  <tr><td>userTypeId</td><td>会员类型编号</td><td>&nbsp;</td></tr>
+     *  <tr><td>userTypeName</td><td>会员类型名称</td><td>&nbsp;</td></tr>
+     *  <tr><td>permissions</td><td>配置的权限集合</td><td>&nbsp;</td></tr>
+     *  </table>
+     * <pre>
+     *    错误回应：
+     *       {"code":-1} //用户未登录
+     * </pre>
+     */
+    @RequestMapping(value = "/admin/userType",method = RequestMethod.GET)
+    public String backUserTypeList(HttpServletRequest request){
+        log.info("查询所有会员类型列表");
+        UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
+
+        List<UserType> userTypeList=siteBaseInfoService.findUserTypeList();
+        operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员查询所有会员类型列表"));
+        return JsonUtil.getReturnJson(userTypeList);
+    }
+
+    /**
+     * 网站设置--&gt;会员类型设置，会员类型编辑
+     * @param userTypeId 会员编号
+     * @param request 请求对象
+     * @return json字符串
+
+     *<p>&nbsp;</p>
+     * 请求格式：
+     * <pre>
+     *     请求地址：http://127.0.0.1:8081/admin/userType/{userTypeId}
+     *     请求方式：get
+     *     请求参数：无
+     *</pre>
+     *
+     *
+     * 回应内容：
+     * <pre>
+     *    正确回应：
+     *      转到新增: {"code":"add"}
+     *      转到修改：{"code":{"permissions":[],"userTypeId":10,"userTypeName":"管理员"}}
+     * </pre>
+     * <table border="1">
+     *      <caption>json对象属性</caption>
+     *  <tr><td>参数</td><td>含义</td><td>备注</td></tr>
+     *  <tr><td>userTypeId</td><td>会员类型编号</td><td>&nbsp;</td></tr>
+     *  <tr><td>userTypeName</td><td>会员类型名称</td><td>&nbsp;</td></tr>
+     *  <tr><td>permissions</td><td>配置的权限集合</td><td>&nbsp;</td></tr>
+     *  </table>
+     * <pre>
+     *    错误回应：
+     *       {"code":-1} //用户未登录
+     * </pre>
+     */
+    @RequestMapping(value = "/admin/userType/{userTypeId}",method = RequestMethod.GET)
+    public String backUserTypeEdit(@PathVariable Long userTypeId,HttpServletRequest request){
+        log.info("会员类型编辑");
+        UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
+        operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员执行会员类型编辑"));
+
+        if(0==userTypeId){
+            return JsonUtil.getReturnJson("add");
+        }else{
+            UserType userType=siteBaseInfoService.findUserTypeById(userTypeId);
+            return JsonUtil.getReturnJson(userType);
+        }
+    }
+
+    /**
+     * 网站设置--&gt;会员类型设置，会员类型保存
+     * @param userType 会员类型json对象
+     * @param request 请求对象
+     * @return json字符串
+     *
+     *<p>&nbsp;</p>
+     * 请求格式：
+     * <pre>
+     *     请求地址：http://127.0.0.1:8081/admin/userType
+     *     请求方式：post
+     *     请求参数：会员类型json对象
+     *     格式：{"userTypeId":101,"userTypeName":"普通会员1"}
+     *</pre>
+     *<table border="1">
+     *      <caption>json对象属性</caption>
+     *  <tr><td>参数</td><td>含义</td><td>备注</td></tr>
+     *  <tr><td>userTypeId</td><td>会员类型编号</td><td>为空时表示新增会员类型,否则会修改对应编号会员类型</td></tr>
+     *  <tr><td>userTypeName</td><td>会员类型名称</td><td>&nbsp;</td></tr>
+     *  </table>
+     *
+     * 回应内容：
+     * <pre>
+     *    正确回应：
+     *       {"code":1} 保存成功
+     *       {"code":0} 保存失败
+     * </pre>
+     * <pre>
+     *    错误回应：
+     *       {"code":-1} //用户未登录
+     * </pre>
+     */
+    @RequestMapping(value = "/admin/userType",method = RequestMethod.POST)
+    public String backUserTypeSave(@RequestBody UserType userType, HttpServletRequest request){
+        log.info("会员类型保存");
+        UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
+        operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员执行会员类型保存"));
+
+        try {
+            siteBaseInfoService.insertUserType(userType);
+            return JsonUtil.getReturnJson("1");
+        }catch (Exception e){
+            return JsonUtil.getReturnJson("0");
+        }
+    }
+
+    /**
+     * 网站设置--&gt;会员类型设置，会员类型删除
+     * @param userTypeId 会员编号
+     * @param request 请求对象
+     * @return json字符串
+     *<p>&nbsp;</p>
+     * 请求格式：
+     * <pre>
+     *     请求地址：http://127.0.0.1:8081/admin/userType/{userTypeId}
+     *     请求方式：delete
+     *     请求参数：无
+     *</pre>
+     *
+     * 回应内容：
+     * <pre>
+     *    正确回应：
+     *       {"code":1} 删除成功
+     *       {"code":0} 删除失败
+     * </pre>
+     * <pre>
+     *    错误回应：
+     *       {"code":-1} //用户未登录
+     * </pre>
+     */
+    @RequestMapping(value = "/admin/userType/{userTypeId}",method = RequestMethod.DELETE)
+    public String backUserTypeDel(@PathVariable Long userTypeId,HttpServletRequest request){
+        log.info("会员类型保存");
+        UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
+        operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员执行会员类型删除"));
+
+        try{
+            siteBaseInfoService.deleteUserType(userTypeId);
+            return JsonUtil.getReturnJson("1");
+        }catch (Exception e){
+            return JsonUtil.getReturnJson("0");
+        }
+    }
 
 }

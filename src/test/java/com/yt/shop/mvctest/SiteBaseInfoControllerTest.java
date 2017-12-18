@@ -1,5 +1,6 @@
 package com.yt.shop.mvctest;
 
+import com.alibaba.fastjson.JSONObject;
 import com.yt.shop.common.Constract;
 import com.yt.shop.controller.SiteBaseInfoController;
 import com.yt.shop.model.UserInfo;
@@ -19,8 +20,12 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 import java.io.FileInputStream;
+import java.util.HashMap;
+import java.util.Map;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -44,7 +49,7 @@ public class SiteBaseInfoControllerTest {
 
     /**
      * 测试网站基本信息设置，获取商城名称基本信息
-     * @throws Exception
+     * @throws Exception 异常对象
      */
     @Test
     public void testShopBaseInfoSet() throws Exception {
@@ -58,8 +63,8 @@ public class SiteBaseInfoControllerTest {
                 .sessionAttr(Constract.ADMIN_LOGIN_FLAG,userInfo)
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())// 模拟向testRest发送post请求
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))// 预期返回值的媒体类型text/plain;charset=UTF-8
+                .andExpect(status().isOk())// 模拟向testRest发送get请求
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
                 .andReturn();// 返回执行请求的结果
 
 
@@ -71,7 +76,7 @@ public class SiteBaseInfoControllerTest {
 
     /**
      * 测试保存商城基本信息
-     * @throws Exception
+     * @throws Exception 异常对象
      */
     @Test
     public void testShopBaseInfoSave()throws Exception{
@@ -98,7 +103,7 @@ public class SiteBaseInfoControllerTest {
 
     /**
      * 测试后台管理返回轮播图列表信息
-     * @throws Exception
+     * @throws Exception 异常对象
      */
     @Test
     public void testBackShopBanner() throws Exception{
@@ -111,8 +116,8 @@ public class SiteBaseInfoControllerTest {
                 .sessionAttr(Constract.ADMIN_LOGIN_FLAG,userInfo)
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())// 模拟向testRest发送post请求
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))// 预期返回值的媒体类型text/plain;charset=UTF-8
+                .andExpect(status().isOk())// 模拟向testRest发送get请求
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
                 .andReturn();// 返回执行请求的结果
 
 
@@ -121,7 +126,7 @@ public class SiteBaseInfoControllerTest {
 
     /**
      * 测试转到轮播图编辑
-     * @throws Exception
+     * @throws Exception 异常对象
      */
     @Test
     public void testBackShopBannerEdit() throws Exception{
@@ -134,8 +139,8 @@ public class SiteBaseInfoControllerTest {
                 .sessionAttr(Constract.ADMIN_LOGIN_FLAG,userInfo)
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())// 模拟向testRest发送post请求
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))// 预期返回值的媒体类型text/plain;charset=UTF-8
+                .andExpect(status().isOk())// 模拟向testRest发送get请求
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
                 .andReturn();// 返回执行请求的结果
 
 
@@ -144,7 +149,7 @@ public class SiteBaseInfoControllerTest {
 
     /**
      * 测试轮播图保存
-     * @throws Exception
+     * @throws Exception 异常对象
      */
     @Test
     public void testbackShopBannerSave() throws Exception{
@@ -168,5 +173,122 @@ public class SiteBaseInfoControllerTest {
         //测试controller上传的方法
         siteBaseInfoController.backShopBannerSave(file,request);
         Assert.assertTrue(true);
+    }
+
+    /**
+     * 测试后台管理员删除轮播图
+     * @throws Exception 异常对象
+     */
+    @Test
+    public void testBackShopBannerDel() throws Exception{
+        UserInfo userInfo=new UserInfo();
+        userInfo.setUserId(1L);
+        userInfo.setUserName("admin");
+
+        MvcResult result = mockMvc.perform(delete("/admin/shopBanner/2")
+                .sessionAttr(Constract.ADMIN_LOGIN_FLAG,userInfo)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())// 模拟向testRest发送delete请求
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andReturn();// 返回执行请求的结果
+
+
+        System.out.println("输出结果："+result.getResponse().getContentAsString());
+    }
+
+    /**
+     * 测试后台管理员查询会员类型列表
+     * @throws Exception 异常对象
+     */
+    @Test
+    public void testBackUserTypeList() throws Exception{
+        UserInfo userInfo=new UserInfo();
+        userInfo.setUserId(1L);
+        userInfo.setUserName("admin");
+
+
+        MvcResult result = mockMvc.perform(get("/admin/userType")
+                .sessionAttr(Constract.ADMIN_LOGIN_FLAG,userInfo)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())// 模拟向testRest发送get请求
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andReturn();// 返回执行请求的结果
+
+
+        System.out.println("输出结果："+result.getResponse().getContentAsString());
+    }
+
+    /**
+     * 测试进入会员类型编辑，如果是新增，id设为0，如果是修改，按照id查询待修改的会员类型
+     * @throws Exception 异常对象
+     */
+    @Test
+    public void testBackUserTypeEdit() throws Exception{
+        UserInfo userInfo=new UserInfo();
+        userInfo.setUserId(1L);
+        userInfo.setUserName("admin");
+
+
+        MvcResult result = mockMvc.perform(get("/admin/userType/10")
+                .sessionAttr(Constract.ADMIN_LOGIN_FLAG,userInfo)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())// 模拟向testRest发送get请求
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andReturn();// 返回执行请求的结果
+
+
+        System.out.println("输出结果："+result.getResponse().getContentAsString());
+    }
+
+    /**
+     * 测试会员类型保存
+     * @throws Exception 异常对象
+     */
+    @Test
+    public void testBackUserTypeSave() throws Exception{
+        UserInfo userInfo=new UserInfo();
+        userInfo.setUserId(1L);
+        userInfo.setUserName("admin");
+
+        Map<String,Object> map=new HashMap<>();
+        map.put("userTypeId",101);
+        map.put("userTypeName","另类用户1");
+
+        MvcResult result = mockMvc.perform(post("/admin/userType")
+                .sessionAttr(Constract.ADMIN_LOGIN_FLAG,userInfo)
+                .content(JSONObject.toJSONString(map))
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())// 模拟向testRest发送post请求
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andReturn();// 返回执行请求的结果
+
+
+        System.out.println("输出结果："+result.getResponse().getContentAsString());
+    }
+
+    /**
+     * 测试删除会员类型
+     * @throws Exception 异常对象
+     */
+    @Test
+    public void testBackUserTypeDel() throws Exception{
+        UserInfo userInfo=new UserInfo();
+        userInfo.setUserId(1L);
+        userInfo.setUserName("admin");
+
+        MvcResult result = mockMvc.perform(delete("/admin/userType/101")
+                .sessionAttr(Constract.ADMIN_LOGIN_FLAG,userInfo)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())// 模拟向testRest发送delete请求
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andReturn();// 返回执行请求的结果
+
+
+        System.out.println("输出结果："+result.getResponse().getContentAsString());
     }
 }

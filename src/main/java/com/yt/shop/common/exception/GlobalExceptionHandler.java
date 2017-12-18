@@ -29,25 +29,44 @@ public class GlobalExceptionHandler {
         return result;
     }*/
 
+    /**
+     * 违反主键约束异常
+     * @param ex 异常对象
+     * @return 出错状态码和异常信息
+     */
     @ExceptionHandler(value = { ConstraintViolationException.class })
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ApiErrorResponse constraintViolationException(ConstraintViolationException ex) {
         return new ApiErrorResponse(500, 5001, ex.getMessage());
     }
 
+    /**
+     * 参数传递异常
+     * @param ex 异常对象
+     * @return 出错状态码和异常信息
+     */
     @ExceptionHandler(value = { IllegalArgumentException.class })
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ApiErrorResponse IllegalArgumentException(IllegalArgumentException ex) {
         return new ApiErrorResponse(501, 5002, ex.getMessage());
     }
 
+    /**
+     * 没有找到正确的请求异常
+     * @param ex 异常对象
+     * @return 出错状态码和异常信息
+     */
     @ExceptionHandler(value = { NoHandlerFoundException.class })
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ApiErrorResponse noHandlerFoundException(Exception ex) {
         return new ApiErrorResponse(404, 4041, ex.getMessage());
     }
 
-
+    /**
+     * 返回错误状态
+     * @param ex 异常对象
+     * @return 出错状态码和异常信息
+     */
     @ExceptionHandler(value = { Exception.class })
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ApiErrorResponse unknownException(Exception ex) {

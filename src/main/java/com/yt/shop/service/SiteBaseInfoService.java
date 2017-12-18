@@ -2,10 +2,13 @@ package com.yt.shop.service;
 
 import com.yt.shop.dao.ShopBannerJpa;
 import com.yt.shop.dao.ShopInfoJpa;
+import com.yt.shop.model.ShopBanner;
 import com.yt.shop.model.ShopInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 /**
  * 网站基本信息业务类
@@ -27,5 +30,25 @@ public class SiteBaseInfoService {
     @Transactional
     public void insertShopInfo(ShopInfo shopInfo) {
         shopInfoJpa.save(shopInfo);
+    }
+
+    @Transactional
+    public List<ShopBanner> findShopBannerList() {
+        return shopBannerJpa.findAll();
+    }
+
+    @Transactional
+    public ShopBanner findShopBannerById(Long shopBannerId) {
+        return shopBannerJpa.findOne(shopBannerId);
+    }
+
+    @Transactional
+    public void insertShopBanner(ShopBanner shopBanner) {
+        shopBannerJpa.save(shopBanner);
+    }
+
+    @Transactional
+    public void deleteShopBanner(Long shopBannerId) {
+        shopBannerJpa.delete(shopBannerId);
     }
 }

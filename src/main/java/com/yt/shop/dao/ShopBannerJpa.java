@@ -1,5 +1,6 @@
 package com.yt.shop.dao;
 
+import com.yt.shop.model.ShopBanner;
 import com.yt.shop.model.ShopInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -15,5 +16,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  );
 
  */
-public interface ShopBannerJpa extends JpaRepository<ShopInfo,Long> {
+public interface ShopBannerJpa extends JpaRepository<ShopBanner,Long> {
 }

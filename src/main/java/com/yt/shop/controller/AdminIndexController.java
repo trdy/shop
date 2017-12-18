@@ -39,10 +39,10 @@ public class AdminIndexController {
 
     /**
      * 用户登录成功后，访问后台首页加载系统配置的用户菜单
-     * @param request
+     * @param request 请求对象
      * @return 该用户配置的菜单集合
      *
-     *<p/>
+     *<p>&nbsp;</p>
      * 请求格式：
      * <pre>
      *     请求地址：http://127.0.0.1:8081/admin/menu
@@ -78,6 +78,7 @@ public class AdminIndexController {
             ]}
      * </pre>
      *  <table border="1">
+     *      <caption>json对象属性</caption>
      *  <tr><td>属性</td><td>含义</td><td>备注</td></tr>
      *  <tr><td>menuId</td><td>菜单编号</td><td>&nbsp;</td></tr>
      *  <tr><td>menuName</td><td>菜单名称</td><td>&nbsp;</td></tr>
@@ -177,9 +178,10 @@ public class AdminIndexController {
 
     /**
      * 用户登录后，访问后台首页，加载用户信息
-     * @return
+     * @param request 请求对象
+     * @return 用户信息json字符串
      *
-     *<p/>
+     *<p>&nbsp;</p>
      * 请求格式：
      * <pre>
      *     请求地址：http://127.0.0.1:8081/admin/loadUser
@@ -191,30 +193,31 @@ public class AdminIndexController {
      *     正确回应：
      *     {
             "code": {
-                "code": "420400197402111013",
-                "duihuanScore": 0,
-                "email": "371866295@qq.com",
-                "gouwuScore": 0,
-                "headPic": "/upload/userHead/defaultHead.jpg",
-                "name": "admin",
-                "regTime": 1513217876000,
-                "shopCars": [],
-                "tradePass": "123",
-                "tuiguanScore": 0,
-                "userId": 1,
-                "userName": "admin",
-                "userState": 1,
-                "userType": {
-                    "permissions": [],
-                    "userTypeId": 10,
-                    "userTypeName": "管理员"
-                    },
-                "xianjinScore": 0,
-                "zengzhiScore": 0
-                }
+            "code": "420400197402111013",
+            "duihuanScore": 0,
+            "email": "371866295@qq.com",
+            "gouwuScore": 0,
+            "headPic": "/upload/userHead/defaultHead.jpg",
+            "name": "admin",
+            "regTime": 1513217876000,
+            "shopCars": [],
+            "tradePass": "123",
+            "tuiguanScore": 0,
+            "userId": 1,
+            "userName": "admin",
+            "userState": 1,
+            "userType": {
+            "permissions": [],
+            "userTypeId": 10,
+            "userTypeName": "管理员"
+            },
+            "xianjinScore": 0,
+            "zengzhiScore": 0
+            }
             }
      * </pre>
      * <table border="1">
+     *     <caption>json对象属性</caption>
      *  <tr><td>属性</td><td>含义</td><td>备注</td></tr>
      *  <tr><td>userId</td><td>用户编号</td><td>&nbsp;</td></tr>
      *  <tr><td>userName</td><td>用户登录名称</td><td>&nbsp;</td></tr>
@@ -252,6 +255,7 @@ public class AdminIndexController {
         userInfo.setUserPass(null);//让返回的json没有密码关键信息
         userInfo.setQuestion(null);
         userInfo.setAnswer(null);
+
         return JsonUtil.getReturnJson(userInfo);
     }
 

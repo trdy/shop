@@ -1,23 +1,23 @@
 package com.yt.shop.controller;
 
+import com.sun.org.apache.regexp.internal.RE;
 import com.yt.shop.common.Constract;
 import com.yt.shop.common.FileUtil;
 import com.yt.shop.common.JsonUtil;
 import com.yt.shop.dao.OperRecordJpa;
 import com.yt.shop.model.OperRecord;
+import com.yt.shop.model.ShopBanner;
 import com.yt.shop.model.ShopInfo;
 import com.yt.shop.model.UserInfo;
 import com.yt.shop.service.SiteBaseInfoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -35,12 +35,13 @@ public class SiteBaseInfoController {
     @Autowired
     private SiteBaseInfoService siteBaseInfoService;
 
+
     /**
-     * 网站基本信息设置，转到设置网站名称和logo页面，获得页面需要JSON数据
-     * @param request
+     * 网站设置--&gt;网站基本信息设置，转到设置网站名称和logo页面，获得页面需要JSON数据
+     * @param request 请求对象
      * @return shopInfo对象json字符串
      *
-     *<p/>
+     *<p>&nbsp;</p>
      * 请求格式：
      * <pre>
      *     请求地址：http://127.0.0.1:8081/admin/shopInfoSet
@@ -57,6 +58,7 @@ public class SiteBaseInfoController {
      *      }
      * </pre>
      * <table border="1">
+     *     <caption>json对象属性</caption>
      *  <tr><td>属性</td><td>含义</td><td>备注</td></tr>
      *  <tr><td>nsLogo</td><td>商城lOGO文件路径地址</td><td>&nbsp;</td></tr>
      *  <tr><td>nsname</td><td>商城名称</td><td>&nbsp;</td></tr>
@@ -79,19 +81,20 @@ public class SiteBaseInfoController {
     }
 
     /**
-     * 网站基本信息设置，修改或保存网站名称和上传LOGO
-     * @param file
-     * @param request
+     * 网站设置--&gt;网站基本信息设置，修改或保存网站名称和上传LOGO
+     * @param file 上传文件
+     * @param request 请求对象
      * @return 1：成功 0：失败
      *
-     * *<p/>
+     * *<p>&nbsp;</p>
      * 请求格式：
      * <pre>
      *     请求地址：http://127.0.0.1:8081/admin/shopBaseInfoSave
      *     请求方式：post enctype="multipart/form-data"
-     *     请求参数：
+     *     请求参数：nslogo,nsname,nsid
      *</pre>
      * <table border="1">
+     *      <caption>json对象属性</caption>
      *  <tr><td>参数</td><td>含义</td><td>备注</td></tr>
      *  <tr><td>nslogo</td><td>上传商品图片文件</td><td>&nbsp;</td></tr>
      *  <tr><td>nsname</td><td>商城名称</td><td>&nbsp;</td></tr>
@@ -111,6 +114,8 @@ public class SiteBaseInfoController {
     @RequestMapping(value = "/admin/shopBaseInfoSave",method = RequestMethod.POST)
     public String shopBaseInfoSave(@RequestParam("nslogo") MultipartFile file, HttpServletRequest request) {
         log.info("访问网站基本信息设置，设置网站名称，上传logo");
+        UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
+
         try {
             ShopInfo shopInfo = new ShopInfo();
             String nsid = request.getParameter("nsid");
@@ -143,12 +148,231 @@ public class SiteBaseInfoController {
 
             siteBaseInfoService.insertShopInfo(shopInfo);
             log.debug("文件上传成功,数据正确保存：" + shopInfo);
+            operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"重新设置网站基本信息"));
 
             return JsonUtil.getReturnJson(1);
         } catch (Exception e) {
             return JsonUtil.getReturnJson(0);
         }
     }
+
+    /**
+     * 网站设置--&gt;轮播图设置，后台管理员访问首页轮播图列表
+     * @param request 请求对象
+     * @return 轮播图信息集合，json字符串
+     *
+     *<p>&nbsp;</p>
+     * 请求格式：
+     * <pre>
+     *     请求地址：http://127.0.0.1:8081/admin/shopBaseInfoSashopBanner
+     *     请求方式：get
+     *     请求参数：无
+     *</pre>
+     *
+     * 回应内容：
+     * <pre>
+     *    正确回应：
+     *      {"code":[
+     *          {"banid":1,
+     *          "bannerDesc":"宣传1",
+     *          "bannerPath":"/upload/banner/0f707c1e-5f59-46c1-963f-e336a44157fe.gif",
+     *          "bannerUrl":"#"},
+     *          {"banid":2,
+     *          "bannerDesc":"宣传2",
+     *          "bannerPath":"/upload/banner/71bddb6b-5707-4054-b3ed-141df9f16278.gif",
+     *          "bannerUrl":"#"}]
+     *       }
+     * </pre>
+     * <table border="1">
+     *      <caption>json对象属性</caption>
+     *  <tr><td>参数</td><td>含义</td><td>备注</td></tr>
+     *  <tr><td>banid</td><td>轮播图编号</td><td>&nbsp;</td></tr>
+     *  <tr><td>bannerDesc</td><td>轮播图简单描述</td><td>&nbsp;</td></tr>
+     *  <tr><td>bannerPath</td><td>轮播图文件链接地址</td><td>&nbsp;</td></tr>
+     *  <tr><td>bannerUrl</td><td>轮播图宣传链接地址</td><td>&nbsp;</td></tr>
+     *  </table>
+     * <pre>
+     *    错误回应：
+     *       {"code":-1} //用户未登录
+     * </pre>
+     */
+    @RequestMapping(value = "/admin/shopBanner",method = RequestMethod.GET)
+    public String backShopBanner(HttpServletRequest request){
+        log.info("后台管理员访问轮播图设置列表");
+        UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
+
+        //查询轮播图列表
+        List<ShopBanner> shopBannerList=siteBaseInfoService.findShopBannerList();
+
+        operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"读取轮播图列表信息"));
+        return JsonUtil.getReturnJson(shopBannerList);
+    }
+
+    /**
+     * 网站设置--&gt;轮播图设置，后台管理员删除轮播图
+     * @param shopBannerId 轮播图编号
+     * @param request 请求对象
+     * @return json字符串
+     *<p>&nbsp;</p>
+     * 请求格式：
+     * <pre>
+     *     请求地址：http://127.0.0.1:8081/admin/shopBanner/{轮播图id}
+     *     请求方式：delete
+     *     请求参数：无
+     *</pre>
+     *
+     * 回应内容：
+     * <pre>
+     *    正确回应：
+     *      {"code",1} //删除成功
+     * </pre>
+     * <pre>
+     *    错误回应：
+     *       {"code":-1} //用户未登录
+     * </pre>
+     */
+    @RequestMapping(value = "/admin/shopBanner/{shopBannerId}",method = RequestMethod.DELETE)
+    public String backShopBannerDel(@PathVariable Long shopBannerId,HttpServletRequest request){
+        log.info("后台管理员删除轮播图");
+        UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
+
+        siteBaseInfoService.deleteShopBanner(shopBannerId);
+
+        operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员删除轮播图"));
+        return JsonUtil.getReturnJson("1");
+    }
+
+    /**
+     * 网站设置--&gt;轮播图设置，后台管理员访问轮播图编辑
+     * @param shopBannerId 轮播图编号
+     * @param request 请求对象
+     * @return json字符串
+     *<p>&nbsp;</p>
+     * 请求格式：
+     * <pre>
+     *     请求地址：http://127.0.0.1:8081/admin/shopBanner/{轮播图id}，如果是新增轮播图操作，id设置0
+     *     请求方式：get
+     *     请求参数：无
+     *</pre>
+     *
+     * 回应内容：
+     * <pre>
+     *    正确回应：
+     *      新增前：{"code","add"}
+     *
+     *      修改前：{"code":{
+     *          "banid":1,
+     *          "bannerDesc":"宣传1",
+     *          "bannerPath":"/upload/banner/0f707c1e-5f59-46c1-963f-e336a44157fe.gif",
+     *          "bannerUrl":"#"}
+     *      } //表示待修改轮播图
+     * </pre>
+     * <table border="1">
+     *      <caption>json对象属性</caption>
+     *  <tr><td>参数</td><td>含义</td><td>备注</td></tr>
+     *  <tr><td>banid</td><td>轮播图编号</td><td>&nbsp;</td></tr>
+     *  <tr><td>bannerDesc</td><td>轮播图简单描述</td><td>&nbsp;</td></tr>
+     *  <tr><td>bannerPath</td><td>轮播图文件链接地址</td><td>&nbsp;</td></tr>
+     *  <tr><td>bannerUrl</td><td>轮播图宣传链接地址</td><td>&nbsp;</td></tr>
+     *  </table>
+     * <pre>
+     *    错误回应：
+     *       {"code":-1} //用户未登录
+     * </pre>
+     */
+    @RequestMapping(value = "/admin/shopBanner/{shopBannerId}",method = RequestMethod.GET)
+    public String backShopBannerEdit(@PathVariable Long shopBannerId,HttpServletRequest request){
+        log.info("后台管理员访问轮播图编辑");
+        UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
+        operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员访问轮播图编辑"));
+
+        if(0==shopBannerId){
+            return JsonUtil.getReturnJson("add");
+        }else{
+            ShopBanner shopBanner=siteBaseInfoService.findShopBannerById(shopBannerId);
+            return JsonUtil.getReturnJson(shopBanner);
+        }
+    }
+
+    /**
+     * 网站设置--&gt;轮播图设置，后台管理员保存轮播图信息
+     * @param file 轮播图图片文件
+     * @param request 请求对象
+     * @return json字符串
+     *<p>&nbsp;</p>
+     * 请求格式：
+     * <pre>
+     *     请求地址：http://127.0.0.1:8081/admin/shopBanner
+     *     请求方式：post  enctype="multipart/form-data"
+     *     请求参数：bannerUrl,bannerDesc,banid
+     *</pre>
+     * <table border="1">
+     *      <caption>json对象属性</caption>
+     *  <tr><td>参数</td><td>含义</td><td>备注</td></tr>
+     *  <tr><td>bannerUrl</td><td>轮播图关联的宣传页链接地址</td><td>&nbsp;</td></tr>
+     *  <tr><td>bannerDesc</td><td>轮播图描述</td><td>&nbsp;</td></tr>
+     *  <tr><td>banid</td><td>轮播图id编号</td><td>如果有该参数，则修改变成修改数据</td></tr>
+     *  </table>
+     *
+     * 回应内容：
+     * <pre>
+     *    正确回应：
+     *      {"code",1} //保存成功
+     *      {"code",{0}} //保存失败
+     * </pre>
+     * <pre>
+     *    错误回应：
+     *       {"code":-1} //用户未登录
+     * </pre>
+     */
+    @RequestMapping(value = "/admin/shopBanner",method = RequestMethod.POST)
+    public String backShopBannerSave(@RequestParam("bannerFile") MultipartFile file, HttpServletRequest request){
+        log.info("后台管理员保存轮播图信息");
+        UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
+
+        try {
+            ShopBanner shopBanner = new ShopBanner();
+            String banid = request.getParameter("banid");
+            String bannerUrl = request.getParameter("bannerUrl");
+            String bannerDesc = request.getParameter("bannerDesc");
+
+            if(null!=banid&&!"".equals(banid)){
+                shopBanner.setBanid(Long.parseLong(banid));
+            }
+            if(null!=bannerUrl&&!"".equals(bannerUrl)){
+                shopBanner.setBannerUrl(bannerUrl);
+            }
+            if(null!=bannerDesc&&!"".equals(bannerDesc)){
+                shopBanner.setBannerDesc(bannerDesc);
+            }
+
+            if (!file.isEmpty()) {
+                String filePath = System.getProperty("user.dir") + "/upload/banner/";
+                int n = file.getOriginalFilename().indexOf(".");
+                String fileName = UUID.randomUUID() + file.getOriginalFilename().substring(n);
+                log.info("上传文件目录：" + filePath);
+
+                try {
+                    FileUtil.uploadFile(file.getBytes(), filePath, fileName);
+                    shopBanner.setBannerPath("/upload/banner/" + fileName);
+                    log.info("上传成功");
+
+                } catch (Exception e) {
+                    log.error("执行文件上传：" + e.toString());
+
+                }
+            }
+
+            siteBaseInfoService.insertShopBanner(shopBanner);
+            log.debug("文件上传成功,数据正确保存：" + shopBanner);
+            operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员保存轮播图信息"));
+
+            return JsonUtil.getReturnJson(1);
+        } catch (Exception e) {
+            return JsonUtil.getReturnJson(0);
+        }
+    }
+
 
 
 }

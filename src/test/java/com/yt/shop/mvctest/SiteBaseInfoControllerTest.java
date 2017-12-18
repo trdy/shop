@@ -95,4 +95,78 @@ public class SiteBaseInfoControllerTest {
         Assert.assertTrue(true);
 
     }
+
+    /**
+     * 测试后台管理返回轮播图列表信息
+     * @throws Exception
+     */
+    @Test
+    public void testBackShopBanner() throws Exception{
+        UserInfo userInfo=new UserInfo();
+        userInfo.setUserId(1L);
+        userInfo.setUserName("admin");
+
+
+        MvcResult result = mockMvc.perform(get("/admin/shopBanner")
+                .sessionAttr(Constract.ADMIN_LOGIN_FLAG,userInfo)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())// 模拟向testRest发送post请求
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))// 预期返回值的媒体类型text/plain;charset=UTF-8
+                .andReturn();// 返回执行请求的结果
+
+
+        System.out.println("输出结果："+result.getResponse().getContentAsString());
+    }
+
+    /**
+     * 测试转到轮播图编辑
+     * @throws Exception
+     */
+    @Test
+    public void testBackShopBannerEdit() throws Exception{
+        UserInfo userInfo=new UserInfo();
+        userInfo.setUserId(1L);
+        userInfo.setUserName("admin");
+
+
+        MvcResult result = mockMvc.perform(get("/admin/shopBanner/1")
+                .sessionAttr(Constract.ADMIN_LOGIN_FLAG,userInfo)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())// 模拟向testRest发送post请求
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))// 预期返回值的媒体类型text/plain;charset=UTF-8
+                .andReturn();// 返回执行请求的结果
+
+
+        System.out.println("输出结果："+result.getResponse().getContentAsString());
+    }
+
+    /**
+     * 测试轮播图保存
+     * @throws Exception
+     */
+    @Test
+    public void testbackShopBannerSave() throws Exception{
+
+        FileInputStream fis = new FileInputStream("d:\\login.gif");
+        MockMultipartFile file = new MockMultipartFile("file","1.gif","image/jpeg",fis);
+
+        //定义一个请求对象
+        MockMultipartHttpServletRequest request = new MockMultipartHttpServletRequest();
+        request.setMethod("POST");
+        request.setContentType("multipart/form-data");
+        request.addHeader("Content-type", "multipart/form-data");
+
+        //设置请求参数
+        request.setParameter("banid","2");
+        request.setParameter("bannerUrl","#");
+        request.setParameter("bannerDesc","宣传2");
+        //设置上传文件
+        request.addFile(file);
+
+        //测试controller上传的方法
+        siteBaseInfoController.backShopBannerSave(file,request);
+        Assert.assertTrue(true);
+    }
 }

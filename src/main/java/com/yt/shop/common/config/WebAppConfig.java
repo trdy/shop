@@ -33,7 +33,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter{
 
     /**
      * 增加外部文件系统路径到上下文环境
-     * @param registry
+     * @param registry 配置注册
      */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
@@ -45,7 +45,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter{
 
     /**
      * 跨域路由配置
-     * @param registry
+     * @param registry 配置注册
      */
     @Override
     public void addCorsMappings(CorsRegistry registry) {

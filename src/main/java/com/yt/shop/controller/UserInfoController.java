@@ -38,12 +38,12 @@ public class UserInfoController {
 
     /**
      * 生成图形验证码
-     * @param request
-     * @param response
+     * @param request 请求对象
+     * @param response 回应对象
      * @throws IOException
      *
      * 用户登录系统，未防止用户试探登录，生成图形验证码
-     *<p/>
+     *<p>&nbsp;</p>
      * 请求格式：
      * <pre>
      *     http://127.0.0.1:8081/valiCode
@@ -74,11 +74,11 @@ public class UserInfoController {
 
     /**
      * 后台登录验证
-     * @param request
-     * @return
+     * @param request 请求对象
+     * @return  返回json字符串
      * @throws IOException
      *
-     *<p/>
+     *<p>&nbsp;</p>
      * 请求格式：
      * <pre>
      *     请求地址：http://127.0.0.1:8081/admin/validUser

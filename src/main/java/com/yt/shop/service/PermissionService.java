@@ -26,7 +26,7 @@ public class PermissionService {
 
     /**
      * 查询出系统中所有定义的菜单项
-     * @return
+     * @return 一级菜单集合
      */
     @Transactional
     public List<Menu> findParnetMenuList() {
@@ -35,8 +35,8 @@ public class PermissionService {
 
     /**
      * 查询指定menuId的菜单项
-     * @param menuId
-     * @return
+     * @param menuId 菜单编号
+     * @return 菜单项
      */
     @Transactional
     public Menu findMenuById(Long menuId) {
@@ -45,7 +45,7 @@ public class PermissionService {
 
     /**
      * 修改菜单
-     * @param menu
+     * @param menu 菜单对象
      */
     @Transactional
     public void updateMenu(Menu menu) {
@@ -54,7 +54,7 @@ public class PermissionService {
 
     /**
      * 新增菜单
-     * @param menu
+     * @param menu 菜单对象
      */
     @Transactional
     public void insertMenu(Menu menu) {
@@ -63,7 +63,7 @@ public class PermissionService {
 
     /**
      * 删除菜单
-     * @param menuId
+     * @param menuId 菜单编号
      */
     @Transactional
     public void deleteMenuById(Long menuId) {

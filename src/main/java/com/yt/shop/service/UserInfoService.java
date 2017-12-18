@@ -15,9 +15,9 @@ public class UserInfoService {
 
     /**
      * 后台管理员登录根据用户名和密码查询后台用户
-     * @param userName
-     * @param userPass
-     * @return
+     * @param userName 用户名
+     * @param userPass 密码
+     * @return 用户对象
      */
     @Transactional
     public UserInfo findBackUserByNameAndPass(String userName, String userPass) {
@@ -26,8 +26,8 @@ public class UserInfoService {
 
     /**
      * 后台管理员登录后，访问首页加载用户信息
-     * @param userId
-     * @return
+     * @param userId 用户编号
+     * @return 用户对象
      */
     @Transactional
     public UserInfo findUserInfoById(Long userId) {

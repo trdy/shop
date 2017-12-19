@@ -95,83 +95,54 @@ public class AdminIndexController {
     @RequestMapping(value = "/admin/menu",method = RequestMethod.GET)
     public String backIndexMenu(HttpServletRequest request){
 
-
         //读取菜单信息
         List<Menu> pm=permissionService.findParnetMenuList();
         //获得用户信息
         UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
         log.info(userInfo.getUserName() + "访问后台管理菜单");
 
+        List<Permission> userPermissions=permissionService.findPermissionByUserTypeId(userInfo.getUserType().getUserTypeId());
+
+        //先获取用配置的权限的menuId
+        List<String> mids=new ArrayList<String>();
+        for(Permission p:userPermissions){
+            mids.add(p.getMenu().getMenuId()+"");
+        }
+
         //定义一个待输出的菜单集合
-        List<MenuItem> menuItemList=new ArrayList<>();
+        List<MenuItem> menuItemList=loadMenuItemList(pm,userInfo,mids);
+        log.info("根据userName:"+userInfo.getUserName()+"的userTypeId："+userInfo.getUserType().getUserTypeId()+"查询权限");
 
         //默认添加一个首页菜单
         MenuItem indexMenuItem=new MenuItem();
         indexMenuItem.setMenuId(0L);
         indexMenuItem.setMenuName("首页");
         indexMenuItem.setMenuUrl("/admin/menu");
-        menuItemList.add(indexMenuItem);
+        menuItemList.add(0,indexMenuItem);
+        operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"访问后台首页，读取菜单"));
+        return JsonUtil.getReturnJson(menuItemList);
+    }
 
-        //检查用户身份，如果是系统默认超级管理员，直接读取所有菜单，否则根据用户配置的菜单项检查，设置菜单集合
-        if(userInfo.getUserName().equals(Constract.ROOT_USER)){
-            log.info("如果是系统默认超级管理员，返回最高权限");
-            //一级菜单
-            for(Menu m:pm){
-                MenuItem menuItem=new MenuItem();
+    /**
+     * 递归加载菜单和子菜单
+     * @param menus
+     * @return
+     */
+    private List<MenuItem> loadMenuItemList(Collection<Menu> menus,UserInfo userInfo,List<String> mids){
+        List<MenuItem> menuItemList=new ArrayList<MenuItem>();
+
+        for(Menu m:menus){
+            if(userInfo.getUserName().equals(Constract.ROOT_USER)||mids.contains(m.getMenuId()+"")) {
+                MenuItem menuItem = new MenuItem();
                 menuItem.setMenuId(m.getMenuId());
                 menuItem.setMenuName(m.getMenuName());
                 menuItem.setMenuUrl(m.getMenuUrl());
-                List<MenuItem> childMenuItemList=new ArrayList<>();
-                Set<Menu> cms=m.getMenus();
-                //二级菜单
-                for(Menu cm:cms){
-                    MenuItem childMenuItem=new MenuItem();
-                    childMenuItem.setMenuId(cm.getMenuId());
-                    childMenuItem.setMenuName(cm.getMenuName());
-                    childMenuItem.setMenuUrl(cm.getMenuUrl());
-                    childMenuItemList.add(childMenuItem);
-                }
+                List<MenuItem> childMenuItemList = loadMenuItemList(m.getMenus(), userInfo,mids);
                 menuItem.setChildMenus(childMenuItemList);
                 menuItemList.add(menuItem);
             }
-        }else{
-            Long userTypeId=userInfo.getUserType().getUserTypeId();
-            log.info("不是系统默认的超级用户，根据userName:"+userInfo.getUserName()+"的userTypeId："+userTypeId+"查询权限");
-            List<Permission> userPermissions=permissionService.findPermissionByUserTypeId(userTypeId);
-
-            //先获取用配置的权限的menuId
-            List<String> mids=new ArrayList<String>();
-            for(Permission p:userPermissions){
-                mids.add(p.getMenu().getMenuId()+"");
-            }
-            //再检查一级菜单
-            for(Menu m:pm){
-                if(mids.contains(m.getMenuId()+"")){
-                    MenuItem menuItem=new MenuItem();
-                    menuItem.setMenuId(m.getMenuId());
-                    menuItem.setMenuName(m.getMenuName());
-                    menuItem.setMenuUrl(m.getMenuUrl());
-
-                    List<MenuItem> childMenuItemList=new ArrayList<>();
-                    //获得二级子菜单，再检查是否配置有权限
-                    Set<Menu> cms=m.getMenus();
-                    for(Menu cm:cms){
-                        //如果配置有二级子菜单权限，加入集合
-                        if(mids.contains(cm.getMenuId()+"")){
-                            MenuItem childMenuItem=new MenuItem();
-                            childMenuItem.setMenuId(cm.getMenuId());
-                            childMenuItem.setMenuName(cm.getMenuName());
-                            childMenuItem.setMenuUrl(cm.getMenuUrl());
-                            childMenuItemList.add(childMenuItem);
-                        }
-                    }
-                    menuItem.setChildMenus(childMenuItemList);
-                    menuItemList.add(menuItem);
-                }
-            }
         }
-        operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"访问后台首页，读取菜单"));
-        return JsonUtil.getReturnJson(menuItemList);
+        return menuItemList;
     }
 
 

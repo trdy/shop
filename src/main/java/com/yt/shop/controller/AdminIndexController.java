@@ -45,7 +45,7 @@ public class AdminIndexController {
      *<p>&nbsp;</p>
      * 请求格式：
      * <pre>
-     *     请求地址：http://127.0.0.1:8081/admin/menu
+     *     请求地址：http://192.168.1.201:8081/admin/menu
      *     请求方式：get
      *     请求参数：无
      *</pre>
@@ -184,7 +184,7 @@ public class AdminIndexController {
      *<p>&nbsp;</p>
      * 请求格式：
      * <pre>
-     *     请求地址：http://127.0.0.1:8081/admin/loadUser
+     *     请求地址：http://192.168.1.201:8081/admin/loadUser
      *     请求方式：get
      *     请求参数：无
      *</pre>

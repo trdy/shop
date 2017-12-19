@@ -46,7 +46,7 @@ public class UserInfoController {
      *<p>&nbsp;</p>
      * 请求格式：
      * <pre>
-     *     http://127.0.0.1:8081/valiCode
+     *     http://192.168.1.201:8081/valiCode
      *</pre>
      * 回应内容：
      * <pre>
@@ -81,7 +81,7 @@ public class UserInfoController {
      *<p>&nbsp;</p>
      * 请求格式：
      * <pre>
-     *     请求地址：http://127.0.0.1:8081/admin/validUser
+     *     请求地址：http://192.168.1.201:8081/admin/validUser
      *     请求方式：post
      *     请求参数：
      *          userName:用户名

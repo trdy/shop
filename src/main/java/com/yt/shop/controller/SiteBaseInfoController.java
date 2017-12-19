@@ -40,7 +40,7 @@ public class SiteBaseInfoController {
      *<p>&nbsp;</p>
      * 请求格式：
      * <pre>
-     *     请求地址：http://127.0.0.1:8081/admin/shopInfoSet
+     *     请求地址：http://192.168.1.201:8081/admin/shopInfo
      *     请求方式：get
      *     请求参数：无
      *</pre>
@@ -65,7 +65,7 @@ public class SiteBaseInfoController {
      *       {"code":-1} //用户未登录
      * </pre>
      */
-    @RequestMapping(value = "/admin/shopInfoSet",method = RequestMethod.GET)
+    @RequestMapping(value = "/admin/shopInfo",method = RequestMethod.GET)
     public String shopBaseInfoSet(HttpServletRequest request){
         UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
 
@@ -85,7 +85,7 @@ public class SiteBaseInfoController {
      * *<p>&nbsp;</p>
      * 请求格式：
      * <pre>
-     *     请求地址：http://127.0.0.1:8081/admin/shopBaseInfoSave
+     *     请求地址：http://192.168.1.201:8081/admin/shopInfo
      *     请求方式：post enctype="multipart/form-data"
      *     请求参数：nslogo(上传文件),nsname,nsid
      *</pre>
@@ -107,7 +107,7 @@ public class SiteBaseInfoController {
      *       {"code":-1} //用户未登录
      * </pre>
      */
-    @RequestMapping(value = "/admin/shopBaseInfoSave",method = RequestMethod.POST)
+    @RequestMapping(value = "/admin/shopInfo",method = RequestMethod.POST)
     public String shopBaseInfoSave(@RequestParam("nslogo") MultipartFile file, HttpServletRequest request) {
         log.info("访问网站基本信息设置，设置网站名称，上传logo");
         UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
@@ -162,7 +162,7 @@ public class SiteBaseInfoController {
      *<p>&nbsp;</p>
      * 请求格式：
      * <pre>
-     *     请求地址：http://127.0.0.1:8081/admin/shopBanner
+     *     请求地址：http://192.168.1.201:8081/admin/shopBanner
      *     请求方式：get
      *     请求参数：无
      *</pre>
@@ -214,7 +214,7 @@ public class SiteBaseInfoController {
      *<p>&nbsp;</p>
      * 请求格式：
      * <pre>
-     *     请求地址：http://127.0.0.1:8081/admin/shopBanner/{轮播图id}
+     *     请求地址：http://192.168.1.201:8081/admin/shopBanner/{轮播图id}
      *     请求方式：delete
      *     请求参数：无
      *</pre>
@@ -252,7 +252,7 @@ public class SiteBaseInfoController {
      *<p>&nbsp;</p>
      * 请求格式：
      * <pre>
-     *     请求地址：http://127.0.0.1:8081/admin/shopBanner/{轮播图id}，如果是新增轮播图操作，id设置0
+     *     请求地址：http://192.168.1.201:8081/admin/shopBanner/{轮播图id}，如果是新增轮播图操作，id设置0
      *     请求方式：get
      *     请求参数：无
      *</pre>
@@ -304,7 +304,7 @@ public class SiteBaseInfoController {
      *<p>&nbsp;</p>
      * 请求格式：
      * <pre>
-     *     请求地址：http://127.0.0.1:8081/admin/shopBanner
+     *     请求地址：http://192.168.1.201:8081/admin/shopBanner
      *     请求方式：post  enctype="multipart/form-data"
      *     请求参数：bannerUrl,bannerDesc,banid,bannerFile(上传文件)
      *</pre>
@@ -386,7 +386,7 @@ public class SiteBaseInfoController {
      *<p>&nbsp;</p>
      * 请求格式：
      * <pre>
-     *     请求地址：http://127.0.0.1:8081/admin/userType
+     *     请求地址：http://192.168.1.201:8081/admin/userType
      *     请求方式：get
      *     请求参数：无
      *</pre>
@@ -440,7 +440,7 @@ public class SiteBaseInfoController {
      *<p>&nbsp;</p>
      * 请求格式：
      * <pre>
-     *     请求地址：http://127.0.0.1:8081/admin/userType/{userTypeId}
+     *     请求地址：http://192.168.1.201:8081/admin/userType/{userTypeId}
      *     请求方式：get
      *     请求参数：无
      *</pre>
@@ -487,7 +487,7 @@ public class SiteBaseInfoController {
      *<p>&nbsp;</p>
      * 请求格式：
      * <pre>
-     *     请求地址：http://127.0.0.1:8081/admin/userType
+     *     请求地址：http://192.168.1.201:8081/admin/userType
      *     请求方式：post
      *     请求参数：会员类型json对象
      *     格式：{"userTypeId":101,"userTypeName":"普通会员1"}
@@ -532,7 +532,7 @@ public class SiteBaseInfoController {
      *<p>&nbsp;</p>
      * 请求格式：
      * <pre>
-     *     请求地址：http://127.0.0.1:8081/admin/userType/{userTypeId}
+     *     请求地址：http://192.168.1.201:8081/admin/userType/{userTypeId}
      *     请求方式：delete
      *     请求参数：无
      *</pre>

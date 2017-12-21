@@ -2,6 +2,7 @@ package com.yt.shop.mvctest;
 
 import com.yt.shop.common.Constract;
 import com.yt.shop.model.UserInfo;
+import com.yt.shop.model.UserType;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -44,7 +45,7 @@ public class AdminIndexControllerTest {
         UserInfo userInfo=new UserInfo();
         userInfo.setUserId(1L);
         userInfo.setUserName("admin");
-
+        userInfo.setUserType(new UserType(10L));
 
         MvcResult result = mockMvc.perform(get("/admin/menu")
                 .sessionAttr(Constract.ADMIN_LOGIN_FLAG,userInfo)
@@ -63,6 +64,7 @@ public class AdminIndexControllerTest {
         UserInfo userInfo=new UserInfo();
         userInfo.setUserId(1L);
         userInfo.setUserName("admin");
+
 
         MvcResult result = mockMvc.perform(get("/admin/loadUser")
                 .sessionAttr(Constract.ADMIN_LOGIN_FLAG,userInfo)

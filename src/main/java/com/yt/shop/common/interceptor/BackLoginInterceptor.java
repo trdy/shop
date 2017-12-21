@@ -18,7 +18,7 @@ public class BackLoginInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
-        log.info("验证是否登录拦截检查--> 访问地址："+httpServletRequest.getRequestURI());
+        //log.info("验证是否登录拦截检查--> 访问地址："+httpServletRequest.getRequestURI());
         HttpSession session=httpServletRequest.getSession();
         UserInfo userInfo= (UserInfo) session.getAttribute(Constract.ADMIN_LOGIN_FLAG);
         if(null==userInfo){

@@ -78,7 +78,7 @@ public class SiteBaseInfoController {
 
     /**
      * 网站设置--&gt;网站基本信息设置，修改或保存网站名称和上传LOGO
-     * @param file 上传文件
+     * @param nslogo 上传文件 base64编码字符串
      * @param request 请求对象
      * @return 1：成功 0：失败
      *
@@ -108,7 +108,7 @@ public class SiteBaseInfoController {
      * </pre>
      */
     @RequestMapping(value = "/admin/shopInfo",method = RequestMethod.POST)
-    public String shopBaseInfoSave(@RequestParam("nslogo") MultipartFile file, HttpServletRequest request) {
+    public String shopBaseInfoSave(@RequestParam String nslogo, HttpServletRequest request) {
         log.info("访问网站基本信息设置，设置网站名称，上传logo");
         UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
 
@@ -123,21 +123,11 @@ public class SiteBaseInfoController {
                 shopInfo.setNsname(nsname);
             }
 
-            if (!file.isEmpty()) {
-                String filePath = System.getProperty("user.dir") + "/upload/nslogo/";
-                int n = file.getOriginalFilename().indexOf(".");
-                String fileName = UUID.randomUUID() + file.getOriginalFilename().substring(n);
-                log.info("上传文件目录：" + filePath);
-
-                try {
-                    FileUtil.uploadFile(file.getBytes(), filePath, fileName);
-                    shopInfo.setNslogo("/upload/nslogo/" + fileName);
-                    log.info("上传成功");
-
-                } catch (Exception e) {
-                    log.error("执行文件上传：" + e.toString());
-
-                }
+            if (null!=nslogo&&!"".equals(nslogo)) {
+                String uploadPath = System.getProperty("user.dir") + "/upload/nslogo/";
+                log.info("上传文件保存到"+uploadPath);
+                String fileName=FileUtil.uploadBase64File(nslogo,uploadPath);
+                shopInfo.setNslogo("/upload/nslogo/"+fileName);
             } else {
                 shopInfo.setNslogo("/upload/nslogo/chuangfulogo.png");
             }
@@ -148,6 +138,7 @@ public class SiteBaseInfoController {
 
             return JsonUtil.getReturnJson(1);
         } catch (Exception e) {
+            log.error("上传失败"+e.toString());
             return JsonUtil.getReturnJson(0);
         }
     }
@@ -298,7 +289,7 @@ public class SiteBaseInfoController {
 
     /**
      * 网站设置--&gt;轮播图设置，后台管理员保存轮播图信息
-     * @param file 轮播图图片文件
+     * @param bannerFile 轮播图图片文件base64编码字符串
      * @param request 请求对象
      * @return json字符串
      *<p>&nbsp;</p>
@@ -329,7 +320,7 @@ public class SiteBaseInfoController {
      * </pre>
      */
     @RequestMapping(value = "/admin/shopBanner",method = RequestMethod.POST)
-    public String backShopBannerSave(@RequestParam("bannerFile") MultipartFile file, HttpServletRequest request){
+    public String backShopBannerSave(@RequestParam String bannerFile, HttpServletRequest request){
         log.info("后台管理员保存轮播图信息");
         UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
 
@@ -349,21 +340,13 @@ public class SiteBaseInfoController {
                 shopBanner.setBannerDesc(bannerDesc);
             }
 
-            if (!file.isEmpty()) {
-                String filePath = System.getProperty("user.dir") + "/upload/banner/";
-                int n = file.getOriginalFilename().indexOf(".");
-                String fileName = UUID.randomUUID() + file.getOriginalFilename().substring(n);
-                log.info("上传文件目录：" + filePath);
-
-                try {
-                    FileUtil.uploadFile(file.getBytes(), filePath, fileName);
-                    shopBanner.setBannerPath("/upload/banner/" + fileName);
-                    log.info("上传成功");
-
-                } catch (Exception e) {
-                    log.error("执行文件上传：" + e.toString());
-
-                }
+            if (null!=bannerFile&&!"".equals(bannerFile)) {
+                String uploadPath = System.getProperty("user.dir") + "/upload/banner/";
+                log.info("上传文件保存到"+uploadPath);
+                String fileName=FileUtil.uploadBase64File(bannerFile,uploadPath);
+                shopBanner.setBannerPath("/upload/banner/"+fileName);
+            } else {
+                shopBanner.setBannerPath("/upload/banner/defaultBanner.png");
             }
 
             siteBaseInfoService.insertShopBanner(shopBanner);

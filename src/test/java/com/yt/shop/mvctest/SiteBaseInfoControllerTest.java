@@ -17,6 +17,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.util.Base64Utils;
 import org.springframework.web.context.WebApplicationContext;
 
 import java.io.FileInputStream;
@@ -59,7 +60,7 @@ public class SiteBaseInfoControllerTest {
         userInfo.setUserName("admin");
 
 
-        MvcResult result = mockMvc.perform(get("/admin/shopInfoSet")
+        MvcResult result = mockMvc.perform(get("/admin/shopInfo")
                 .sessionAttr(Constract.ADMIN_LOGIN_FLAG,userInfo)
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
@@ -80,24 +81,30 @@ public class SiteBaseInfoControllerTest {
      */
     @Test
     public void testShopBaseInfoSave()throws Exception{
-        FileInputStream fis = new FileInputStream("d:\\login.gif");
-        MockMultipartFile file = new MockMultipartFile("file","1.gif","image/jpeg",fis);
+        FileInputStream fis = new FileInputStream("d:\\login.jpg");
+        byte[] buf=new byte[fis.available()];
+        fis.read(buf);
+        fis.close();
+        String base64Code=Base64Utils.encodeToString(buf);
 
-        //定义一个请求对象
-        MockMultipartHttpServletRequest request = new MockMultipartHttpServletRequest();
-        request.setMethod("POST");
-        request.setContentType("multipart/form-data");
-        request.addHeader("Content-type", "multipart/form-data");
+        System.out.println(base64Code);
+        UserInfo userInfo=new UserInfo();
+        userInfo.setUserId(1L);
+        userInfo.setUserName("admin");
 
-        //设置请求参数
-        request.setParameter("nsid","1");
-        request.setParameter("nsname","创福网");
-        //设置上传文件
-        request.addFile(file);
 
-        //测试controller上传的方法
-        siteBaseInfoController.shopBaseInfoSave(file,request);
-        Assert.assertTrue(true);
+        MvcResult result = mockMvc.perform(post("/admin/shopInfo")
+                .sessionAttr(Constract.ADMIN_LOGIN_FLAG,userInfo)
+                .param("nslogo","data:image/jpeg;base64,"+base64Code)
+                .param("nsname","创福网")
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())// 模拟向testRest发送post请求
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andReturn();// 返回执行请求的结果
+
+
+        System.out.println("输出结果："+result.getResponse().getContentAsString());
 
     }
 
@@ -154,7 +161,7 @@ public class SiteBaseInfoControllerTest {
     @Test
     public void testbackShopBannerSave() throws Exception{
 
-        FileInputStream fis = new FileInputStream("d:\\login.gif");
+        /*FileInputStream fis = new FileInputStream("d:\\login.gif");
         MockMultipartFile file = new MockMultipartFile("file","1.gif","image/jpeg",fis);
 
         //定义一个请求对象
@@ -172,7 +179,36 @@ public class SiteBaseInfoControllerTest {
 
         //测试controller上传的方法
         siteBaseInfoController.backShopBannerSave(file,request);
-        Assert.assertTrue(true);
+        Assert.assertTrue(true);*/
+
+        FileInputStream fis = new FileInputStream("d:\\shoplogo.png");
+        byte[] buf=new byte[fis.available()];
+        fis.read(buf);
+        String base64Code=Base64Utils.encodeToString(buf);
+
+        UserInfo userInfo=new UserInfo();
+        userInfo.setUserId(1L);
+        userInfo.setUserName("admin");
+
+        /**
+         * data:image/jpeg;base64,
+         * data:image/png;base64,
+         * data:image/x-icon;base64,
+         * data:image/gif;base64,
+         */
+        MvcResult result = mockMvc.perform(post("/admin/shopBanner")
+                .sessionAttr(Constract.ADMIN_LOGIN_FLAG,userInfo)
+                .param("bannerFile","data:image/png;base64,"+base64Code)
+                .param("bannerUrl","#")
+                .param("bannerDesc","...")
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())// 模拟向testRest发送post请求
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andReturn();// 返回执行请求的结果
+
+
+        System.out.println("输出结果："+result.getResponse().getContentAsString());
     }
 
     /**

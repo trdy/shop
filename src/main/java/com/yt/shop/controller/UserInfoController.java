@@ -1,8 +1,6 @@
 package com.yt.shop.controller;
 
-import com.yt.shop.common.Constract;
-import com.yt.shop.common.MD5;
-import com.yt.shop.common.VerifyCodeUtils;
+import com.yt.shop.common.*;
 import com.yt.shop.dao.OperRecordJpa;
 import com.yt.shop.model.OperRecord;
 import com.yt.shop.model.UserInfo;
@@ -91,9 +89,9 @@ public class UserInfoController {
      * 回应内容：
      * <pre>
      *     json字符串
-     *          {"code":1} 登录成功
-     *          {"code":-1} 用户名或密码不正确
-     *          {\"code\":-2} 验证码不正确
+     *          {"code":1,"message":"登录成功","data":""}
+     *          {"code":-1,"message":"用户名或密码不正确","data":""}
+     *          {"code":-2,"message":"验证码不正确","data":""}
      * </pre>
      */
     @RequestMapping(value = "/admin/validUser",method =RequestMethod.POST)
@@ -114,14 +112,14 @@ public class UserInfoController {
                 log.info("登录成功。。。。:"+userInfo);
                 //记录操作日志
                 operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userName+"登录成功后台管理"));
-                return "{\"code\":1}";
+                return JsonUtil.getReturnJson(1,"登录成功");
             }else{
                 log.info("用户名密码不正确");
-                return "{\"code\":-1}";
+                return JsonUtil.getReturnJson(-1,"用户名或密码不正确");
             }
         }else{
             log.info("验证码不正确");
-            return "{\"code\":-2}";
+            return JsonUtil.getReturnJson(-2,"验证码不正确");
         }
     }
 

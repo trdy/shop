@@ -1,6 +1,7 @@
 package com.yt.shop.common.interceptor;
 
 import com.yt.shop.common.Constract;
+import com.yt.shop.common.JsonUtil;
 import com.yt.shop.model.UserInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,7 +24,7 @@ public class BackLoginInterceptor extends HandlerInterceptorAdapter {
         UserInfo userInfo= (UserInfo) session.getAttribute(Constract.ADMIN_LOGIN_FLAG);
         if(null==userInfo){
             httpServletResponse.setContentType(String.valueOf(MediaType.APPLICATION_JSON_UTF8));
-            httpServletResponse.getWriter().print("{\"code\",-1}");
+            httpServletResponse.getWriter().print(JsonUtil.getReturnJson(-1,"用户未登录"));
             return false;
         }
         return true;

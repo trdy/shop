@@ -53,7 +53,9 @@ public class AdminIndexController {
      *
      * <pre>
      *  正确回应：
-     *      {"code": [
+     *      {"code":1,
+     *      "message":"正确返回结果",
+     *      "data":[
                     {"menuId": 0,
                     "menuName": "首页",
                     "menuUrl": "/admin/menu"
@@ -78,7 +80,7 @@ public class AdminIndexController {
             ]}
      * </pre>
      *  <table border="1">
-     *      <caption>json对象属性</caption>
+     *      <caption>data对象属性</caption>
      *  <tr><td>属性</td><td>含义</td><td>备注</td></tr>
      *  <tr><td>menuId</td><td>菜单编号</td><td>&nbsp;</td></tr>
      *  <tr><td>menuName</td><td>菜单名称</td><td>&nbsp;</td></tr>
@@ -87,7 +89,7 @@ public class AdminIndexController {
      *  </table>
      * <pre>
      *   错误回应：
-     *     {"code":-1} //用户未登录
+     *     {"code":-1,"message":"用户未登录",data:""}
      * </pre>
      *
      *
@@ -120,7 +122,7 @@ public class AdminIndexController {
         indexMenuItem.setMenuUrl("/admin/menu");
         menuItemList.add(0,indexMenuItem);
         operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"访问后台首页，读取菜单"));
-        return JsonUtil.getReturnJson(menuItemList);
+        return JsonUtil.getReturnJson(1,"正确加载用户配置的权限菜单",menuItemList);
     }
 
     /**
@@ -163,7 +165,9 @@ public class AdminIndexController {
      * <pre>
      *     正确回应：
      *     {
-            "code": {
+            "code":1,
+            "message":"正确加载用户信息",
+            "data":{
             "code": "420400197402111013",
             "duihuanScore": 0,
             "email": "371866295@qq.com",
@@ -188,7 +192,7 @@ public class AdminIndexController {
             }
      * </pre>
      * <table border="1">
-     *     <caption>json对象属性</caption>
+     *     <caption>data对象属性</caption>
      *  <tr><td>属性</td><td>含义</td><td>备注</td></tr>
      *  <tr><td>userId</td><td>用户编号</td><td>&nbsp;</td></tr>
      *  <tr><td>userName</td><td>用户登录名称</td><td>&nbsp;</td></tr>
@@ -207,7 +211,7 @@ public class AdminIndexController {
      *  </table>
      * <pre>
      *     错误回应：
-     *      {"code":-1} //用户未登录
+     *      {"code":-1,"message":"用户未登录","data":""}
      * </pre>
      */
     @RequestMapping(value = "/admin/loadUser",method = RequestMethod.GET)
@@ -227,7 +231,7 @@ public class AdminIndexController {
         userInfo.setQuestion(null);
         userInfo.setAnswer(null);
 
-        return JsonUtil.getReturnJson(userInfo);
+        return JsonUtil.getReturnJson(1,"正确加载用户信息",userInfo);
     }
 
 }

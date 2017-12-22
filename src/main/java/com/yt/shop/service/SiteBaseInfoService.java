@@ -1,8 +1,10 @@
 package com.yt.shop.service;
 
+import com.yt.shop.dao.GoodsPlateJpa;
 import com.yt.shop.dao.ShopBannerJpa;
 import com.yt.shop.dao.ShopInfoJpa;
 import com.yt.shop.dao.UserTypeJpa;
+import com.yt.shop.model.GoodsPlate;
 import com.yt.shop.model.ShopBanner;
 import com.yt.shop.model.ShopInfo;
 import com.yt.shop.model.UserType;
@@ -18,14 +20,9 @@ import java.util.List;
 @Service("siteBaseInfoService")
 public class SiteBaseInfoService {
 
+    //----------------------------------------------------
     @Autowired
     private ShopInfoJpa shopInfoJpa;
-
-    @Autowired
-    private ShopBannerJpa shopBannerJpa;
-
-    @Autowired
-    private UserTypeJpa userTypeJpa;
 
     @Transactional
     public ShopInfo findLastShopInfo() {
@@ -36,6 +33,10 @@ public class SiteBaseInfoService {
     public void insertShopInfo(ShopInfo shopInfo) {
         shopInfoJpa.save(shopInfo);
     }
+
+    //----------------------------------------------------
+    @Autowired
+    private ShopBannerJpa shopBannerJpa;
 
     @Transactional
     public List<ShopBanner> findShopBannerList() {
@@ -57,6 +58,10 @@ public class SiteBaseInfoService {
         shopBannerJpa.delete(shopBannerId);
     }
 
+    //----------------------------------------------------
+    @Autowired
+    private UserTypeJpa userTypeJpa;
+
     @Transactional
     public List<UserType> findUserTypeList() {
         return userTypeJpa.findAll();
@@ -75,5 +80,29 @@ public class SiteBaseInfoService {
     @Transactional
     public void deleteUserType(Long userTypeId) {
         userTypeJpa.delete(userTypeId);
+    }
+
+    //----------------------------------------------------
+    @Autowired
+    private GoodsPlateJpa goodsPlateJpa;
+
+    @Transactional
+    public List<GoodsPlate> findGoodsPlateList() {
+        return goodsPlateJpa.findAll();
+    }
+
+    @Transactional
+    public GoodsPlate findGoodsPlateById(Long goodsPlateId) {
+        return goodsPlateJpa.findOne(goodsPlateId);
+    }
+
+    @Transactional
+    public void insertGoodsPlate(GoodsPlate goodsPlate) {
+        goodsPlateJpa.save(goodsPlate);
+    }
+
+    @Transactional
+    public void deleteGoodsPlateById(Long goodsPlateId) {
+        goodsPlateJpa.delete(goodsPlateId);
     }
 }

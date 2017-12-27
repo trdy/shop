@@ -1,6 +1,7 @@
 package com.yt.shop.common;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class DateUtil {
@@ -45,5 +46,12 @@ public class DateUtil {
 			break;
 		}
 		return day;
+	}
+
+	public static String getYearMonth(){
+		Calendar cal= Calendar.getInstance();
+		int year=cal.get(Calendar.YEAR);
+		int month=cal.get(Calendar.MONTH)+1;
+		return year+""+month;
 	}
 }

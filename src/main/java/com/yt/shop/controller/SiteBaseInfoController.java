@@ -47,7 +47,7 @@ public class SiteBaseInfoController {
      *      {"code":1,
      *      "message":"正确返回最后一次设置的网站基本资料",
      *      "data":
-     *          {"nslogo":"/upload/nslogo/a80b1b7e-6352-43cf-91b7-08c1faf0b0ff.gif",
+     *          {"nslogo":"/upload/logo/a80b1b7e-6352-43cf-91b7-08c1faf0b0ff.gif",
      *          "nsname":"创福网",
      *          "siid":2}
      *      }
@@ -123,12 +123,12 @@ public class SiteBaseInfoController {
             }
 
             if (null!=nslogo&&!"".equals(nslogo)) {
-                String uploadPath = System.getProperty("user.dir") + "/upload/nslogo/";
+                String uploadPath = System.getProperty("user.dir") + "/upload/logo/";
                 log.info("上传文件保存到"+uploadPath);
                 String fileName=FileUtil.uploadBase64File(nslogo,uploadPath);
-                shopInfo.setNslogo("/upload/nslogo/"+fileName);
+                shopInfo.setNslogo("/upload/logo/"+fileName);
             } else {
-                shopInfo.setNslogo("/upload/nslogo/chuangfulogo.png");
+                shopInfo.setNslogo("/upload/logo/chuangfulogo.png");
             }
 
             siteBaseInfoService.insertShopInfo(shopInfo);
@@ -274,6 +274,7 @@ public class SiteBaseInfoController {
      * <pre>
      *    错误回应：
      *       {"code":-1,"message","用户未登录"}
+     *       {"code":-2,"message","没有找到待修改的数据"}
      * </pre>
      */
     @RequestMapping(value = "/admin/shopBannerEdit",method = RequestMethod.GET)
@@ -453,6 +454,7 @@ public class SiteBaseInfoController {
      * <pre>
      *    错误回应：
      *       {"code":-1,"message":"用户未登录"}
+     *       {"code":-2,"message","没有找到待修改的数据"}
      * </pre>
      */
     @RequestMapping(value = "/admin/userTypeEdit",method = RequestMethod.GET)
@@ -637,7 +639,8 @@ public class SiteBaseInfoController {
      *  </table>
      * <pre>
      *    错误回应：
-     *       {"code":-1} //用户未登录
+     *       {"code":-1,"message","用户未登录"}
+     *       {"code":-2,"message","没有找到待修改的数据"}
      * </pre>
      */
     @RequestMapping(value = "/admin/goodsPlateEdit",method = RequestMethod.GET)

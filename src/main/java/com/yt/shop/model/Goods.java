@@ -50,6 +50,36 @@ public class Goods implements java.io.Serializable {
 	
 	@Column(name="goods_name")
 	private String goodsName;
+
+	@Column(name="goods_mfrs")
+	private String goodsMfrs;
+
+	@Column(name="goods_origin")
+	private String goodsOrigin;
+
+	@Column(name="goods_mfrs_tel")
+	private String goodsMfrsTel;
+
+	@Column(name="goods_cret")
+	private String goodsCret;
+
+	@Column(name="goods_check_report")
+	private String goodsCheckReport;
+
+	@Column(name="goods_trademark")
+	private String goodsTrademark;
+
+	@Column(name="goods_special_cert")
+	private String goodsSpecialCert;
+
+	@Column(name="goods_marketing")
+	private String goodsMarketing;
+
+	@Column(name="goods_busi_lice")
+	private String goodsBusiLice;
+
+	@Column(name="goods_other_cert")
+	private String goodsOtherCert;
 	
 	@Column(name="goods_num")
 	private Integer goodsNum;
@@ -187,7 +217,87 @@ public class Goods implements java.io.Serializable {
 		return goodsPics;
 	}
 
-	public void setGoodsPics(Set<GoodsPic> goodsPics) {
-		this.goodsPics = goodsPics;
+	public void setGoodsPics(Set<GoodsPic> goodsPics){
+		this.goodsPics=goodsPics;
+	}
+
+	public String getGoodsMfrs() {
+		return goodsMfrs;
+	}
+
+	public void setGoodsMfrs(String goodsMfrs) {
+		this.goodsMfrs = goodsMfrs;
+	}
+
+	public String getGoodsOrigin() {
+		return goodsOrigin;
+	}
+
+	public void setGoodsOrigin(String goodsOrigin) {
+		this.goodsOrigin = goodsOrigin;
+	}
+
+	public String getGoodsMfrsTel() {
+		return goodsMfrsTel;
+	}
+
+	public void setGoodsMfrsTel(String goodsMfrsTel) {
+		this.goodsMfrsTel = goodsMfrsTel;
+	}
+
+	public String getGoodsCret() {
+		return goodsCret;
+	}
+
+	public void setGoodsCret(String goodsCret) {
+		this.goodsCret = goodsCret;
+	}
+
+	public String getGoodsCheckReport() {
+		return goodsCheckReport;
+	}
+
+	public void setGoodsCheckReport(String goodsCheckReport) {
+		this.goodsCheckReport = goodsCheckReport;
+	}
+
+	public String getGoodsTrademark() {
+		return goodsTrademark;
+	}
+
+	public void setGoodsTrademark(String goodsTrademark) {
+		this.goodsTrademark = goodsTrademark;
+	}
+
+	public String getGoodsSpecialCert() {
+		return goodsSpecialCert;
+	}
+
+	public void setGoodsSpecialCert(String goodsSpecialCert) {
+		this.goodsSpecialCert = goodsSpecialCert;
+	}
+
+	public String getGoodsMarketing() {
+		return goodsMarketing;
+	}
+
+	public void setGoodsMarketing(String goodsMarketing) {
+		this.goodsMarketing = goodsMarketing;
+	}
+
+	public String getGoodsBusiLice() {
+		return goodsBusiLice;
+	}
+
+	public void setGoodsBusiLice(String goodsBusiLice) {
+		this.goodsBusiLice = goodsBusiLice;
+	}
+
+	public String getGoodsOtherCert() {
+		return goodsOtherCert;
+	}
+
+	public void setGoodsOtherCert(String goodsOtherCert) {
+		this.goodsOtherCert = goodsOtherCert;
 	}
 }

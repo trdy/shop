@@ -1,5 +1,7 @@
 package com.yt.shop.model;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 import java.util.List;
 import java.util.Set;
 
@@ -31,7 +33,8 @@ public class GoodsPlate implements java.io.Serializable {
 	private Long gpid;
 	private String gpname;
 	private String gpremark;
-	
+
+	@JSONField(serialize = false)
 	@OneToMany(targetEntity=GoodsType.class,fetch=FetchType.EAGER)
 	@OrderBy("gtid")
 	@JoinColumn(name="gpid")

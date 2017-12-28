@@ -732,11 +732,11 @@ public class SiteBaseInfoController {
      *       {"code":-1,"message","用户未登录"}
      * </pre>
      */
-    @RequestMapping(value = "/admin/goodsPlateDel",method = RequestMethod.DELETE)
+    @RequestMapping(value = "/admin/goodsPlateDel",method = RequestMethod.POST)
     public String backGoodsPlateDel(@RequestParam Long goodsPlateId,HttpServletRequest request){
         log.info("后台管理员删除商品板块信息");
         UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
-        operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员删除商品板块信息"));
+        operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员删除商品板块信息goodsPlateId:"+goodsPlateId));
 
         try {
             siteBaseInfoService.deleteGoodsPlateById(goodsPlateId);
@@ -747,4 +747,294 @@ public class SiteBaseInfoController {
         }
     }
 
+    //------------------------------------------------------------------------------------
+
+    /**
+     * 网站设置--&gt;商品类别，后台管理员查看商品类别列表
+     * @param request 请求对象
+     * @return 商品类别集合 json字符串
+     *
+     *<p>
+     * 请求格式：
+     * <pre>
+     *     请求地址：http://192.168.1.201:8081/admin/goodsTypeList
+     *     请求方式：get
+     *     请求参数 无
+     *</pre>
+     *
+     *
+     * 回应内容：
+     * <pre>
+     *    正确回应：
+     *      {
+                "code": 1,
+                "message": "正确获取商品类别列表",
+                "data":{"goodsPlate":{"gpid":1,"gpname":"数码产品","gpremark":""},"gtid":1,"gtname":"手机","gtremark":""},
+                        {"goodsPlate":{"gpid":6,"gpname":"服装","gpremark":""},"gtid": 5,"gtname": "女装","gtremark": ""}]
+            }
+     * </pre>
+     *<table border="1">
+     *      <caption>goodsType-json对象属性</caption>
+     *  <tr><td>参数</td><td>含义</td><td>备注</td></tr>
+     *  <tr><td>gtid</td><td>商品类别编号</td><td>&nbsp;</td></tr>
+     *  <tr><td>gtname</td><td>商品类别名称</td><td>&nbsp;</td></tr>
+     *  <tr><td>gtremark</td><td>商品类别描述</td><td>&nbsp;</td></tr>
+     *  <tr><td>goodsPlate.gpid</td><td>商品类别所属板块id</td><td>&nbsp;</td></tr>
+     *  <tr><td>goodsPlate.gpname</td><td>商品类别所属板块名称</td><td>&nbsp;</td></tr>
+     *  <tr><td>goodsPlate.gpremark</td><td>商品类别所属板块描述</td><td>&nbsp;</td></tr>
+     *  </table>
+     * <pre>
+     *    错误回应：
+     *       {"code":-1,"message","用户未登录"}
+     * </pre>
+     */
+    @RequestMapping(value = "/admin/goodsTypeList",method = RequestMethod.GET)
+    public String backGoodsTypeList(HttpServletRequest request){
+        log.info("后台管理员查看商品类别列表");
+        UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
+        operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员查看商品类别列表"));
+
+        List<GoodsType> goodsTypes=siteBaseInfoService.findGoodsTypeList();
+        return JsonUtil.getReturnJson(1,"正确获取商品类别列表",goodsTypes);
+    }
+
+    /**
+     * 网站设置--&gt;商品类别设置，后台管理员根据商品类型id查看商品类别详情(商品二级分类)
+     * @param goodsTypeId 商品板块编号，如果为0表示新增，否则为修改前查询
+     * @param request 请求对象
+     * @return 商品类别信息 json字符串
+     *
+     *<p>
+     * 请求格式：
+     * <pre>
+     *     请求地址：http://192.168.1.201:8081/admin/goodsTypeEdit?goodsTypeId=商品类别编号值
+     *     请求方式：get
+     *     请求参数：goodsTypeId 商品板块编号
+     *</pre>
+     *
+     *
+     * 回应内容：
+     * <pre>
+     *    正确回应：
+     *      转到新增：{"code":0,"message":"准备新增商品板块数据"}
+     *      转到修改：{
+                    "code":1,"message":"准备修改商品板块数据","data":{"gtid": 1,"gtname": "手机","gtremark": ""}
+    }
+     * </pre>
+     * <table border="1">
+     *      <caption>json对象属性</caption>
+     *  <tr><td>参数</td><td>含义</td><td>备注</td></tr>
+     *  <tr><td>gtid</td><td>商品类别编号</td><td>&nbsp;</td></tr>
+     *  <tr><td>gtname</td><td>商品类别名称</td><td>&nbsp;</td></tr>
+     *  <tr><td>gtremark</td><td>商品类别描述</td><td>&nbsp;</td></tr>
+     *  <tr><td>goodsPlate.gpid</td><td>商品类别所属板块id</td><td>&nbsp;</td></tr>
+     *  <tr><td>goodsPlate.gpname</td><td>商品类别所属板块名称</td><td>&nbsp;</td></tr>
+     *  <tr><td>goodsPlate.gpremark</td><td>商品类别所属板块描述</td><td>&nbsp;</td></tr>
+     *  </table>
+     * <pre>
+     *    错误回应：
+     *       {"code":-1,"message","用户未登录"}
+     *       {"code":-2,"message","没有找到待修改的数据"}
+     * </pre>
+     */
+    @RequestMapping(value = "/admin/goodsTypeEdit",method = RequestMethod.GET)
+    public String backGoodsTypeEdit(@RequestParam Long goodsTypeId,HttpServletRequest request){
+        log.info("后台管理员根据商品类型id查看商品类别详情");
+        UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
+        operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员根据商品类型id查看商品类别详情"));
+
+        if(0==goodsTypeId){
+            return JsonUtil.getReturnJson(0,"准备新增商品类别数据");
+        }else{
+            GoodsType goodsType=siteBaseInfoService.findGoodsTypeById(goodsTypeId);
+            if(null==goodsType){
+                return JsonUtil.getReturnJson(-2,"没有找到待修改的数据");
+            }
+            return JsonUtil.getReturnJson(1,"返回待修改商品类别数据",goodsType);
+        }
+    }
+
+
+    /**
+     * 网站设置--&gt;商品类别设置，后台管理员保存商品类别信息
+     * @param goodsType 商品类别对象 json字符串
+     * @param request 请求对象
+     * @return json字符串
+     *
+     *<p>
+     * 请求格式：
+     * <pre>
+     *     请求地址：http://192.168.1.201:8081/admin/goodsTypeSave
+     *     请求方式：post
+     *     请求参数：goodsType 示例：{"gtname":"军火11","gtremark":"","goodsPlate":{"gpid":"1"}}
+     *
+     *</pre>
+     * <table border="1">
+     *      <caption>goodsType-json对象属性</caption>
+     *  <tr><td>参数</td><td>含义</td><td>备注</td></tr>
+     *  <tr><td>gtid</td><td>商品类别编号</td><td>可以为空，如果没有值则是新增类别，如果传递正确的值则是修改类别信息</td></tr>
+     *  <tr><td>gtname</td><td>商品类别名称</td><td>&nbsp;</td></tr>
+     *  <tr><td>gtremark</td><td>商品类别描述</td><td>&nbsp;</td></tr>
+     *  <tr><td>goodsPlate.gpid</td><td>商品类别所属板块id</td><td>所属商品板块id</td></tr>
+     *  </table>
+     *
+     * 回应内容：
+     * <pre>
+     *    正确回应：
+     *      {"code":1,"message":"保存成功"}
+     *      {"code":0,"message":"保存失败"}
+     *
+     *    错误回应：
+     *       {"code":-1,"message":"用户未登录"}
+     * </pre>
+     */
+    @RequestMapping(value = "/admin/goodsTypeSave",method = RequestMethod.POST)
+    public String backGoodsPlateSave(@RequestBody GoodsType goodsType,HttpServletRequest request){
+        log.info("后台管理员保存商品板块信息");
+        UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
+        operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员保存商品板块信息"));
+        try {
+            siteBaseInfoService.insertGoodsType(goodsType);
+            return JsonUtil.getReturnJson(1,"保存成功");
+        }catch (Exception e){
+            log.error("保存商品板块信息出错"+e);
+            return JsonUtil.getReturnJson(0,"保存失败");
+        }
+    }
+
+    /**
+     * 网站设置--&gt;商品类别设置，后台管理员删除商品删除信息
+     * @param goodsTypeId 商品类别编号
+     * @param request 请求对象
+     * @return json字符串
+     *
+     *<p>
+     * 请求格式：
+     * <pre>
+     *     请求地址：http://192.168.1.201:8081/admin/goodsTypeDel?goodsTypeId=商品类别编号值
+     *     请求方式：post
+     *     请求参数 goodsTypeId 商品类别编号
+     *</pre>
+     *
+     *
+     * 回应内容：
+     * <pre>
+     *    正确回应：
+     *      {"code":1,"message":"删除成功"}
+     *      {"code":0,"message":"删除失败"}
+     * </pre>
+     *
+     * <pre>
+     *    错误回应：
+     *       {"code":-1,"message","用户未登录"}
+     * </pre>
+     */
+    @RequestMapping(value = "/admin/goodsTypeDel",method = RequestMethod.POST)
+    public String backGoodsTypeDel(@RequestParam Long goodsTypeId,HttpServletRequest request){
+        log.info("后台管理员删除商品类别信息");
+        UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
+        operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员删除商品类别信息goodsTypeId："+goodsTypeId));
+
+        try {
+            siteBaseInfoService.deleteGoodsTypeById(goodsTypeId);
+            return JsonUtil.getReturnJson(1,"删除成功");
+        }catch (Exception e){
+            log.error("删除商品类别信息出错"+e);
+            return JsonUtil.getReturnJson(0,"删除失败");
+        }
+    }
+
+    //---------------------------------------------------------------------------------
+
+    /**
+     * 网站设置--&gt;网站新闻公告，后台管理员查看网站公告新闻列表
+     * @param request 请求对象
+     * @return 新闻列表集合 json字符串
+     *
+     *<p>
+     * 请求格式：
+     * <pre>
+     *     请求地址：http://192.168.1.201:8081/admin/shopNewsList
+     *     请求方式：get
+     *     请求参数: 无
+     *</pre>
+     *
+     *
+     * 回应内容：
+     * <pre>
+     *    正确回应：
+     *      {"code":1,
+     *      "data":[{"context":"&lt;img src=\"/ytw/upload/attached/image/20171227/20171227110312_759.jpg\" alt=\"\" /&gt;","newsDate":1514365438000,"snid":5,"title":"标题"},
+     *      {"context":"&lt;img src=\"/ytw/upload/attached/image/20171227/20171227110312_759.jpg\" alt=\"\" /&gt;","newsDate":1514343795000,"snid":4,"title":"ddd"},
+     *      "message":"正确读取网站新闻公告列表"}
+     * </pre>
+     *<table border="1">
+     *      <caption>shopNews-json对象属性</caption>
+     *  <tr><td>参数</td><td>含义</td><td>备注</td></tr>
+     *  <tr><td>snid</td><td>新闻公告编号</td><td>&nbsp;</td></tr>
+     *  <tr><td>title</td><td>新闻公告标题</td><td>&nbsp;</td></tr>
+     *  <tr><td>context</td><td>新闻公告内容</td><td>&nbsp;</td></tr>
+     *  <tr><td>newsDate</td><td>新闻公告发布时间</td><td>&nbsp;</td></tr>
+     *  </table>
+     * <pre>
+     *    错误回应：
+     *       {"code":-1,"message","用户未登录"}
+     * </pre>
+     */
+    @RequestMapping(value = "/admin/shopNewsList",method = RequestMethod.GET)
+    public String backShopNewsList(HttpServletRequest request){
+        log.info("后台管理员查看网站公告新闻列表");
+        UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
+        operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员查看网站公告新闻列表"));
+
+        List<ShopNews> shopNewsList=siteBaseInfoService.findSHopNewsList();
+        return JsonUtil.getReturnJson(1,"正确读取网站新闻公告列表",shopNewsList);
+    }
+
+    /**
+     * 网站设置--&gt;网站新闻公告,后台管理员编辑保存新闻公告
+     * @param shopNews 新闻公告对象
+     * @param request 请求对象
+     * @return  保存结果 json字符串
+     *
+     *<p>
+     * 请求格式：
+     * <pre>
+     *     请求地址：http://192.168.1.201:8081/admin/shopNewsSave
+     *     请求方式：post
+     *     请求参数: shopNews对象 json字符串 {"context":"&lt;img src=\"/ytw/upload/attached/image/20171227/20171227110312_759.jpg\" alt=\"\" /&gt;","title":"标题"}
+     *</pre>
+     *<table border="1">
+     *      <caption>shopNews-json对象属性</caption>
+     *  <tr><td>参数</td><td>含义</td><td>备注</td></tr>
+     *  <tr><td>title</td><td>新闻公告标题</td><td>&nbsp;</td></tr>
+     *  <tr><td>context</td><td>新闻公告内容</td><td>特殊字符需要用转义符号"\"</td></tr>
+     *  </table>
+     *
+     * 回应内容：
+     * <pre>
+     *    正确回应：
+     *      {"code":1,"message","保存成功"}
+     *       {"code":0,"message","保存失败"}
+     * </pre>
+     *
+     * <pre>
+     *    错误回应：
+     *       {"code":-1,"message","用户未登录"}
+     * </pre>
+     */
+    @RequestMapping(value = "/admin/shopNewsSave",method = RequestMethod.POST)
+    public String backShopNewsSave(@RequestBody ShopNews shopNews,HttpServletRequest request){
+        log.info("后台管理员编辑保存新闻公告");
+        UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
+        operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员编辑保存新闻公告"));
+
+        try {
+            siteBaseInfoService.insertShopNew(shopNews);
+            return JsonUtil.getReturnJson(1,"保存成功");
+        }catch (Exception e){
+            log.error("保存新闻公告出错"+e);
+            return JsonUtil.getReturnJson(0,"保存失败");
+        }
+    }
 }

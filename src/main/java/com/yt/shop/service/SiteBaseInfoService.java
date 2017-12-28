@@ -1,13 +1,7 @@
 package com.yt.shop.service;
 
-import com.yt.shop.dao.GoodsPlateJpa;
-import com.yt.shop.dao.ShopBannerJpa;
-import com.yt.shop.dao.ShopInfoJpa;
-import com.yt.shop.dao.UserTypeJpa;
-import com.yt.shop.model.GoodsPlate;
-import com.yt.shop.model.ShopBanner;
-import com.yt.shop.model.ShopInfo;
-import com.yt.shop.model.UserType;
+import com.yt.shop.dao.*;
+import com.yt.shop.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -104,5 +98,43 @@ public class SiteBaseInfoService {
     @Transactional
     public void deleteGoodsPlateById(Long goodsPlateId) {
         goodsPlateJpa.delete(goodsPlateId);
+    }
+
+    //----------------------------------------------------
+    @Autowired
+    private GoodsTypeJpa goodsTypeJpa;
+
+    @Transactional
+    public List<GoodsType> findGoodsTypeList() {
+        return goodsTypeJpa.findAll();
+    }
+
+    @Transactional
+    public GoodsType findGoodsTypeById(Long goodsTypeId) {
+        return goodsTypeJpa.findOne(goodsTypeId);
+    }
+
+    @Transactional
+    public void insertGoodsType(GoodsType goodsType) {
+        goodsTypeJpa.save(goodsType);
+    }
+
+    @Transactional
+    public void deleteGoodsTypeById(Long goodsTypeId) {
+        goodsTypeJpa.delete(goodsTypeId);
+    }
+
+    //--------------------------------------------------------
+    @Autowired
+    private ShopNewsJpa shopNewsJpa;
+
+    @Transactional
+    public List<ShopNews> findSHopNewsList() {
+        return shopNewsJpa.findShopNewsList();
+    }
+
+    @Transactional
+    public void insertShopNew(ShopNews shopNews) {
+        shopNewsJpa.save(shopNews);
     }
 }

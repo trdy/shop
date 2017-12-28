@@ -443,4 +443,158 @@ public class SiteBaseInfoControllerTest {
 
         System.out.println("输出结果：" + result.getResponse().getContentAsString());
     }
+
+    /**
+     * 测试商品类别列表查询
+     * @throws Exception 异常对象
+     */
+    @Test
+    public void testBackGoodsTypeList() throws Exception{
+        UserInfo userInfo = new UserInfo();
+        userInfo.setUserId(1L);
+        userInfo.setUserName("admin");
+
+
+        MvcResult result = mockMvc.perform(get("/admin/goodsTypeList")
+                .sessionAttr(Constract.ADMIN_LOGIN_FLAG, userInfo)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andReturn();// 返回执行请求的结果
+
+
+        System.out.println("输出结果：" + result.getResponse().getContentAsString());
+    }
+
+    /**
+     * 测试商品类别编辑
+     * @throws Exception 异常对象
+     */
+    @Test
+    public void testBackGoodsTypeEdit() throws Exception{
+        UserInfo userInfo = new UserInfo();
+        userInfo.setUserId(1L);
+        userInfo.setUserName("admin");
+
+
+        MvcResult result = mockMvc.perform(get("/admin/goodsTypeEdit")
+                .param("goodsTypeId","1")
+                .sessionAttr(Constract.ADMIN_LOGIN_FLAG, userInfo)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andReturn();// 返回执行请求的结果
+
+
+        System.out.println("输出结果：" + result.getResponse().getContentAsString());
+    }
+
+    /**
+     * 测试商品类别保存
+     * @throws Exception 异常对象
+     */
+    @Test
+    public void testBackGoodsTypeSave() throws Exception{
+        UserInfo userInfo = new UserInfo();
+        userInfo.setUserId(1L);
+        userInfo.setUserName("admin");
+
+        Map<String,Object> map=new HashMap<>();
+        map.put("gtname","军火11");
+        map.put("gtremark","");
+
+        Map<String,Object> plateMap=new HashMap<>();
+        plateMap.put("gpid","1");
+        map.put("goodsPlate",plateMap);
+
+        String json=JSONObject.toJSONString(map);
+        System.out.println(json);
+        MvcResult result = mockMvc.perform(post("/admin/goodsTypeSave")
+                .sessionAttr(Constract.ADMIN_LOGIN_FLAG, userInfo)
+                .content(json)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andReturn();// 返回执行请求的结果
+
+
+        System.out.println("输出结果：" + result.getResponse().getContentAsString());
+    }
+
+    /**
+     * 测试商品类别删除
+     * @throws Exception 异常对象
+     */
+    @Test
+    public void testBackGoodsTypeDel() throws Exception{
+        UserInfo userInfo = new UserInfo();
+        userInfo.setUserId(1L);
+        userInfo.setUserName("admin");
+
+        MvcResult result = mockMvc.perform(post("/admin/goodsTypeDel")
+                .sessionAttr(Constract.ADMIN_LOGIN_FLAG, userInfo)
+                .param("goodsTypeId","30")
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andReturn();// 返回执行请求的结果
+
+
+        System.out.println("输出结果：" + result.getResponse().getContentAsString());
+    }
+
+    /**
+     * 测试读取新闻公告列表
+     * @throws Exception 异常对象
+     */
+    @Test
+    public void testShopNewsList() throws Exception{
+        UserInfo userInfo = new UserInfo();
+        userInfo.setUserId(1L);
+        userInfo.setUserName("admin");
+
+        MvcResult result = mockMvc.perform(get("/admin/shopNewsList")
+                .sessionAttr(Constract.ADMIN_LOGIN_FLAG, userInfo)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andReturn();// 返回执行请求的结果
+
+
+        System.out.println("输出结果：" + result.getResponse().getContentAsString());
+    }
+
+    /**
+     测试保存新闻公告
+     * @throws Exception 异常对象
+     */
+    @Test
+    public void testShopNewsSave() throws Exception{
+        UserInfo userInfo = new UserInfo();
+        userInfo.setUserId(1L);
+        userInfo.setUserName("admin");
+
+        Map<String,Object> map=new HashMap<>();
+        map.put("title","标题");
+        map.put("context","<img src=\"/ytw/upload/attached/image/20171227/20171227110312_759.jpg\" alt=\"\" />");
+
+        String json=JSONObject.toJSONString(map);
+        System.out.println(json);
+        MvcResult result = mockMvc.perform(post("/admin/shopNewsSave")
+                .sessionAttr(Constract.ADMIN_LOGIN_FLAG, userInfo)
+                .content(json)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andReturn();// 返回执行请求的结果
+
+
+        System.out.println("输出结果：" + result.getResponse().getContentAsString());
+    }
 }

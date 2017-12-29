@@ -1,5 +1,6 @@
 package com.yt.shop.controller;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.yt.shop.common.Constract;
 import com.yt.shop.common.FileUtil;
 import com.yt.shop.common.JsonUtil;
@@ -12,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -290,6 +292,7 @@ public class SiteBaseInfoController {
             if(null==shopBanner){
                 return JsonUtil.getReturnJson(-2,"没有找到待修改的数据");
             }
+            //shopBanner.setBannerPath(FileUtil.loadBase64File(shopBanner.getBannerPath()));
             return JsonUtil.getReturnJson(1,"准备修改轮播id="+shopBannerId+"的资料",shopBanner);
         }
     }
@@ -303,16 +306,17 @@ public class SiteBaseInfoController {
      * 请求格式：
      * <pre>
      *     请求地址：http://192.168.1.201:8081/admin/shopBannerSave
-     *     请求方式：post  enctype="multipart/form-data"
-     *     请求参数：bannerUrl,bannerDesc,banid,bannerFile(上传文件)
+     *     请求方式：post
+     *     请求参数：bannerUrl,bannerDesc,banid,bannerFile(上传文件base64编码)
      *</pre>
      * <table border="1">
      *      <caption>json对象属性</caption>
      *  <tr><td>参数</td><td>含义</td><td>备注</td></tr>
      *  <tr><td>bannerUrl</td><td>轮播图关联的宣传页链接地址</td><td>&nbsp;</td></tr>
      *  <tr><td>bannerDesc</td><td>轮播图描述</td><td>&nbsp;</td></tr>
-     *  <tr><td>banid</td><td>轮播图id编号</td><td>如果有该参数，则修改变成修改数据</td></tr>
+     *  <tr><td>banid</td><td>轮播图id编号</td><td>修改数据必有该参数</td></tr>
      *  <tr><td>bannerFile</td><td>轮播图文件</td><td>&nbsp;</td></tr>
+     *  <tr><td>oldBannerFile</td><td>老图片路径</td><td>修改数据必有该参数</td></tr>
      *  </table>
      *
      * 回应内容：
@@ -327,7 +331,7 @@ public class SiteBaseInfoController {
      * </pre>
      */
     @RequestMapping(value = "/admin/shopBannerSave",method = RequestMethod.POST)
-    public String backShopBannerSave(@RequestParam String bannerFile, HttpServletRequest request){
+    public String backShopBannerSave(@RequestParam(required = false) String bannerFile, HttpServletRequest request){
         log.info("后台管理员保存轮播图信息");
         UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
 
@@ -353,7 +357,8 @@ public class SiteBaseInfoController {
                 String fileName=FileUtil.uploadBase64File(bannerFile,uploadPath);
                 shopBanner.setBannerPath("/upload/banner/"+fileName);
             } else {
-                shopBanner.setBannerPath("/upload/banner/defaultBanner.png");
+                String oldBannerFile=request.getParameter("oldBannerFile");
+                shopBanner.setBannerPath(oldBannerFile);
             }
 
             siteBaseInfoService.insertShopBanner(shopBanner);
@@ -476,7 +481,6 @@ public class SiteBaseInfoController {
 
     /**
      * 网站设置--&gt;会员类型设置，会员类型保存
-     * @param userType 会员类型json对象
      * @param request 请求对象
      * @return json字符串
      *
@@ -507,13 +511,24 @@ public class SiteBaseInfoController {
      * </pre>
      */
     @RequestMapping(value = "/admin/userTypeSave",method = RequestMethod.POST)
-    public String backUserTypeSave(@RequestBody UserType userType, HttpServletRequest request){
+    public String backUserTypeSave(HttpServletRequest request){
         log.info("会员类型保存");
         UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
         operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员执行会员类型保存"));
 
+        String userTypeId=request.getParameter("userTypeId");
+        String userTypeName=request.getParameter("userTypeName");
+
+        UserType userType=new UserType();
+        if(null!=userTypeId&&!"".equals(userTypeId)){
+            userType.setUserTypeId(Long.parseLong(userTypeId));
+        }
+        if(null!=userTypeName&&!"".equals(userTypeName)){
+            userType.setUserTypeName(userTypeName);
+        }
+
         try {
-            siteBaseInfoService.insertUserType(userType);
+            siteBaseInfoService.saveUserType(userType);
             return JsonUtil.getReturnJson(1,"保存成功");
         }catch (Exception e){
             return JsonUtil.getReturnJson(0,"保存失败");
@@ -662,7 +677,6 @@ public class SiteBaseInfoController {
 
     /**
      * 网站设置--&gt;商品板块设置，后台管理员保存商品板块信息
-     * @param goodsPlate 商品板块对象
      * @param request 请求对象
      * @return json字符串
      *
@@ -692,12 +706,27 @@ public class SiteBaseInfoController {
      * </pre>
      */
     @RequestMapping(value = "/admin/goodsPlateSave",method = RequestMethod.POST)
-    public String backGoodsPlateSave(@RequestBody GoodsPlate goodsPlate,HttpServletRequest request){
+    public String backGoodsPlateSave(HttpServletRequest request){
         log.info("后台管理员保存商品板块信息");
         UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
         operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员保存商品板块信息"));
         try {
-            siteBaseInfoService.insertGoodsPlate(goodsPlate);
+            String gpid=request.getParameter("gpid");
+            String gpname=request.getParameter("gpname");
+            String gpremark=request.getParameter("gpremark");
+
+            GoodsPlate goodsPlate=new GoodsPlate();
+            if(null!=gpid&&!"".equals(gpid)){
+                goodsPlate.setGpid(Long.parseLong(gpid));
+            }
+            if(null!=gpname&&!"".equals(gpname)){
+                goodsPlate.setGpname(gpname);
+            }
+            if(null!=gpremark&&!"".equals(gpremark)){
+                goodsPlate.setGpremark(gpremark);
+            }
+
+            siteBaseInfoService.saveGoodsPlate(goodsPlate);
             return JsonUtil.getReturnJson(1,"保存成功");
         }catch (Exception e){
             log.error("保存商品板块信息出错"+e);
@@ -730,6 +759,7 @@ public class SiteBaseInfoController {
      * <pre>
      *    错误回应：
      *       {"code":-1,"message","用户未登录"}
+     *        {"code":-2,"message","该商品板块下设置有商品类别，必须先删除所属商品类别再执行删除板块"}
      * </pre>
      */
     @RequestMapping(value = "/admin/goodsPlateDel",method = RequestMethod.POST)
@@ -739,6 +769,10 @@ public class SiteBaseInfoController {
         operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员删除商品板块信息goodsPlateId:"+goodsPlateId));
 
         try {
+            List<GoodsType> goodsTypes=siteBaseInfoService.findGoodsTypeByGoodsPlateId(goodsPlateId);
+            if(goodsTypes.size()>0){
+                return JsonUtil.getReturnJson(-2,"该商品板块下设置有商品类别，必须先删除所属商品类别再执行删除板块");
+            }
             siteBaseInfoService.deleteGoodsPlateById(goodsPlateId);
             return JsonUtil.getReturnJson(1,"删除成功");
         }catch (Exception e){
@@ -857,7 +891,6 @@ public class SiteBaseInfoController {
 
     /**
      * 网站设置--&gt;商品类别设置，后台管理员保存商品类别信息
-     * @param goodsType 商品类别对象 json字符串
      * @param request 请求对象
      * @return json字符串
      *
@@ -889,12 +922,30 @@ public class SiteBaseInfoController {
      * </pre>
      */
     @RequestMapping(value = "/admin/goodsTypeSave",method = RequestMethod.POST)
-    public String backGoodsPlateSave(@RequestBody GoodsType goodsType,HttpServletRequest request){
+    public String backGoodsTypeSave(HttpServletRequest request){
         log.info("后台管理员保存商品板块信息");
         UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
         operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员保存商品板块信息"));
         try {
-            siteBaseInfoService.insertGoodsType(goodsType);
+            String gtid=request.getParameter("gtid");
+            String gtname=request.getParameter("gtname");
+            String gtremark=request.getParameter("gtremark");
+            String gpid=request.getParameter("gpid");
+
+            GoodsType goodsType=new GoodsType();
+            if(null!=gtid&&!"".equals(gtid)){
+                goodsType.setGtid(Long.parseLong(gtid));
+            }
+            if(null!=gtname&&!"".equals(gtname)){
+                goodsType.setGtname(gtname);
+            }
+            if(null!=gtremark&&!"".equals(gtremark)){
+                goodsType.setGtremark(gtremark);
+            }
+            if(null!=gpid&&!"".equals(gpid)){
+                goodsType.setGoodsPlate(new GoodsPlate(Long.parseLong(gpid)));
+            }
+            siteBaseInfoService.saveGoodsType(goodsType);
             return JsonUtil.getReturnJson(1,"保存成功");
         }catch (Exception e){
             log.error("保存商品板块信息出错"+e);
@@ -936,6 +987,10 @@ public class SiteBaseInfoController {
         operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员删除商品类别信息goodsTypeId："+goodsTypeId));
 
         try {
+            List<Goods> goodsList=siteBaseInfoService.findGoodsListByGoodsTypeId(goodsTypeId);
+            if(goodsList.size()>0){
+                return JsonUtil.getReturnJson(-2,"该商品类别下有商品资料，不能删除!");
+            }
             siteBaseInfoService.deleteGoodsTypeById(goodsTypeId);
             return JsonUtil.getReturnJson(1,"删除成功");
         }catch (Exception e){
@@ -993,7 +1048,6 @@ public class SiteBaseInfoController {
 
     /**
      * 网站设置--&gt;网站新闻公告,后台管理员编辑保存新闻公告
-     * @param shopNews 新闻公告对象
      * @param request 请求对象
      * @return  保存结果 json字符串
      *
@@ -1024,11 +1078,22 @@ public class SiteBaseInfoController {
      * </pre>
      */
     @RequestMapping(value = "/admin/shopNewsSave",method = RequestMethod.POST)
-    public String backShopNewsSave(@RequestBody ShopNews shopNews,HttpServletRequest request){
+    public String backShopNewsSave(HttpServletRequest request){
         log.info("后台管理员编辑保存新闻公告");
         UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
         operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员编辑保存新闻公告"));
 
+        String title=request.getParameter("title");
+        String context=request.getParameter("context");
+
+        ShopNews shopNews=new ShopNews();
+        if(null!=title&&!"".equals(title)){
+            shopNews.setTitle(title);
+        }
+        if(null!=context&&!"".equals(context)){
+            shopNews.setContext(context);
+        }
+        shopNews.setNewsDate(new Timestamp(System.currentTimeMillis()));
         try {
             siteBaseInfoService.insertShopNew(shopNews);
             return JsonUtil.getReturnJson(1,"保存成功");

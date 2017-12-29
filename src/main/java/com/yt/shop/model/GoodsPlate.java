@@ -34,6 +34,7 @@ public class GoodsPlate implements java.io.Serializable {
 	private String gpname;
 	private String gpremark;
 
+
 	@JSONField(serialize = false)
 	@OneToMany(targetEntity=GoodsType.class,fetch=FetchType.EAGER)
 	@OrderBy("gtid")
@@ -48,6 +49,10 @@ public class GoodsPlate implements java.io.Serializable {
 
 	/** default constructor */
 	public GoodsPlate() {
+	}
+
+	public GoodsPlate(Long gpid){
+		this.gpid=gpid;
 	}
 
 	public Long getGpid() {

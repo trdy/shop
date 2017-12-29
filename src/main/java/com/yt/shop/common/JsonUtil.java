@@ -1,7 +1,7 @@
 package com.yt.shop.common;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.alibaba.fastjson.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,7 +20,8 @@ public class JsonUtil {
         result.put("code",code);
         result.put("message",message);
         result.put("data",obj);
-        return JSON.toJSONString(result);
+        return JSONObject.toJSON(result).toString();
+        //return JSON.toJSONString(result);
     }
 
     public static String getReturnJson(int code,String message)  {

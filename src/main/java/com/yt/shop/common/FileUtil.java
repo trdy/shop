@@ -3,6 +3,8 @@ package com.yt.shop.common;
 import org.springframework.util.Base64Utils;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.UUID;
 
@@ -62,5 +64,20 @@ public class FileUtil {
             throw new Exception("上传失败，写入文件失败，"+ee.getMessage());
         }
         return tempFileName;
+    }
+
+    public static String loadBase64File(String filePath) {
+        try {
+            String loadFilePath = System.getProperty("user.dir") + "/" + filePath;
+
+            FileInputStream fin = new FileInputStream(loadFilePath);
+            byte[] buf = new byte[fin.available()];
+            fin.read(buf);
+            String base64Str=Base64Utils.encodeToString(buf);
+            return base64Str;
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return "";
     }
 }

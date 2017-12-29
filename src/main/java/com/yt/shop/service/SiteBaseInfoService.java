@@ -67,7 +67,7 @@ public class SiteBaseInfoService {
     }
 
     @Transactional
-    public void insertUserType(UserType userType) {
+    public void saveUserType(UserType userType) {
         userTypeJpa.save(userType);
     }
 
@@ -91,7 +91,7 @@ public class SiteBaseInfoService {
     }
 
     @Transactional
-    public void insertGoodsPlate(GoodsPlate goodsPlate) {
+    public void saveGoodsPlate(GoodsPlate goodsPlate) {
         goodsPlateJpa.save(goodsPlate);
     }
 
@@ -115,13 +115,18 @@ public class SiteBaseInfoService {
     }
 
     @Transactional
-    public void insertGoodsType(GoodsType goodsType) {
+    public void saveGoodsType(GoodsType goodsType) {
         goodsTypeJpa.save(goodsType);
     }
 
     @Transactional
     public void deleteGoodsTypeById(Long goodsTypeId) {
         goodsTypeJpa.delete(goodsTypeId);
+    }
+
+    @Transactional
+    public List<GoodsType> findGoodsTypeByGoodsPlateId(Long goodsPlateId) {
+        return goodsTypeJpa.findGoodsTypeByGoodsPlateId(goodsPlateId);
     }
 
     //--------------------------------------------------------
@@ -136,5 +141,15 @@ public class SiteBaseInfoService {
     @Transactional
     public void insertShopNew(ShopNews shopNews) {
         shopNewsJpa.save(shopNews);
+    }
+
+
+    //---------------------------------------------------------
+    @Autowired
+    private GoodsJpa goodsJpa;
+
+    @Transactional
+    public List<Goods> findGoodsListByGoodsTypeId(Long goodsTypeId) {
+        return goodsJpa.findGoodsListByGoodsTypeId(goodsTypeId);
     }
 }

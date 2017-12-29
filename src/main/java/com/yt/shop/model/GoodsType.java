@@ -1,5 +1,7 @@
 package com.yt.shop.model;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -19,7 +21,7 @@ public class GoodsType implements java.io.Serializable {
 	@Id
 	@GeneratedValue
 	private Long gtid;
-	
+
 	@ManyToOne
 	@JoinColumn(name="gpid")
 	private GoodsPlate goodsPlate;

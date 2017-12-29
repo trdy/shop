@@ -3,6 +3,7 @@ package com.yt.shop.controller;
 import com.alibaba.fastjson.annotation.JSONField;
 import com.yt.shop.common.Constract;
 import com.yt.shop.common.FileUtil;
+import com.yt.shop.common.IDTools;
 import com.yt.shop.common.JsonUtil;
 import com.yt.shop.dao.OperRecordJpa;
 import com.yt.shop.model.*;
@@ -1101,5 +1102,13 @@ public class SiteBaseInfoController {
             log.error("保存新闻公告出错"+e);
             return JsonUtil.getReturnJson(0,"保存失败");
         }
+    }
+
+    @Autowired
+    private IDTools idTools;
+
+    @RequestMapping(value = "/admin/test")
+    public String test(){
+        return JsonUtil.getReturnJson(1,"ok",idTools.genOrderNo());
     }
 }

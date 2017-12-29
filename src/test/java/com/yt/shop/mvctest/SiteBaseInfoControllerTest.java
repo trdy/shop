@@ -597,4 +597,23 @@ public class SiteBaseInfoControllerTest {
 
         System.out.println("输出结果：" + result.getResponse().getContentAsString());
     }
+
+    @Test
+    public void testTest() throws Exception{
+        UserInfo userInfo = new UserInfo();
+        userInfo.setUserId(1L);
+        userInfo.setUserName("admin");
+
+
+        MvcResult result = mockMvc.perform(post("/admin/test")
+                .sessionAttr(Constract.ADMIN_LOGIN_FLAG, userInfo)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andReturn();// 返回执行请求的结果
+
+
+        System.out.println("输出结果：" + result.getResponse().getContentAsString());
+    }
 }

@@ -88,7 +88,10 @@ public class SiteBaseInfoController {
      * <pre>
      *     请求地址：http://192.168.1.201:8081/admin/shopInfo
      *     请求方式：post enctype="multipart/form-data"
-     *     请求参数：nslogo(上传文件),nsname,nsid
+     *     请求参数：nslogo(上传文件),
+     *             nsname,
+     *             oldNsLogo
+     *             nsid
      *</pre>
      * <table border="1">
      *      <caption>json对象属性</caption>
@@ -110,7 +113,7 @@ public class SiteBaseInfoController {
      * </pre>
      */
     @RequestMapping(value = "/admin/shopInfo",method = RequestMethod.POST)
-    public String shopBaseInfoSave(@RequestParam String nslogo, HttpServletRequest request) {
+    public String shopBaseInfoSave(@RequestParam(required = false) String nslogo, HttpServletRequest request) {
         log.info("访问网站基本信息设置，设置网站名称，上传logo");
         UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
 

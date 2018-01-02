@@ -279,7 +279,7 @@ public class UserInfoController {
      *     请求参数：
      *          oldPass:旧密码
      *          newPass:新密码
-     *          repass：二次输入新密码
+     *          rePass：二次输入新密码
      *</pre>
      * 回应内容：
      * <pre>
@@ -302,7 +302,9 @@ public class UserInfoController {
         String newPass=request.getParameter("newPass");
         String rePass=request.getParameter("rePass");
 
-        if(!user.getUserPass().equals(MD5.GetMD5Code(oldPass))){
+        UserInfo userInfo=userInfoService.findUserInfoById(user.getUserId());
+
+        if(!userInfo.getUserPass().equals(MD5.GetMD5Code(oldPass))){
             return JsonUtil.getReturnJson(-2,"原有旧密码不正确,不能修改!");
         }
         if(oldPass.equals(newPass)){
@@ -311,7 +313,7 @@ public class UserInfoController {
         if(!newPass.equals(rePass)){
             return JsonUtil.getReturnJson(-4,"两次输入的新密码不一致,不能修改！");
         }
-        UserInfo userInfo=userInfoService.findUserInfoById(user.getUserId());
+
         userInfo.setUserPass(MD5.GetMD5Code(newPass));
         userInfoService.saveUserInfo(userInfo);
         return JsonUtil.getReturnJson(1,"修改密码成功");

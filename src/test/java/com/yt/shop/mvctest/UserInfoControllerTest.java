@@ -120,4 +120,41 @@ public class UserInfoControllerTest {
 
         System.out.println("输出结果：" + result.getResponse().getContentAsString());
     }
+
+    @Test
+    public void testBackUserInfoUpdatePass() throws Exception{
+        UserInfo userInfo = new UserInfo();
+        userInfo.setUserId(1L);
+        userInfo.setUserName("admin");
+
+        MvcResult result = mockMvc.perform(post("/admin/userInfoUpdatePass")
+                .sessionAttr(Constract.ADMIN_LOGIN_FLAG, userInfo)
+                .param("oldPass","1").param("newPass","1").param("rePass","1")
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andReturn();// 返回执行请求的结果
+
+
+        System.out.println("输出结果：" + result.getResponse().getContentAsString());
+    }
+
+    @Test
+    public void testBackUserInfoExit() throws Exception{
+        UserInfo userInfo = new UserInfo();
+        userInfo.setUserId(1L);
+        userInfo.setUserName("admin");
+
+        MvcResult result = mockMvc.perform(get("/admin/userInfoExit")
+                .sessionAttr(Constract.ADMIN_LOGIN_FLAG, userInfo)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andReturn();// 返回执行请求的结果
+
+
+        System.out.println("输出结果：" + result.getResponse().getContentAsString());
+    }
 }

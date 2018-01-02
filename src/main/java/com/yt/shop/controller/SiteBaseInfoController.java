@@ -1,6 +1,5 @@
 package com.yt.shop.controller;
 
-import com.alibaba.fastjson.annotation.JSONField;
 import com.yt.shop.common.Constract;
 import com.yt.shop.common.FileUtil;
 import com.yt.shop.common.IDTools;
@@ -94,9 +93,10 @@ public class SiteBaseInfoController {
      * <table border="1">
      *      <caption>json对象属性</caption>
      *  <tr><td>参数</td><td>含义</td><td>备注</td></tr>
-     *  <tr><td>nslogo</td><td>上传商品图片文件</td><td>&nbsp;</td></tr>
+     *  <tr><td>nslogo</td><td>上传商城Logo图片文件</td><td>&nbsp;</td></tr>
      *  <tr><td>nsname</td><td>商城名称</td><td>&nbsp;</td></tr>
      *  <tr><td>nsid</td><td>商城id记录号</td><td>可以不写，如果有该参数，则修改变成修改数据</td></tr>
+     *  <tr><td>oldNslogo</td><td>原有商城Logo图片文件路径</td><td>&nbsp;</td></tr>
      *  </table>
      * 回应内容：
      * <pre>
@@ -131,7 +131,8 @@ public class SiteBaseInfoController {
                 String fileName=FileUtil.uploadBase64File(nslogo,uploadPath);
                 shopInfo.setNslogo("/upload/logo/"+fileName);
             } else {
-                shopInfo.setNslogo("/upload/logo/chuangfulogo.png");
+                String oldNslogo=request.getParameter("oldNslogo");
+                shopInfo.setNslogo(oldNslogo);
             }
 
             siteBaseInfoService.insertShopInfo(shopInfo);

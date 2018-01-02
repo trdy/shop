@@ -33,4 +33,13 @@ public class UserInfoService {
     public UserInfo findUserInfoById(Long userId) {
         return userInfoJpa.findOne(userId);
     }
+
+    /**
+     * 保存用户信息
+     * @param userInfo 用户对象
+     */
+    @Transactional
+    public void saveUserInfo(UserInfo userInfo) {
+        userInfoJpa.save(userInfo);
+    }
 }

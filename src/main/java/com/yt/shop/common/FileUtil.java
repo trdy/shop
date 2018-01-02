@@ -25,6 +25,12 @@ public class FileUtil {
     }
 
     public static String uploadBase64File(String base64Data,String uploadPath) throws Exception {
+        //如果上传的路径不存在就创建目录
+        File uploadDir=new File(uploadPath);
+        if(!uploadDir.exists()){
+            uploadDir.mkdirs();
+        }
+
         String dataPrix = "";
         String data = "";
         if(base64Data == null || "".equals(base64Data)){

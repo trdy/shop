@@ -1,8 +1,8 @@
 package com.yt.shop.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.yt.shop.common.Constract;
 import com.yt.shop.common.FileUtil;
-import com.yt.shop.common.IDTools;
 import com.yt.shop.common.JsonUtil;
 import com.yt.shop.dao.OperRecordJpa;
 import com.yt.shop.model.*;
@@ -1061,7 +1061,7 @@ public class SiteBaseInfoController {
      * <pre>
      *     请求地址：http://192.168.1.201:8081/admin/shopNewsSave
      *     请求方式：post
-     *     请求参数: shopNews对象 json字符串 {"context":"&lt;img src=\"/ytw/upload/attached/image/20171227/20171227110312_759.jpg\" alt=\"\" /&gt;","title":"标题"}
+     *     请求参数: shopNews对象 json字符串 {"context":"&lt;img src=\"/upload/attached/image/20171227/20171227110312_759.jpg\" alt=\"\" /&gt;","title":"标题"}
      *</pre>
      *<table border="1">
      *      <caption>shopNews-json对象属性</caption>
@@ -1091,28 +1091,70 @@ public class SiteBaseInfoController {
         String title=request.getParameter("title");
         String context=request.getParameter("context");
 
-        ShopNews shopNews=new ShopNews();
-        if(null!=title&&!"".equals(title)){
-            shopNews.setTitle(title);
-        }
-        if(null!=context&&!"".equals(context)){
-            shopNews.setContext(context);
-        }
-        shopNews.setNewsDate(new Timestamp(System.currentTimeMillis()));
         try {
+            ShopNews shopNews=new ShopNews();
+            if(null!=title&&!"".equals(title)){
+                shopNews.setTitle(title);
+            }
+            if(null!=context&&!"".equals(context)){
+                shopNews.setContext(FileUtil.formatNewsContent(context));
+            }
+            shopNews.setNewsDate(new Timestamp(System.currentTimeMillis()));
+
             siteBaseInfoService.insertShopNew(shopNews);
             return JsonUtil.getReturnJson(1,"保存成功");
         }catch (Exception e){
+            e.printStackTrace();
             log.error("保存新闻公告出错"+e);
             return JsonUtil.getReturnJson(0,"保存失败");
         }
     }
 
-    @Autowired
-    private IDTools idTools;
+    /**
+     * 网站设置--&gt;新闻公告预览，后台管理员预览新闻公告
+     * @param shopNewsId 新闻公告id
+     * @param request 请求对象
+     * @return 新闻公告对象 json字符串
+     *<p>
+     * 请求格式：
+     * <pre>
+     *     请求地址：http://192.168.1.201:8081/admin/shopNewsView
+     *     请求方式：get
+     *     请求参数: shopNewsId 新闻公告id编号
+     *</pre>
+     *
+     * 回应内容：
+     * <pre>
+     *    正确回应：
+     *      {"code":1","message":"获取新闻公告成功",data":{"snid":9,"context":"<p>你好</p>","title":"我是新闻1","newsDate":1515382519000}}
+     *       {"code":0,"message","获取新闻公告失败"}
+     * </pre>
+     *<table border="1">
+     *      <caption>shopNews-json对象属性</caption>
+     *  <tr><td>参数</td><td>含义</td><td>备注</td></tr>
+     *  <tr><td>snid</td><td>新闻公告编号</td><td>&nbsp;</td></tr>
+     *  <tr><td>title</td><td>新闻公告标题</td><td>&nbsp;</td></tr>
+     *  <tr><td>context</td><td>新闻公告内容</td><td>特殊字符需要用转义符号"\"</td></tr>
+     *  <tr><td>newsDate</td><td>新闻公告时间</td><td>&nbsp;</td></tr>
+     *  </table>
+     * <pre>
+     *    错误回应：
+     *       {"code":-1,"message","用户未登录"}
+     * </pre>
+     */
+    @RequestMapping(value = "/admin/shopNewsView",method = RequestMethod.GET)
+    public String backShopNewsView(@RequestParam Long shopNewsId,HttpServletRequest request){
+        log.info("后台管理员预览新闻公告");
+        UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
+        operRecordJpa.save(new OperRecord(userInfo,request.getRemoteAddr(),userInfo.getUserName()+"后台管理员预览新闻公告"));
 
-    @RequestMapping(value = "/admin/test")
-    public String test(){
-        return JsonUtil.getReturnJson(1,"ok",idTools.genOrderNo());
+        if(null!=shopNewsId) {
+            ShopNews shopNews = siteBaseInfoService.findShopNewsById(shopNewsId);
+            return JsonUtil.getReturnJson(1,"获取新闻公告成功",shopNews);
+        }else{
+            return JsonUtil.getReturnJson(0,"获取新闻公告失败");
+        }
     }
+
+
 }

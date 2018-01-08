@@ -4,15 +4,12 @@ import com.alibaba.fastjson.JSONObject;
 import com.yt.shop.common.Constract;
 import com.yt.shop.controller.SiteBaseInfoController;
 import com.yt.shop.model.UserInfo;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
-import org.springframework.mock.web.MockMultipartFile;
-import org.springframework.mock.web.MockMultipartHttpServletRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
@@ -20,7 +17,6 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.util.Base64Utils;
 import org.springframework.web.context.WebApplicationContext;
 
-import javax.servlet.http.HttpServletRequest;
 import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.Map;
@@ -599,14 +595,14 @@ public class SiteBaseInfoControllerTest {
     }
 
     @Test
-    public void testTest() throws Exception{
+    public void testShopNewsView() throws Exception{
         UserInfo userInfo = new UserInfo();
         userInfo.setUserId(1L);
         userInfo.setUserName("admin");
 
-
-        MvcResult result = mockMvc.perform(post("/admin/test")
+        MvcResult result = mockMvc.perform(get("/admin/shoNewsView")
                 .sessionAttr(Constract.ADMIN_LOGIN_FLAG, userInfo)
+                .param("shopNewsId","9")
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
@@ -616,4 +612,6 @@ public class SiteBaseInfoControllerTest {
 
         System.out.println("输出结果：" + result.getResponse().getContentAsString());
     }
+
+
 }

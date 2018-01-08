@@ -49,9 +49,12 @@ public class DateUtil {
 	}
 
 	public static String getYearMonth(){
-		Calendar cal= Calendar.getInstance();
+		/*Calendar cal= Calendar.getInstance();
 		int year=cal.get(Calendar.YEAR);
 		int month=cal.get(Calendar.MONTH)+1;
-		return year+""+month;
+		return year+""+month;*/
+		SimpleDateFormat df=new SimpleDateFormat("yyyyMM");
+		return df.format(new Date());
+
 	}
 }

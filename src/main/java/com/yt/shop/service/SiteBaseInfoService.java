@@ -152,4 +152,9 @@ public class SiteBaseInfoService {
     public List<Goods> findGoodsListByGoodsTypeId(Long goodsTypeId) {
         return goodsJpa.findGoodsListByGoodsTypeId(goodsTypeId);
     }
+
+    @Transactional
+    public ShopNews findShopNewsById(Long shopNewsId) {
+        return shopNewsJpa.findOne(shopNewsId);
+    }
 }

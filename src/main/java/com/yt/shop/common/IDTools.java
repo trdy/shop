@@ -1,6 +1,7 @@
 package com.yt.shop.common;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
@@ -9,6 +10,8 @@ import java.util.Calendar;
 import java.util.Map;
 
 public class IDTools {
+
+
 
     @Autowired
     private JdbcTemplate jdbcTemplate;

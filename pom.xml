@@ -118,6 +118,13 @@
 			<version>${jackson-version}</version>
 		</dependency>
 
+		<!--html dom 解析-->
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.11.2</version>
+		</dependency>
+
 		<!--
 		 添加jQuery和bootstrap框架依赖
 		 http://localhost:8081/webjars/jquery/jquery.js

@@ -1,5 +1,7 @@
 package com.yt.shop.model;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -30,7 +32,8 @@ public class ShopNews implements java.io.Serializable{
 	private String title;
 	
 	private String context;
-	
+
+	@JSONField(format = "yyyy-MM-dd HH:mm:ss")
 	@Column(name="news_date")
 	private Date newsDate;
 

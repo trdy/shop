@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/kindeditor/themes/default/default.css" />
+    <link rel="stylesheet" href="/kindeditor/plugins/code/prettify.css" />
+    <script charset="utf-8" src="/kindeditor/kindeditor-all.js"></script>
+    <script charset="utf-8" src="/kindeditor/lang/zh-CN.js"></script>
+    <script charset="utf-8" src="/kindeditor/plugins/code/prettify.js"></script>
+    <script>
+
+        KindEditor.ready(function(K) {
+            var editor1 = K.create('textarea[name="content1"]', {
+                cssPath : '/kindeditor/plugins/code/prettify.css',
+                uploadJson : '/test/file_upload',
+                allowFileManager : false,
+            });
+            prettyPrint();
+
+        });
+
+    </script>
+</head>
+<body>
+测试kindedit富文本框
+<form name="example" method="post" action="#">
+    <textarea name="content1" cols="100" rows="20" style="width:700px;height:400px;visibility:hidden;"></textarea>
+    <br />
+    <input type="submit" name="button" value="提交内容" /> (提交快捷键: Ctrl + Enter)
+</form>
+</body>
+</html>

@@ -82,6 +82,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter{
         registry.addInterceptor(backLoginInterceptor())
                 .excludePathPatterns("/valiCode")
                 .excludePathPatterns("/admin/validUser")
+                .excludePathPatterns("/file/**")
                 .excludePathPatterns("/test/**")
                 .addPathPatterns("/admin/**");
         super.addInterceptors(registry);

@@ -1,6 +1,7 @@
 package com.yt.shop.mvctest;
 
 import com.yt.shop.common.Constract;
+import com.yt.shop.common.servlet.InitServlet;
 import com.yt.shop.model.UserInfo;
 import org.junit.Before;
 import org.junit.Test;
@@ -56,4 +57,6 @@ public class TestControllerTest {
 
         System.out.println("输出结果：" + result.getResponse().getContentAsString());
     }
+
+
 }

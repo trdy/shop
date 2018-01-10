@@ -427,7 +427,7 @@ public class SiteBaseInfoControllerTest {
         userInfo.setUserName("admin");
 
 
-        MvcResult result = mockMvc.perform(delete("/admin/goodsPlateDel")
+        MvcResult result = mockMvc.perform(post("/admin/goodsPlateDel")
                 .param("goodsPlateId","7")
                 .sessionAttr(Constract.ADMIN_LOGIN_FLAG, userInfo)
                 .contentType(MediaType.APPLICATION_JSON)
@@ -600,7 +600,7 @@ public class SiteBaseInfoControllerTest {
         userInfo.setUserId(1L);
         userInfo.setUserName("admin");
 
-        MvcResult result = mockMvc.perform(get("/admin/shoNewsView")
+        MvcResult result = mockMvc.perform(get("/admin/shopNewsView")
                 .sessionAttr(Constract.ADMIN_LOGIN_FLAG, userInfo)
                 .param("shopNewsId","9")
                 .contentType(MediaType.APPLICATION_JSON)

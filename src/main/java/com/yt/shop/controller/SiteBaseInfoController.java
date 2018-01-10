@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.File;
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -304,7 +305,6 @@ public class SiteBaseInfoController {
 
     /**
      * 网站设置--&gt;轮播图设置，后台管理员保存轮播图信息
-     * @param bannerFile 轮播图图片文件base64编码字符串
      * @param request 请求对象
      * @return json字符串
      *<p>&nbsp;</p>
@@ -336,7 +336,7 @@ public class SiteBaseInfoController {
      * </pre>
      */
     @RequestMapping(value = "/admin/shopBannerSave",method = RequestMethod.POST)
-    public String backShopBannerSave(@RequestParam(required = false) String bannerFile, HttpServletRequest request){
+    public String backShopBannerSave(HttpServletRequest request){
         log.info("后台管理员保存轮播图信息");
         UserInfo userInfo= (UserInfo) request.getSession().getAttribute(Constract.ADMIN_LOGIN_FLAG);
 
@@ -345,6 +345,7 @@ public class SiteBaseInfoController {
             String banid = request.getParameter("banid");
             String bannerUrl = request.getParameter("bannerUrl");
             String bannerDesc = request.getParameter("bannerDesc");
+            String bannerFile =request.getParameter("bannerFile");
 
             if(null!=banid&&!"".equals(banid)){
                 shopBanner.setBanid(Long.parseLong(banid));
@@ -355,12 +356,8 @@ public class SiteBaseInfoController {
             if(null!=bannerDesc&&!"".equals(bannerDesc)){
                 shopBanner.setBannerDesc(bannerDesc);
             }
-
             if (null!=bannerFile&&!"".equals(bannerFile)) {
-                String uploadPath = System.getProperty("user.dir") + "/upload/banner/";
-                log.info("上传文件保存到"+uploadPath);
-                String fileName=FileUtil.uploadBase64File(bannerFile,uploadPath);
-                shopBanner.setBannerPath("/upload/banner/"+fileName);
+                shopBanner.setBannerPath(bannerFile);
             } else {
                 String oldBannerFile=request.getParameter("oldBannerFile");
                 shopBanner.setBannerPath(oldBannerFile);
@@ -1097,7 +1094,7 @@ public class SiteBaseInfoController {
                 shopNews.setTitle(title);
             }
             if(null!=context&&!"".equals(context)){
-                shopNews.setContext(FileUtil.formatNewsContent(context));
+                shopNews.setContext(context);
             }
             shopNews.setNewsDate(new Timestamp(System.currentTimeMillis()));
 
@@ -1126,7 +1123,7 @@ public class SiteBaseInfoController {
      * 回应内容：
      * <pre>
      *    正确回应：
-     *      {"code":1","message":"获取新闻公告成功",data":{"snid":9,"context":"<p>你好</p>","title":"我是新闻1","newsDate":1515382519000}}
+     *      {"code":1","message":"获取新闻公告成功",data":{"snid":9,"context":"你好","title":"我是新闻1","newsDate":1515382519000}}
      *       {"code":0,"message","获取新闻公告失败"}
      * </pre>
      *<table border="1">
